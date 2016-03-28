@@ -1,0 +1,4 @@
+class SquadsController < ApplicationController
+
+
+end
