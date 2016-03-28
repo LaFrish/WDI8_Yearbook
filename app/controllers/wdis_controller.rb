@@ -1,0 +1,3 @@
+class WdisController < ApplicationController
+
+end

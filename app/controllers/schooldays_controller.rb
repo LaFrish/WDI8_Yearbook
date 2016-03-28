@@ -1,0 +1,1 @@
+class SchooldaysController < ApplicationController

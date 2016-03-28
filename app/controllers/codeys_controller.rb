@@ -1,0 +1,3 @@
+class CodeysController < ApplicationController
+
+end
