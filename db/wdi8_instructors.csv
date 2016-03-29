@@ -1,8 +1,8 @@
-id,name,squad_name
-,Adrian Maseda,
-,Becky Beauchamp,
-,Jesse Shawl,Jesse and the Rippers
-,Joe Zaretsky,
-,Matt Scilipoti,
-,Nick Olds,
-,Robin Thomas,
+id,name,squad_name,squad_id
+,Adrian Maseda,,
+,Becky Beauchamp,,
+,Jesse Shawl,Jesse and the Rippers,
+,Joe Zaretsky,,
+,Matt Scilipoti,,
+,Nick Olds,,
+,Robin Thomas,,
