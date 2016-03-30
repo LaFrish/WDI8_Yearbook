@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'wdi#index'
+  root to: 'wdi8#index'
 
-  resources :wdis do
+  resources :wdi8 do
     resources :students
     resources :squads
     resources :instructors

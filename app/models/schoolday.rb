@@ -1,3 +1,3 @@
 class Schoolday < ActiveRecord::Base
-  belongs_to :wdi
+  belongs_to :wdi8
 end
