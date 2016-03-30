@@ -1,0 +1,5 @@
+<h2>Students</h2>
+<h2>Student Index</h2>
+  <% @students.each do |student| %>
+<button><%= link_to student.name, student%></button>
+  <% end %>

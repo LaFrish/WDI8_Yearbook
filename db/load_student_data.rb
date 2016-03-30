@@ -1,17 +1,13 @@
-NEED TO CORRECT
-
 require 'pg'
 
 db_conn = PG.connect(:dbname => 'wdi8', :host => 'localhost')
 
-file = File.new("wdi8_students.csv", "a+")
+file = File.new("student_data.csv", "a+")
 
 file.each do |line|
   student = line.split(",")
-
-  student = line.split(",")
   id = student[0]
-  name = student[1].gsub("'","")
+  name = student[1].("'","")
   img_url = student[2]
   instructor_id = student[3]
   squad_id = student[4]
