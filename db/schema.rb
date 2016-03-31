@@ -11,9 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160330203834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "codeys", force: :cascade do |t|
+    t.string  "name"
+    t.string  "award"
+    t.integer "student_id"
+  end
+
+  add_index "codeys", ["student_id"], name: "index_codeys_on_student_id", using: :btree
+
+  create_table "instructors", force: :cascade do |t|
+    t.string  "name"
+    t.string  "img_url"
+    t.string  "squad_name"
+    t.integer "squad_id"
+  end
+
+  add_index "instructors", ["squad_id"], name: "index_instructors_on_squad_id", using: :btree
+
+  create_table "students", force: :cascade do |t|
+    t.string  "name"
+    t.string  "img_url"
+    t.string  "github_url"
+    t.string  "portfolio_url"
+    t.string  "project1_url"
+    t.string  "project2_url"
+    t.string  "project3_url"
+    t.string  "project4_url"
+    t.string  "quote"
+    t.integer "instructor_id"
+    t.integer "squad_id"
+  end
+
+  add_index "students", ["instructor_id"], name: "index_students_on_instructor_id", using: :btree
+  add_index "students", ["squad_id"], name: "index_students_on_squad_id", using: :btree
 
 end
