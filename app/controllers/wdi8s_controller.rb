@@ -11,7 +11,7 @@ class Wdi8sController < ApplicationController
   def create
     @wdi8 = Wdi8.create!(wdi8_params)
 
-    redirect_to
+    redirect_to wdi8_path(@wdi8)
   end
 
   def show
@@ -27,14 +27,14 @@ class Wdi8sController < ApplicationController
     @wdi8 = Wdi8.find(params[:id])
     @wdi8.update(wdi8_params)
 
-    redirect_to
+    redirect_to wdi8_path(@wdi8)
   end
 
   def destroy
     @wdi8 = Wdi8.find(params[:id])
     @wdi8.destroy
 
-    redirect_to 
+    redirect_to wdi8_path(@wdi8)
   end
 
   private

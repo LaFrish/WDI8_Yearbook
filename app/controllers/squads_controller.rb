@@ -9,7 +9,7 @@ class SquadsController < ApplicationController
   end
 
   def create
-    @squad = Squad.create!(@squad_params)
+    @squad = Squad.create!(squad_params)
 
     redirect_to
   end
@@ -25,7 +25,7 @@ class SquadsController < ApplicationController
 
   def update
     @squad = Squad.find(params[:id])
-    @squad.update(@squad_params)
+    @squad.update(squad_params)
 
     redirect_to
   end
@@ -39,6 +39,6 @@ class SquadsController < ApplicationController
 
   private
   def @squad_params
-    params.require(:@squad).permit()
+    params.require(:squad).permit()
   end
 end

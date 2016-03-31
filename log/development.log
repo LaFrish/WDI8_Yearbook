@@ -3432,3 +3432,5 @@ ActionController::RoutingError (uninitialized constant Wdi8Controller):
   Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
   Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
   Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (411.7ms)
+  [1m[36mStudent Load (2.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35mStudent Load (1.8ms)[0m  SELECT "students".* FROM "students"
