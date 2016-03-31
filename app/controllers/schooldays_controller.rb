@@ -9,7 +9,7 @@ class SchooldaysController < ApplicationController
     end
 
     def create
-      @schoolday = Schoolday.create!(@schoolday_params)
+      @schoolday = Schoolday.create!(schoolday_params)
 
       redirect_to
     end
@@ -25,7 +25,7 @@ class SchooldaysController < ApplicationController
 
     def update
       @schoolday = Schoolday.find(params[:id])
-      @schoolday.update(@schoolday_params)
+      @schoolday.update(schoolday_params)
 
       redirect_to
     end
@@ -39,7 +39,7 @@ class SchooldaysController < ApplicationController
 
     private
     def @schoolday_params
-      params.require(:@schoolday).permit()
+      params.require(:schoolday).permit()
     end
   end
 
