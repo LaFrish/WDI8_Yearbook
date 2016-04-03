@@ -39,6 +39,6 @@ class Wdi8sController < ApplicationController
 
   private
   def wdi8_params
-    params.require(:wdi8).permit()
+    params.require(:wdi8).permit(:students, :squads, :instructors)
   end
 end
