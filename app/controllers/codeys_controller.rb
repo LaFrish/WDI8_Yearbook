@@ -38,6 +38,6 @@ class CodeysController < ApplicationController
 
   private
   def codey_params
-    params.require(:codey).permit(:id, :name, :award, :student_id)
+    params.require(:codey).permit(:codey_id, :name, :award, :student_id)
   end
 end

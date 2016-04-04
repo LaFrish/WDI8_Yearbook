@@ -1,0 +1,8 @@
+
+
+
+<h2>YEARBOOK</h2>
+<h2>YEARBOOK Index</h2>
+  <% @instructors.each do |instructor| %>
+<button><%= link_to @instructor.name, instructor%></button>
+  <% end %>

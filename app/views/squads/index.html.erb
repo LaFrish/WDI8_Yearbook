@@ -1,0 +1,5 @@
+<h2>Squads</h2>
+<h2>Squad Index</h2>
+  <% @instructors.each do |instructor| %>
+<button><%= link_to instructor.name, instructor %></button>
+  <% end %>

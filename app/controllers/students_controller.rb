@@ -4,6 +4,10 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
 
+  def show
+    @student = Student.find(params[:id])
+  end
+
   def new
     @student = Student.new
   end
@@ -12,11 +16,6 @@ class StudentsController < ApplicationController
     @student = Student.create!(student_params)
 
     redirect_to
-  end
-
-  def show
-    @student = Student.find(params[:id])
-
   end
 
   def edit
@@ -39,6 +38,6 @@ class StudentsController < ApplicationController
 
   private
   def student_params
-    params.require(:student).permit(:id, :name, :img_url, :instructor_id, :squad_id, :github_url, :portfolio_url, :project1_url, :project2_url, :project3_url, :project4_url, :quote)
+    params.require(:student).permit(:student_id, :name, :img_url, :github_url, :portfolio_url, :project1_url, :project2_url, :project3_url, :project4_url, :quote, :instructor_id, :squad_id)
   end
 end
