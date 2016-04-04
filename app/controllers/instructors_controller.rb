@@ -3,7 +3,11 @@ class InstructorsController < ApplicationController
   def index
     @instructors = Instructor.all
   end
+  
+  def show
+    @instructor = Instructor.find(params[:id])
 
+  end
   def new
     @instructor = Instructor.new
   end
@@ -14,10 +18,7 @@ class InstructorsController < ApplicationController
     redirect_to
   end
 
-  def show
-    @instructor = Instructor.find(params[:id])
 
-  end
 
   def edit
     @instructor = Instructor.find(params[:id])

@@ -2,7 +2,7 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # require "bundler/setup" # require all the gems we'll be using for this app from the Gemfile. Obviates the need for `bundle exec`
-#
+
 # require "pg"
 # require "active_record"
 # require "pry"
@@ -19,15 +19,17 @@ Instructor.destroy_all
 Codey.destroy_all
 Wdi.destroy_all
 
-wdi8 = Wdi.create!(instructor_name: "Jesse Shawl", squad_id: 3, student_name: "Farishta Haider")
+wdi8 = Wdi.create!(instructor_name: "Jesse Shawl", squad_id: "3", student_name: "Farishta Haider")
 
-Adrian = Instructor.create!(name: "Adrian Maseda", img_url: "", squad_name:"")
-Becky = Instructor.create!(name: "Becky Beauchamp", img_url: "", squad_name: "", squad_id:"")
-Jesse = Instructor.create!(name: "Jesse Shawl", img_url: "", squad_name: "Jesse and the Rippers", squad_id: 3)
-Joe = Instructor.create!(name: "Joe Zaretsky", img_url: "", squad_name: "", squad_id:"4")
-Matt = Instructor.create!(name: "Matt Scilipoti", img_url: "", squad_name: "", squad_id:5)
-Nick = Instructor.create!(name: "Nick Olds", img_url: "", squad_name: "", squad_id:6)
-Robin = Instructor.create!(name: "Robin Thomas", img_url: "", squad_name: "", squad_id:7)
+
+
+Adrian = Instructor.create!(instructor_id: "1", name: "Adrian Maseda", img_url: "", squad_name:"", squad_id:"1")
+Becky = Instructor.create!(instructor_id: "2" ,name: "Becky Beauchamp", img_url: "", squad_name: "", squad_id:"2")
+Jesse = Instructor.create!(instructor_id: "3",name: "Jesse Shawl", img_url: "", squad_name: "Jesse and the Rippers", squad_id: "3")
+Joe = Instructor.create!(instructor_id: "4",name: "Joe Zaretsky", img_url: "", squad_name: "", squad_id:"4")
+Matt = Instructor.create!(instructor_id: "5",name: "Matt Scilipoti", img_url: "", squad_name: "", squad_id:"5")
+Nick = Instructor.create!(instructor_id: "6",name: "Nick Olds", img_url: "", squad_name: "", squad_id:"6")
+Robin = Instructor.create!(instructor_id: "7",name: "Robin Thomas", img_url: "", squad_name: "", squad_id:"7")
 
 
 Adrian2 = Student.create!(student_id: "1", name: "Adrian Wyatt", img_url: "", github_url:"", portfolio_url:"", project1_url:"", project2_url:"", project3_url:"", project4_url:"", quote:"", instructor_id: "1", squad_id:"1")

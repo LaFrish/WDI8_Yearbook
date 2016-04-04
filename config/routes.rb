@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  root to: 'wdi8#index'
+  root to: 'yearbook#index'
 
-  resources :wdi8 do
+  resources :yearbook do
     resources :students
     resources :squads
     resources :instructors
     resources :codeys
-    resources :schooldays
   end
 end
