@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Adrian Maseda",
+    "img_url": 0,
+    "squad_name": 0,
+    "squad_id": 1,
+    "codey_id": 41
+  },
+  {
+    "id": 2,
+    "name": "Becky Beauchamp",
+    "img_url": 0,
+    "squad_name": 0,
+    "squad_id": 2,
+    "codey_id": 42
+  },
+  {
+    "id": 3,
+    "name": "Jesse Shawl",
+    "img_url": 0,
+    "squad_name": "Jesse and the Rippers",
+    "squad_id": 3,
+    "codey_id": 43
+  },
+  {
+    "id": 4,
+    "name": "Joe Zaretsky",
+    "img_url": 0,
+    "squad_name": 0,
+    "squad_id": 4,
+    "codey_id": 44
+  },
+  {
+    "id": 5,
+    "name": "Matt Scilipoti",
+    "img_url": 0,
+    "squad_name": 0,
+    "squad_id": 5,
+    "codey_id": 45
+  },
+  {
+    "id": 6,
+    "name": "Nick Olds",
+    "img_url": 0,
+    "squad_name": 0,
+    "squad_id": 6,
+    "codey_id": 46
+  },
+  {
+    "id": 7,
+    "name": "Robin Thomas",
+    "img_url": 0,
+    "squad_name": 0,
+    "squad_id": 7,
+    "codey_id": 47
+  }
+]
