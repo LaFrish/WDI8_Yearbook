@@ -1,15 +1,9 @@
 Rails.application.routes.draw do
   root to: 'yearbook#index'
 
-  resources :instructors do
-    resources :codeys
-  end
-
-  resources :instructors do
-    resources :squads do
-      resources :students do
-        resources :codeys
-      end
-    end
-  end
+  resources :yearbook
+  resources :instructors
+  resources :squads
+  resources :students
+  resources :codeys
 end
