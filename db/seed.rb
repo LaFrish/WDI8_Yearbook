@@ -5,17 +5,11 @@
 Student.destroy_all
 Instructor.destroy_all
 
-Student.destroy_all
-Instructor.destroy_all
+students_data = JSON.parse(File.read("db/students.json"))
+instructors_data = JSON.parse(File.read("db/events.json"))
 
-students_json = File.read("db/students.json")
-instructors_json = File.read("db/events.json")
-
-students_data= JSON.parse(stories_json)
-instructors_data=JSON.parse(events_json)
-
-Student.create!(events_data)
-Instructor.create!(stories_data)
+Student.create!(students_data)
+Instructor.create!(instructors_data)
 
 
 
