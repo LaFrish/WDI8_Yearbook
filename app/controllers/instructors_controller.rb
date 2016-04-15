@@ -2,8 +2,9 @@ class InstructorsController < ApplicationController
 
   def index
     @instructors = Instructor.all
+    render json: Instructor.all
   end
-  
+
   def show
     @instructor = Instructor.find(params[:id])
 
