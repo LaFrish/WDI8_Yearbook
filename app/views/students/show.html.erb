@@ -1,2 +1,39 @@
 <h2>Students</h2>
 <h2>Student Show</h2>
+
+<h2> Student Profile Page</h2>
+
+  <% @students.each do |student| %>
+<button><%= link_to @student.name, student%></button>
+  <% end %>
+
+<div>
+<!-- profile pic -->
+</div>
+
+
+<div class="container" id="">
+<!-- name
+quote
+social links
+contact info -->
+</div>
+
+
+<section>
+<h3>Image gallery - based off tags they are included in </h3>
+<% @imgs.each do |img| %>
+  <%= img.name %>
+  <%= image_tag img.img_url %>
+  <% end %>
+</section>
+
+<section>
+<h3>Post comments to student's profile</h3>
+<% @student.posts.each do |post| %>
+<h3><%= link_to post.title, student_post_path(@student, post) %></h3>
+<p><%= post.body %></p>
+<% end %>
+</section>
+
+</div>

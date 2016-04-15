@@ -4,15 +4,15 @@ class SquadsController < ApplicationController
     @squads = Squad.all
   end
 
-  # def new
-  #   @squad = Squad.new
-  # end
-  #
-  # def create
-  #   @squad = Squad.create!(squad_params)
-  #
-  #   redirect_to
-  # end
+  def new
+    @squad = Squad.new
+  end
+
+  def create
+    @squad = Squad.create!(squad_params)
+
+    redirect_to
+  end
 
   def show
     @squad = Squad.find(params[:id])

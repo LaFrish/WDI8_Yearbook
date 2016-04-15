@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background: url("chalkboard.png");
+  color: white;
+}
+
+header {
+  background-color: red;
+  color: white;
+}
