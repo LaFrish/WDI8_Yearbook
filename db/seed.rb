@@ -2,16 +2,15 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # require "bundler/setup" # require all the gems we'll be using for this app from the Gemfile. Obviates the need for `bundle exec`
-Student.destroy_all
-Instructor.destroy_all
-
 students_data = JSON.parse(File.read("db/students.json"))
-instructors_data = JSON.parse(File.read("db/events.json"))
+instructors_data = JSON.parse(File.read("db/instructors.json"))
 
-Student.create!(students_data)
-Instructor.create!(instructors_data)
-
-
+ActiveRecord::Base.connection.disable_referential_integrity do
+  Student.destroy_all
+  Instructor.destroy_all
+  Student.create!(students_data)
+  Instructor.create!(instructors_data)
+end
 
 #
 # Adrian = Instructor.create!(name: "Adrian Maseda", img_url: "", squad_name: "", squad_id: "")
