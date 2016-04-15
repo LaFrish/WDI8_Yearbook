@@ -2,24 +2,24 @@ class InstructorsController < ApplicationController
 
   def index
     @instructors = Instructor.all
-    render json: Instructor.all
+    respond_to do |format|
+      format.html
+      format.json{render json: Instructor.all}
+    end
   end
 
   def show
     @instructor = Instructor.find(params[:id])
-
   end
+
   def new
     @instructor = Instructor.new
   end
 
   def create
     @instructor = Instructor.create!(instructor_params)
-
     redirect_to
   end
-
-
 
   def edit
     @instructor = Instructor.find(params[:id])
@@ -28,14 +28,12 @@ class InstructorsController < ApplicationController
   def update
     @instructor = Instructor.find(params[:id])
     @instructor.update(instructor_params)
-
     redirect_to
   end
 
   def destroy
     @squad = Instructor.find(params[:id])
     @squad.destroy
-
     redirect_to
   end
 

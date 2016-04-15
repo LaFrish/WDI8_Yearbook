@@ -2,9 +2,11 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
-    render json: Student.all
+    respond_to do |format|
+      format.html
+      format.json{render json: Student.all}
+    end
   end
-
 
   def show
     @student = Student.find(params[:id])
@@ -16,8 +18,7 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.create!(student_params)
-
-    redirect_to
+    # redirect_to
   end
 
   def edit
@@ -27,15 +28,13 @@ class StudentsController < ApplicationController
   def update
     @student = Student.find(params[:id])
     @student.update(student_params)
-
-    redirect_to
+    # redirect_to
   end
 
   def destroy
     @student = Student.find(params[:id])
     @student.destroy
-
-    redirect_to
+    # redirect_to
   end
 
   private
