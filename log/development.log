@@ -1,5 +1,3 @@
-
-
 Started GET "/" for ::1 at 2016-03-30 01:38:07 -0400
 
 ActiveRecord::NoDatabaseError (FATAL:  database "wdi8_yearbook_development" does not exist
@@ -8693,7 +8691,7 @@ Migrating to CreateInstructors (20160404175552)
   [1m[35m (0.8ms)[0m  COMMIT
 Migrating to CreateCodeys (20160404175557)
   [1m[36m (0.4ms)[0m  [1mBEGIN[0m
-  [1m[35m (7.1ms)[0m  CREATE TABLE "codeys" ("id" serial primary key, "name" character varying, "award" character varying, "student_id" integer) 
+  [1m[35m (7.1ms)[0m  CREATE TABLE "codeys" ("id" serial primary key, "name" character varying, "award" character varying, "student_id" integer)
   [1m[36m (2.7ms)[0m  [1mCREATE  INDEX  "index_codeys_on_student_id" ON "codeys"  ("student_id")[0m
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160404175557"]]
   [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
