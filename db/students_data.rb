@@ -1,4 +1,4 @@
-id,name,img_url,github_url,portfolio_url,project1_url,project2_url,project3_url,project4_url,quote,instructor_id,squad_id
+id,name,img_url,github_url,portfolio_url,project1_url,project2_url,project3_url,project4_url,quote,instructor_id,squad_id,codey_id
 ,Adrian Wyatt,,,,,,,,,,
 ,Alexa Klein,,,,,,,,,,
 ,Andrew Smith-Mui,,,,,,,,,,

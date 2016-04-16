@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160415181354) do
+ActiveRecord::Schema.define(version: 20160404175557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160415181354) do
     t.integer "codey_id"
   end
 
+  add_index "instructors", ["codey_id"], name: "index_instructors_on_codey_id", using: :btree
   add_index "instructors", ["squad_id"], name: "index_instructors_on_squad_id", using: :btree
 
   create_table "students", force: :cascade do |t|
@@ -46,7 +47,6 @@ ActiveRecord::Schema.define(version: 20160415181354) do
     t.string  "quote"
     t.integer "instructor_id"
     t.integer "squad_id"
-    t.integer "codey_id"
   end
 
   add_index "students", ["instructor_id"], name: "index_students_on_instructor_id", using: :btree

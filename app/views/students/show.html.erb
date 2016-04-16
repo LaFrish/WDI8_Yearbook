@@ -3,6 +3,10 @@
 
 <h2> Student Profile Page</h2>
 
+<% @students.each do |student| %>
+<button><%= link_to student.name, student%></button>
+<% end %>
+
   <% @students.each do |student| %>
 <button><%= link_to @student.name, student%></button>
   <% end %>

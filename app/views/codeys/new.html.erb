@@ -1,0 +1,16 @@
+
+<h2> New codey <%=link_to @codey.name, @codey %> </h2>
+<%= form_for [@codey] do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</br>
+  <%=f.label :award %>
+  <%=f.text_field :award %>
+</br>
+  <%=f.label :student_id %>
+  <%=f.text_field :student_id %>
+</br>
+
+  <%=f.submit %>
+  <% end %>

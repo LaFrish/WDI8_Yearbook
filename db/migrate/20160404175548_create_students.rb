@@ -12,6 +12,7 @@ class CreateStudents < ActiveRecord::Migration
         t.string :quote
         t.integer :instructor_id, index: true, foreign_key: true
         t.integer :squad_id, index: true, foreign_key: true
+        t.integer :codey_id, index: true, foreign_key: true
     end
   end
 end
