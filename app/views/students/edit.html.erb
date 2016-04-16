@@ -1,2 +1,43 @@
 <h2>Students</h2>
-<h2>Student Index</h2>
+<h2>Student Edit</h2>
+
+
+<h2> New student <%=link_to @student.name, @student %> </h2>
+<%= form_for [@student] do |f| %>
+</br>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</br>
+  <%=f.label :img_url %>
+  <%=f.text_field :img_url %>
+</br>
+  <%=f.label :github_url %>
+  <%=f.text_field :github_url %>
+</br>
+  <%=f.label :portfolio_url %>
+  <%=f.text_field :portfolio_url %>
+</br>
+  <%=f.label :project1_url %>
+  <%=f.text_field :project1_url %>
+</br>
+  <%=f.label :project2_url %>
+  <%=f.text_field :project2_url %>
+</br>
+  <%=f.label :project3_url %>
+  <%=f.text_field :project3_url %>
+</br>
+  <%=f.label :project4_url %>
+  <%=f.text_field :project4_url %>
+</br>
+  <%=f.label :quote %>
+  <%=f.text_field :quote %>
+</br>
+  <%=f.label :instructor_id %>
+  <%=f.text_field :instructor_id %>
+</br>
+  <%=f.label :squad_id %>
+  <%=f.text_field :squad_id %>
+</br>
+
+  <%=f.submit %>
+  <% end %>

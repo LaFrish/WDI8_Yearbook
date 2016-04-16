@@ -1,0 +1,22 @@
+<h2>instructors</h2>
+<h2>instructor edit</h2>
+
+<%= form_for [@instructor] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</br>
+  <%=f.label :img_url %>
+  <%=f.text_field :img_url %>
+</br>
+  <%=f.label :squad_name %>
+  <%=f.text_field :squad_name %>
+</br>
+  <%=f.label :squad_id %>
+  <%=f.text_field :squad_id %>
+</br>
+  <%=f.label :codey_id %>
+  <%=f.text_field :codey_id %>
+</br>
+  <%=f.submit %>
+  <% end %>
+</br>
