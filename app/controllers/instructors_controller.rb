@@ -2,10 +2,10 @@ class InstructorsController < ApplicationController
 
   def index
     @instructors = Instructor.all
-    respond_to do |format|
-      format.html
-      format.json{render status: 200, json: @instructors }
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.json{render status: 200, json: @instructors }
+    # end
   end
 
   def new
