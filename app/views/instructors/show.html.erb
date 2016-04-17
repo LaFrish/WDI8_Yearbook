@@ -1,3 +1,5 @@
-<% @instructors.each do |instructor| %>
-<button><%= link_to @instructor.name, instructor%></button>
-  <% end %>
+
+<h1><%= @instructor.name %></h1>
+ <%= image_tag @instructor.img_url %>
+ <h2><%= @instructor.squad_name %></h2>
+ <p> Squad team members</p>

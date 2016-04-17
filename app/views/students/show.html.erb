@@ -1,3 +1,7 @@
 
 <h2>Student Show aka Profile Page</h2>
 <h1>  <%= @student.name %> </h1>
+<%= image_tag @student.img_url %>
+<%= link_to @student.github_url %>
+<%= link_to @student.portfolio_url %>
+<%= @student.quote %>
