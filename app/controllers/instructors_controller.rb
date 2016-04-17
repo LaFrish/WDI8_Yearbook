@@ -20,7 +20,7 @@ class InstructorsController < ApplicationController
 
   def show
     @instructor = Instructor.find(params[:id])
-    render status: 200, json: @instructor
+    
   end
 
   def edit
