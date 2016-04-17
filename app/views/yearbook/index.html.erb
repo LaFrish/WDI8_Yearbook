@@ -1,14 +1,21 @@
-<h2>YEARBOOK</h2>
-<h2>YEARBOOK Index</h2>
+<h1>YEARBOOK Index</h1>
 
-  <h2>
-  <button><%= link_to "Yearbook", yearbook_path(@yearbook)%></h2></button>
+<h2>
+  <button><%= link_to "Yearbook Index", yearbook_path(@yearbook)%></button>
+</h2>
+<h2>
+  <button><%= link_to "Add Students", new_student_path(@student)%></button>
 
-  <h2>
-  <button><%= link_to "Students", new_student_path(@student)%></h2></button>
+  <button><%= link_to " Student Index", students_path(@student)%></button>
+</h2>
+<h2>
+  <button><%= link_to "Add Instructors", new_instructor_path(@instructor)%></button>
 
-  <h2>
-  <button><%= link_to "Instructors", new_instructor_path(@instructor)%></h2></button>
 
-  <h2>
-  <button><%= link_to "Codey", new_codey_path(@codey)%></h2></button>
+  <button><%= link_to "Instructors Index", instructors_path(@instructor)%></button>
+</h2>
+<h2>
+  <button><%= link_to "Add Codey", new_codey_path(@codey)%></button>
+
+  <button><%= link_to "Codey Index", codeys_path(@codey)%></button>
+</h2>
