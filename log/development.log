@@ -16010,3 +16010,659 @@ Processing by InstructorsController#show as */*
   Parameters: {"id"=>"4"}
   [1m[36mInstructor Load (0.4ms)[0m  [1mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = $1 LIMIT 1[0m  [["id", 4]]
 Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/instructors.7" for ::1 at 2016-04-16 23:04:13 -0400
+Processing by InstructorsController#index as 
+  [1m[35mInstructor Load (1.4ms)[0m  SELECT "instructors".* FROM "instructors"
+  Rendered instructors/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 80ms (Views: 72.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:04:13 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:04:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:04:13 -0400
+
+
+Started GET "/assets/application.self-5d0d86df3602514487c01244a1a523d2ddd5d2d18947c6cb5741346a95b0b44a.css?body=1" for ::1 at 2016-04-16 23:04:13 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-16 23:04:13 -0400
+
+
+Started GET "/instructors.7" for ::1 at 2016-04-16 23:07:16 -0400
+Processing by InstructorsController#index as 
+  [1m[36mInstructor Load (0.4ms)[0m  [1mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 98ms (Views: 97.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-d70242336b70889e891a745ed0c8f21d0ec27fc44fa0dacd0899157d03064b90.css?body=1" for ::1 at 2016-04-16 23:07:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:07:17 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:07:17 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:07:17 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:07:17 -0400
+
+
+Started GET "/instructors/2" for ::1 at 2016-04-16 23:07:26 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mInstructor Load (0.3ms)[0m  SELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/instructors/2" for ::1 at 2016-04-16 23:07:26 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/instructors/2" for ::1 at 2016-04-16 23:07:26 -0400
+Processing by InstructorsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mInstructor Load (0.2ms)[0m  SELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/instructors.7" for ::1 at 2016-04-16 23:08:39 -0400
+Processing by InstructorsController#index as 
+  [1m[36mInstructor Load (0.3ms)[0m  [1mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-a0f1028e93a9fe2112c997a2004c8266574c2a78cfe6af006117c86115be953b.css?body=1" for ::1 at 2016-04-16 23:08:39 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:08:39 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:08:39 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:08:39 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:08:39 -0400
+
+
+Started GET "/" for ::1 at 2016-04-16 23:10:02 -0400
+Processing by YearbookController#index as HTML
+  Rendered yearbook/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b5ddaaf288c4cfa480f91934ccb4d321192f7b2192621624f650a9949e6d5106.css?body=1" for ::1 at 2016-04-16 23:10:03 -0400
+
+
+Started GET "/" for ::1 at 2016-04-16 23:10:40 -0400
+Processing by YearbookController#index as HTML
+  Rendered yearbook/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:10:41 -0400
+
+
+Started GET "/assets/application.self-82d504ba59d42a646ae953b32e1682489165768f0be9fad673abf7e6b59b62b1.css?body=1" for ::1 at 2016-04-16 23:10:41 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:10:41 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:10:41 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:10:41 -0400
+
+
+Started GET "/assets/chalkboard.png" for ::1 at 2016-04-16 23:10:41 -0400
+
+
+Started GET "/" for ::1 at 2016-04-16 23:10:50 -0400
+Processing by YearbookController#index as HTML
+  Rendered yearbook/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:10:50 -0400
+
+
+Started GET "/assets/application.self-cbfacd588860735c517f7e418c40152ac36bd648c97284e1d7ef2464fe6be52c.css?body=1" for ::1 at 2016-04-16 23:10:50 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:10:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:10:50 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:10:50 -0400
+
+
+Started GET "/" for ::1 at 2016-04-16 23:11:12 -0400
+Processing by YearbookController#index as HTML
+  Rendered yearbook/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:11:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:11:12 -0400
+
+
+Started GET "/assets/application.self-b12d05e52dd3e9967d3a071014be7ee5770109ca66b89a7636f7ddb559da2b13.css?body=1" for ::1 at 2016-04-16 23:11:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:11:12 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:11:12 -0400
+
+
+Started GET "/" for ::1 at 2016-04-16 23:12:33 -0400
+Processing by YearbookController#index as HTML
+  Rendered yearbook/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:12:33 -0400
+
+
+Started GET "/assets/application.self-b12d05e52dd3e9967d3a071014be7ee5770109ca66b89a7636f7ddb559da2b13.css?body=1" for ::1 at 2016-04-16 23:12:33 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:12:33 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:12:33 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:12:33 -0400
+
+
+Started GET "/" for ::1 at 2016-04-16 23:17:44 -0400
+Processing by YearbookController#index as HTML
+  Rendered yearbook/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b12d05e52dd3e9967d3a071014be7ee5770109ca66b89a7636f7ddb559da2b13.css?body=1" for ::1 at 2016-04-16 23:17:44 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:17:44 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:17:44 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:17:44 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:17:44 -0400
+
+
+Started GET "/yearbook/%23%3CYearbook::ActiveRecord_Relation:0x007ff3441cbd00%3E" for ::1 at 2016-04-16 23:17:58 -0400
+Processing by YearbookController#show as HTML
+  Parameters: {"id"=>"#<Yearbook::ActiveRecord_Relation:0x007ff3441cbd00>"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.6ms)
+
+ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "yearbooks" does not exist
+LINE 5:                WHERE a.attrelid = '"yearbooks"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"yearbooks"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  app/controllers/yearbook_controller.rb:15:in `show'
+
+
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (96.5ms)
+
+
+Started GET "/yearbook/%23%3CYearbook::ActiveRecord_Relation:0x007ff3441cbd00%3E" for ::1 at 2016-04-16 23:17:58 -0400
+Processing by YearbookController#show as HTML
+  Parameters: {"id"=>"#<Yearbook::ActiveRecord_Relation:0x007ff3441cbd00>"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "yearbooks" does not exist
+LINE 5:                WHERE a.attrelid = '"yearbooks"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"yearbooks"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  app/controllers/yearbook_controller.rb:15:in `show'
+
+
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.9ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.5ms)
+
+
+Started GET "/students/new" for ::1 at 2016-04-16 23:18:07 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for ::1 at 2016-04-16 23:19:07 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b12d05e52dd3e9967d3a071014be7ee5770109ca66b89a7636f7ddb559da2b13.css?body=1" for ::1 at 2016-04-16 23:19:08 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:19:08 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:19:08 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:19:08 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:19:08 -0400
+
+
+Started GET "/students/new" for ::1 at 2016-04-16 23:19:16 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b12d05e52dd3e9967d3a071014be7ee5770109ca66b89a7636f7ddb559da2b13.css?body=1" for ::1 at 2016-04-16 23:19:17 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:19:17 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:19:17 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:19:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:19:17 -0400
+
+
+Started GET "/students/new" for ::1 at 2016-04-16 23:19:52 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b12d05e52dd3e9967d3a071014be7ee5770109ca66b89a7636f7ddb559da2b13.css?body=1" for ::1 at 2016-04-16 23:19:53 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:19:53 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:19:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:19:53 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:19:53 -0400
+
+
+Started GET "/students/new" for ::1 at 2016-04-16 23:21:49 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b12d05e52dd3e9967d3a071014be7ee5770109ca66b89a7636f7ddb559da2b13.css?body=1" for ::1 at 2016-04-16 23:21:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:21:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:21:49 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:21:49 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:21:49 -0400
+
+
+Started GET "/" for ::1 at 2016-04-16 23:24:36 -0400
+Processing by YearbookController#index as HTML
+  Rendered yearbook/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for ::1 at 2016-04-16 23:25:31 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.5ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/instructors" for ::1 at 2016-04-16 23:26:39 -0400
+Processing by InstructorsController#index as HTML
+  [1m[36mInstructor Load (0.3ms)[0m  [1mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for ::1 at 2016-04-16 23:27:10 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/codeys" for ::1 at 2016-04-16 23:27:30 -0400
+Processing by CodeysController#index as HTML
+  [1m[36mCodey Load (1.0ms)[0m  [1mSELECT "codeys".* FROM "codeys"[0m
+  Rendered codeys/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/codeys" for ::1 at 2016-04-16 23:28:33 -0400
+Processing by CodeysController#index as HTML
+  [1m[35mCodey Load (0.4ms)[0m  SELECT "codeys".* FROM "codeys"
+  Rendered codeys/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:28:34 -0400
+
+
+Started GET "/assets/application.self-4b81fedcb8dc371bf0549dcb4bd6a9c9eb7460400265d710f802b527ef9aa49d.css?body=1" for ::1 at 2016-04-16 23:28:34 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:28:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:28:34 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:28:34 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-16 23:28:40 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:28:40 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:28:40 -0400
+
+
+Started GET "/assets/application.self-4b81fedcb8dc371bf0549dcb4bd6a9c9eb7460400265d710f802b527ef9aa49d.css?body=1" for ::1 at 2016-04-16 23:28:40 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:28:40 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:28:40 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-16 23:29:18 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.5ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-9e8b88cdb073179531612571e4633641f2321b549786fc706b6627c507db10af.css?body=1" for ::1 at 2016-04-16 23:29:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:29:18 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:29:18 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:29:18 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:29:18 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-16 23:30:11 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-70a447f5ecd61dd4a91ea0913993bb6220d6660e8de340007746a79d501eb5b2.css?body=1" for ::1 at 2016-04-16 23:30:11 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:30:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:30:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:30:11 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:30:11 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-16 23:31:00 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-ea1895ca8284cd83d7069b2170b21ff8f628ab4a87e987c7eb66e5465b180e40.css?body=1" for ::1 at 2016-04-16 23:31:00 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:31:00 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:31:00 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:31:00 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:31:00 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-16 23:31:48 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.6ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-22ab443f35c43fef1f34d2e28274901363d0201ad5e7eee8ebef35fb8487b1f6.css?body=1" for ::1 at 2016-04-16 23:31:48 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:31:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:31:49 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:31:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:31:49 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-16 23:32:13 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.5ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-c9ae0703ce899a416d8acd069ec28beb4ea7c4139b180e05349f0708b0dca68b.css?body=1" for ::1 at 2016-04-16 23:32:14 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:32:14 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:32:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:32:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:32:14 -0400
+
+
+Started GET "/students/15" for ::1 at 2016-04-16 23:32:42 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 15]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/15" for ::1 at 2016-04-16 23:32:42 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 15]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/15" for ::1 at 2016-04-16 23:32:43 -0400
+Processing by StudentsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 15]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2016-04-16 23:38:16 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-c9ae0703ce899a416d8acd069ec28beb4ea7c4139b180e05349f0708b0dca68b.css?body=1" for ::1 at 2016-04-16 23:38:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:38:16 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:38:16 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:38:16 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:38:16 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-16 23:39:34 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-c9ae0703ce899a416d8acd069ec28beb4ea7c4139b180e05349f0708b0dca68b.css?body=1" for ::1 at 2016-04-16 23:39:35 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:39:35 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:39:35 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:39:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:39:35 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-16 23:39:57 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 23:39:57 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 23:39:57 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:39:57 -0400
+
+
+Started GET "/assets/application.self-c9ae0703ce899a416d8acd069ec28beb4ea7c4139b180e05349f0708b0dca68b.css?body=1" for ::1 at 2016-04-16 23:39:57 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-16 23:39:57 -0400
+
+
+Started GET "/students/3" for ::1 at 2016-04-16 23:40:18 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/3" for ::1 at 2016-04-16 23:40:18 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/3" for ::1 at 2016-04-16 23:40:19 -0400
+Processing by StudentsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
