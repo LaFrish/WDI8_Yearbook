@@ -1,12 +1,22 @@
-<h2>Students</h2>
-<h2>Student Show</h2>
 
+<h2>Student Show</h2>
+<h2>  <%= @student.name %> </h2>
 <h2> Student Profile Page</h2>
 
-<div>
-profile pic
-</div>
+<section>
+<h3>Quotes and such</h3>
+<% @imgs.each do |img| %>
+  <%= img.name %>
+  <%= image_tag img.img_url %>
+  <% end %>
+</section>
 
+<h3>Talk it out on VentPost!</h3>
+<% @feeling.posts.each do |post| %>
+<h3><%= link_to post.title, feeling_post_path(@feeling, post) %></h3>
+<p><%= post.body %></p>
+<% end %>
+</section>
 
 <div class="container" id="">
 name

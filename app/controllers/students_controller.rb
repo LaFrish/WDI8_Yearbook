@@ -10,6 +10,8 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
+    @imgs = @student.where(data_type: "img")
+    @posts = @student.where(data_type: "post")
     render status: 200, json: @student
   end
 
