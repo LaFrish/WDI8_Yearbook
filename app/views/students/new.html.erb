@@ -1,9 +1,9 @@
 <h2>Students</h2>
 <h2>Student Index</h2>
 
-<h2> New student <%=link_to @student.name, @student %> </h2>
+
 <%= form_for [@student] do |f| %>
-</br>
+
   <%= f.label :name %>
   <%= f.text_field :name %>
 </br>

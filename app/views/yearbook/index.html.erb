@@ -1,8 +1,14 @@
-
-
-
 <h2>YEARBOOK</h2>
 <h2>YEARBOOK Index</h2>
-  <% @instructors.each do |instructor| %>
-<button><%= link_to @instructor.name, instructor%></button>
-  <% end %>
+
+  <h2>
+  <button><%= link_to "Yearbook", yearbook_path(@yearbook)%></h2></button>
+
+  <h2>
+  <button><%= link_to "Students", new_student_path(@student)%></h2></button>
+
+  <h2>
+  <button><%= link_to "Instructors", new_instructor_path(@instructor)%></h2></button>
+
+  <h2>
+  <button><%= link_to "Codey", new_codey_path(@codey)%></h2></button>

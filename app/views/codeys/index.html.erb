@@ -3,7 +3,7 @@
   <% @codeys.each do |codey| %>
 <button><%= link_to @codey.name, codey%></button>
 
-<button><%= link_to "Add it here!", new_feeling_path(@feeling)%></h2></button>
-
+<button><%= link_to "Add it here!", new_codey(@codey)%></h2></button>
+<button><%= link_to "Edit it here!", edit_codey(@codey)%></h2></button>
 
   <% end %>

@@ -4,8 +4,8 @@
 
 
 
-<button><%= link_to "Add it here!", new_instructor_path(@instructor)%></h2></button>
-
+<button><%= link_to "Add", new_instructor_path(@instructor)%></h2></button>
+<button><%= link_to "edit", edit_instructor_path(@instructor)%></h2></button>
 
 <% @instructors.each do |instructor| %>
 <button><%= link_to instructor.name, instructor%></button>
