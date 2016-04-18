@@ -4,17 +4,11 @@
 
 
   <% @students.each do |student| %>
-<button><%= link_to student.name, student%></button>
-  <% end %>
   <p>
-    <%= link_to image_tag(instructor.img_url), instructor_path(instructor) %>
+    <%= link_to image_tag(student.img_url), student_path(student) %>
   </p>
   <% end %>
 
 
 
 <button><%= link_to "Add Student", new_student_path(@student)%></h2></button>
-
-
-
-</div>
