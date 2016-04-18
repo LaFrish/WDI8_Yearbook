@@ -1,4 +1,3 @@
-<h2>instructors</h2>
 <h2>instructor Index</h2>
 
 
@@ -9,4 +8,10 @@
 
 <% @instructors.each do |instructor| %>
 <button><%= link_to instructor.name, instructor%></button>
+<% end %>
+
+<span>
+<% @instructors.each do |instructor| %>
+<%= link_to instructor.img_url, instructor%>
+</span>
 <% end %>
