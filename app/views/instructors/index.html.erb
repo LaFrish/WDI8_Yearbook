@@ -6,6 +6,12 @@
 <button><%= link_to "Add", new_instructor_path(@instructor)%></h2></button>
 
 
+
+
+<% @instructors.each do |instructor| %>
+<%#= link_to image_tag ("instructor.img_url", instructor)%>
+
 <p>
   <%= link_to image_tag(instructor.img_url), instructor_path(instructor) %>
 </p>
+<% end %>
