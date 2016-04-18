@@ -13,7 +13,7 @@ class YearbookController < ApplicationController
 
   def show
     @yearbook = Yearbook.find(params[:id])
-    render status: 200, json: @yearbook
+    # render status: 200, json: @yearbook
   end
 
   def new

@@ -2,10 +2,7 @@ class InstructorsController < ApplicationController
 
   def index
     @instructors = Instructor.all
-    # respond_to do |format|
-    #   format.html
-    #   format.json{render status: 200, json: @instructors }
-    # end
+
   end
 
   def new
@@ -20,7 +17,8 @@ class InstructorsController < ApplicationController
 
   def show
     @instructor = Instructor.find(params[:id])
-    
+    @img_url = @instructor.img_url
+
   end
 
   def edit
