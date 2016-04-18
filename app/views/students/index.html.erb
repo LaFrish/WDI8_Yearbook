@@ -1,14 +1,15 @@
 
 <div class="page-content-wrapper">
   <h1 class="page-header">Student Index</h1>
-
+  
+  <button><%= link_to "Add Student", new_student_path(@student)%></h2></button>
 
   <% @students.each do |student| %>
+<button><%= link_to student.name, student%></button>
+  <% end %>
+
   <p>
+      <% @students.each do |student| %>
     <%= link_to image_tag(student.img_url), student_path(student) %>
   </p>
   <% end %>
-
-
-
-<button><%= link_to "Add Student", new_student_path(@student)%></h2></button>
