@@ -1,3 +1,4 @@
+Negative.destroy_all
 Student.destroy_all
 Instructor.destroy_all
 Photo.destroy_all
