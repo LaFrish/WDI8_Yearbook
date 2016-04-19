@@ -395,7 +395,7 @@ li {
   position: relative;
   img {
     border-radius:50%;
-    @include transition (all .3s ease-in-out);
+    @include transition (all .2s ease-in-out);
     width:300px;
     height:300px;
   }
@@ -406,10 +406,10 @@ li {
     font-size:2.5em;
     color:white;
     opacity:0;
-     @include transition (all .3s ease-in-out);
+     @include transition (all .2s ease-in-out);
      display:block;}
   &:hover img {
-    opacity: 0.4;
+    opacity: 0.6;
     cursor:pointer;
   }
     &:hover span{
