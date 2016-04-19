@@ -8,10 +8,11 @@
 <button><%= link_to student.name, student%></button>
   <% end %>
 
-
+<div class="index">
 <% @students.each do |student| %>
 <%= link_to image_tag(student.img_url), student_path(student) %>
 
 
 
   <% end %>
+</div>
