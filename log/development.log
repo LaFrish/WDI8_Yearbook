@@ -24917,3 +24917,558 @@ Processing by StudentsController#show as HTML
   [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1[0m  [["id", 1]]
   Rendered students/show.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2016-04-18 22:55:04 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.9ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (Invalid CSS after "    }": expected selector or at-rule, was "}"):
+    2: <html>
+    3: <head>
+    4:   <title>WDI8 Yearbook</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.scss:396
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1925411769577250150_70213825197180'
+
+
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.9ms)
+
+
+Started GET "/students" for ::1 at 2016-04-18 22:55:27 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.7ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (Base-level rules cannot contain the parent-selector-referencing character '&'.):
+    2: <html>
+    3: <head>
+    4:   <title>WDI8 Yearbook</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.scss:389
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1925411769577250150_70213825197180'
+
+
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.7ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.5ms)
+
+
+Started GET "/students" for ::1 at 2016-04-18 22:56:22 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (Base-level rules cannot contain the parent-selector-referencing character '&'.):
+    2: <html>
+    3: <head>
+    4:   <title>WDI8 Yearbook</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.scss:389
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1925411769577250150_70213825197180'
+
+
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.5ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.3ms)
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:02:51 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (2.6ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 358ms (ActiveRecord: 2.6ms)
+
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/app/assets/images
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/app/assets/javascripts
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/app/assets/stylesheets
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/assets/javascripts
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/assets/stylesheets
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/jquery-rails-4.1.1/vendor/assets/javascripts
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/bourbon-4.2.7/app/assets/stylesheets):
+    2: <html>
+    3: <head>
+    4:   <title>WDI8 Yearbook</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.scss:11
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1925411769577250150_70213825197180'
+
+
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.5ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.0ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.1ms)
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:03:13 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 344ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (File to import not found or unreadable: compass.
+Load paths:
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/app/assets/images
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/app/assets/javascripts
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/app/assets/stylesheets
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/assets/javascripts
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/assets/stylesheets
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/jquery-rails-4.1.1/vendor/assets/javascripts
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/bourbon-4.2.7/app/assets/stylesheets):
+    2: <html>
+    3: <head>
+    4:   <title>WDI8 Yearbook</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.scss:12
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1925411769577250150_70213825197180'
+
+
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.6ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.6ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.7ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.1ms)
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:05:03 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (File to import not found or unreadable: compass.
+Load paths:
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/app/assets/images
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/app/assets/javascripts
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/app/assets/stylesheets
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/assets/javascripts
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/assets/stylesheets
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/jquery-rails-4.1.1/vendor/assets/javascripts
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/bourbon-4.2.7/app/assets/stylesheets):
+    2: <html>
+    3: <head>
+    4:   <title>WDI8 Yearbook</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.scss:12
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1925411769577250150_70213825197180'
+
+
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.6ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.9ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.0ms)
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:05:57 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 378ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (Undefined mixin 'border-radius'.):
+    2: <html>
+    3: <head>
+    4:   <title>WDI8 Yearbook</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.scss:379:in `border-radius'
+  app/assets/stylesheets/application.css.scss:379
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1925411769577250150_70213825197180'
+
+
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.0ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.3ms)
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:09:40 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (1.5ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 384ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (Undefined mixin 'border-radius'.):
+    2: <html>
+    3: <head>
+    4:   <title>WDI8 Yearbook</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.css.scss:385:in `border-radius'
+  app/assets/stylesheets/application.css.scss:385
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1925411769577250150_70213825197180'
+
+
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.6ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.0ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.9ms)
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:10:12 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 652ms (Views: 651.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-b0b16af33247240003a9f33284434e02a0c2579069563990ed06c609a55bc7ae.css?body=1" for ::1 at 2016-04-18 23:10:13 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 23:10:13 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 23:10:13 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-18 23:10:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 23:10:13 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:12:16 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 658ms (Views: 657.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-9e7b12beac4f83c0b31ff1faa1db1e80882cf48513282ea90df3033d2bc8f025.css?body=1" for ::1 at 2016-04-18 23:12:17 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-18 23:12:17 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 23:12:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 23:12:17 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 23:12:17 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:12:33 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 590ms (Views: 589.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-28b5161fcccd5a0f9118502fc5ea2ae85d1273fe8284d3d559cc3be09a12a9d4.css?body=1" for ::1 at 2016-04-18 23:12:33 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-18 23:12:33 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 23:12:33 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 23:12:33 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 23:12:33 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:13:29 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 575ms (Views: 573.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-7a0c97058e9aa2b25e705ae61cf7ba60a80c8d7bfaa3b77c2815ade2eb0a0ec5.css?body=1" for ::1 at 2016-04-18 23:13:30 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 23:13:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 23:13:30 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 23:13:30 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-18 23:13:30 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:13:36 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-7a0c97058e9aa2b25e705ae61cf7ba60a80c8d7bfaa3b77c2815ade2eb0a0ec5.css?body=1" for ::1 at 2016-04-18 23:13:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 23:13:37 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 23:13:37 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-18 23:13:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 23:13:37 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:18:52 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 605ms (Views: 603.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 23:18:53 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 23:18:53 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 23:18:53 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-18 23:18:53 -0400
+
+
+Started GET "/assets/application.self-d222dfbd9737bab47eca96ba043972e616685d735db0f15504dab64fa1852922.css?body=1" for ::1 at 2016-04-18 23:18:53 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:19:13 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 574ms (Views: 572.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-5735e86c04d6c53e03193f127dcab83d36fcacf31a513d8208a93ad6ea7b2884.css?body=1" for ::1 at 2016-04-18 23:19:14 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 23:19:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 23:19:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 23:19:14 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-18 23:19:14 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:19:26 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (1.7ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 602ms (Views: 600.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 23:19:26 -0400
+
+
+Started GET "/assets/application.self-74e6144ead896164dbb169a07a5d8a7c67f1fd0947e8cf9c4b7b640de8b47ed6.css?body=1" for ::1 at 2016-04-18 23:19:26 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-18 23:19:26 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 23:19:26 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 23:19:26 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:22:18 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (1.0ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-74e6144ead896164dbb169a07a5d8a7c67f1fd0947e8cf9c4b7b640de8b47ed6.css?body=1" for ::1 at 2016-04-18 23:22:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 23:22:18 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 23:22:18 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 23:22:18 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-18 23:22:18 -0400
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:28:49 -0400
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/LaFrish/wdi/projects/wdi8-yearbook/app/views/students/index.html.erb:14: syntax error, unexpected ')', expecting '='
+...ppend=( student.name, student );@output_buffer.safe_append='...
+...                               ^
+/Users/LaFrish/wdi/projects/wdi8-yearbook/app/views/students/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/LaFrish/wdi/projects/wdi8-yearbook/app/views/students/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/LaFrish/wdi/projects/wdi8-yearbook/app/views/students/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/students/index.html.erb:14: syntax error, unexpected ')', expecting '='
+  app/views/students/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+  app/views/students/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/students/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.5ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/LaFrish/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.2ms)
+
+
+Started GET "/students" for ::1 at 2016-04-18 23:29:20 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-74e6144ead896164dbb169a07a5d8a7c67f1fd0947e8cf9c4b7b640de8b47ed6.css?body=1" for ::1 at 2016-04-18 23:29:21 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 23:29:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 23:29:21 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 23:29:21 -0400
+
+
+Started GET "/assets/application.self-788dd4f504c6c8a8e9d28547d6b7f0d07b4074a32d542033ad1b02d0a30becf9.js?body=1" for ::1 at 2016-04-18 23:29:21 -0400
+
+
+Started GET "/students/1" for ::1 at 2016-04-18 23:29:41 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-18 23:29:58 -0400
+Processing by YearbookController#index as HTML
+  Rendered yearbook/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 41ms (Views: 34.1ms | ActiveRecord: 0.0ms)
