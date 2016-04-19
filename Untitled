@@ -8,3 +8,7 @@
 #   format.html
 #   format.json{render status: 200, json: @instructors }
 # end
+
+
+  <%= javascript_include_tag 'lightbox2-master/dist/js/lightbox.js'=> true %>
+    <%= stylesheet_link_tag  'lightbox2-master/dist/css/lightbox.css' %>
