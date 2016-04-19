@@ -1,5 +1,6 @@
 Student.destroy_all
 Instructor.destroy_all
+Photo.destroy_all
 
 Adrian = Instructor.create!(name: "Adrian Maseda", img_url: "")
 Becky = Instructor.create!(name: "Becky Beauchamp", img_url: "", squad_name: "")
@@ -90,3 +91,9 @@ Codey38 = Codey.create!(name: "Vijender Bajwa", award:  "", student_id: "")
 Codey39 = Codey.create!(name: "Winisha Smith", award:  "", student_id: "")
 Codey40 = Codey.create!(name: "Woo Yun", award:  "", student_id: "")
 
+
+
+first_photo = Photo.create(url:"http://cache-blog.credit.com/wp-content/uploads/2013/04/student-loans-ts-1360x860.jpg")
+Photo.create(url:"https://www.sdcity.edu/Portals/0/CollegeServices/StudentSupportResources/Counseling/new_students.jpg")
+
+Jesse.photos << first_photo
