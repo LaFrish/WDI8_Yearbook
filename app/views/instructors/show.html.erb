@@ -3,3 +3,8 @@
  <%= image_tag @instructor.img_url %>
  <h2><%= @instructor.squad_name %></h2>
  <p> Squad team members</p>
+
+ <h3>Tagged Photos</h3>
+ <% @instructor.photos.each do |photo| %>
+  <%= image_tag photo.url %>
+ <% end %>

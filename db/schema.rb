@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160418231512) do
+ActiveRecord::Schema.define(version: 20160419142945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,20 @@ ActiveRecord::Schema.define(version: 20160418231512) do
 
   add_index "instructors", ["codey_id"], name: "index_instructors_on_codey_id", using: :btree
   add_index "instructors", ["squad_id"], name: "index_instructors_on_squad_id", using: :btree
+
+  create_table "negatives", force: :cascade do |t|
+    t.integer "photo_id"
+    t.integer "student_id"
+    t.integer "instructor_id"
+  end
+
+  add_index "negatives", ["instructor_id"], name: "index_negatives_on_instructor_id", using: :btree
+  add_index "negatives", ["photo_id"], name: "index_negatives_on_photo_id", using: :btree
+  add_index "negatives", ["student_id"], name: "index_negatives_on_student_id", using: :btree
+
+  create_table "photos", force: :cascade do |t|
+    t.string "url"
+  end
 
   create_table "students", force: :cascade do |t|
     t.string  "name"
@@ -61,4 +75,7 @@ ActiveRecord::Schema.define(version: 20160418231512) do
   add_index "students", ["instructor_id"], name: "index_students_on_instructor_id", using: :btree
   add_index "students", ["squad_id"], name: "index_students_on_squad_id", using: :btree
 
+  add_foreign_key "negatives", "instructors"
+  add_foreign_key "negatives", "photos"
+  add_foreign_key "negatives", "students"
 end
