@@ -1,14 +1,13 @@
 /*
-
  *= require_self
  */
+
 
 @import "http://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 @import "https://daneden.github.io/animate.css/animate.min.css";
 @import "bourbon";
 
-// @import "compass";
 
 /*-------------------------------*/
 /*           VARIABLES           */
@@ -370,15 +369,50 @@ section {
 
 
 //circle
-img {
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-}
-img:hover {
+// img {
+//   height: 300px;
+//   width: 300px;
+//   border-radius: 50%;
+//   border: 4px solid white;
+//   box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+// }
+// img:hover {
+//   background-color: red;
+//   opacity: 0.4; cursor:pointer;
+//   z-index: 1;
+// }
+
+
+li {
+  list-style:none;
+  border-radius:50%;
+  display:
+  inline-block;
+  margin-right: 25px;
   background-color: red;
-  opacity: 0.4; cursor:pointer;
-  z-index: 1;
+  width:300px;
+  height:300px;
+  position: relative;
+  img {
+    border-radius:50%;
+    @include transition (all .3s ease-in-out);
+    width:300px;
+    height:300px;
+  }
+  span {
+    position:absolute;
+    top:115px;
+    left:90px;
+    font-size:2.5em;
+    color:white;
+    opacity:0;
+     @include transition (all .3s ease-in-out);
+     display:block;}
+  &:hover img {
+    opacity: 0.4;
+    cursor:pointer;
+  }
+    &:hover span{
+      opacity:1;
+    }
 }

@@ -9,10 +9,11 @@
   <% end %>
 
 <div class="index">
+  <li>
 <% @students.each do |student| %>
 <%= link_to image_tag(student.img_url), student_path(student) %>
-
-
+<span><%= student.name%></span>
+</li>
 
   <% end %>
 </div>
