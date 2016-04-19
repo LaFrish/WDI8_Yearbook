@@ -17,6 +17,7 @@ class SquadsController < ApplicationController
   def show
     @squad = Squad.find(params[:id])
 
+
   end
 
   def edit

@@ -2,7 +2,6 @@ class InstructorsController < ApplicationController
 
   def index
     @instructors = Instructor.all
-
   end
 
   def new
@@ -17,8 +16,6 @@ class InstructorsController < ApplicationController
 
   def show
     @instructor = Instructor.find(params[:id])
-
-
   end
 
   def edit
@@ -32,10 +29,16 @@ class InstructorsController < ApplicationController
   end
 
   def destroy
-    @squad = Instructor.find(params[:id])
-    @squad.destroy
+    @instructor = Instructor.find(params[:id])
+    @instructor.destroy
     redirect_to instructors_path(@instructor)
   end
+
+  # def squad
+  #   @instructor = Instructor.find(params[:id])
+  #   @student = Student.where(squad_id: = :instructor_id)
+
+
 
   private
   def instructor_params
