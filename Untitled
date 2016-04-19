@@ -12,3 +12,11 @@
 
   <%= javascript_include_tag 'lightbox2-master/dist/js/lightbox.js'=> true %>
     <%= stylesheet_link_tag  'lightbox2-master/dist/css/lightbox.css' %>
+
+
+  *#= require styleguide_full_of_compass_stuff
+  // @import "compass";
+  @import "compass";
+
+  @import "wdi8-yearbook/mixins";
+  @import "wdi8-yearbook/base";

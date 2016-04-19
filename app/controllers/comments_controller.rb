@@ -1,24 +1,30 @@
-class Negative < ActiveRecord::Base
+class CommentsController < ActiveRecord::Base
 
   def index
+    @student = Student.find(params[:student_id])
     @comments = Comments.all
+    @comments = @student.comments.where(data_type: "comment")
   end
 
   def show
+    @student = Student.find(params[:student_id])
     @comment = Comment.find(params[:id])
   end
 
   def new
+    @student = Student.find(params[:student_id])
     @comment = Comment.new
   end
 
   def create
-    @comment = Comment.create!(post_params)
+    @student = Student.find(params[:student_id])
+    @comment = @student.comments.create!(comment_params)
 
     redirect_to to student_path(@student)
   end
 
     def edit
+      @student = Student.find(params[:student_id])
       @comment = Comment.find(params[:id])
     end
 
@@ -36,4 +42,4 @@ class Negative < ActiveRecord::Base
 
       private
       def comment_params
-        params.require(:comment).permit(:author, :title, :body) 
+        params.require(:comment).permit(:author, :title, :body)

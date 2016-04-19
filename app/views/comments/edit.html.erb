@@ -1,0 +1,17 @@
+<h1> Edit comment</h1>
+
+  <%=link_to @student.name, @student %> </h2>
+
+<%= form_for [@student] do |f| %>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+</br>
+  <%=f.label :title %>
+  <%=f.text_field :title %>
+</br>
+  <%=f.label :body %>
+  <%=f.text_field :body %>
+</br>
+  <%=f.submit %>
+  <% end %>
+</br>
