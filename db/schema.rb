@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20160418231512) do
     t.string  "quote"
     t.integer "instructor_id"
     t.integer "squad_id"
-    t.string  "codey_id"
+    t.integer "codey_id"
     t.string  "q1"
     t.string  "q2"
     t.string  "q3"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20160418231512) do
     t.string  "email"
   end
 
+  add_index "students", ["codey_id"], name: "index_students_on_codey_id", using: :btree
   add_index "students", ["instructor_id"], name: "index_students_on_instructor_id", using: :btree
   add_index "students", ["squad_id"], name: "index_students_on_squad_id", using: :btree
 

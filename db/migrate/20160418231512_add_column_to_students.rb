@@ -1,6 +1,5 @@
 class AddColumnToStudents < ActiveRecord::Migration
   def change
-    add_column :students, :codey_id, :string
     add_column :students, :q1, :string
     add_column :students, :q2, :string
     add_column :students, :q3, :string
