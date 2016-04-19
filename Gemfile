@@ -10,7 +10,10 @@ gem 'puma'
 gem 'activerecord'
 gem 'pry'
 gem 'pry-rails'
-gem 'cowsay'
+
+gem 'bourbon'
+gem 'compass'
+
 # gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

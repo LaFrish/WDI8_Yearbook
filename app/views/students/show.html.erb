@@ -1,3 +1,23 @@
 
 <h2>Student Show aka Profile Page</h2>
+
+  <button><%= link_to "Edit Student", edit_student_path(@student)%></h2></button>
+
 <h1>  <%= @student.name %> </h1>
+<%= image_tag @student.img_url %>
+<%= link_to @student.github_url %>
+<%= link_to @student.portfolio_url %>
+<%= @student.quote %>
+<%= @student.q1 %>
+<%= @student.q2 %>
+<%= @student.q3 %>
+<%= @student.q4 %>
+<%=link_to @student.project1_url %>
+<%=link_to @student.project2_url %>
+<%=link_to @student.project3_url %>
+<%=link_to @student.project4_url %>
+<%=link_to @student.email %>
+<%=link_to @student.fb %>
+<%=link_to @student.linkedin %>
+<%=link_to @student.squad_id %>
+<%=link_to @student.codey_id %>

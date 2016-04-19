@@ -2,10 +2,6 @@ class InstructorsController < ApplicationController
 
   def index
     @instructors = Instructor.all
-    # respond_to do |format|
-    #   format.html
-    #   format.json{render status: 200, json: @instructors }
-    # end
   end
 
   def new
@@ -20,7 +16,6 @@ class InstructorsController < ApplicationController
 
   def show
     @instructor = Instructor.find(params[:id])
-    render status: 200, json: @instructor
   end
 
   def edit
@@ -34,13 +29,19 @@ class InstructorsController < ApplicationController
   end
 
   def destroy
-    @squad = Instructor.find(params[:id])
-    @squad.destroy
+    @instructor = Instructor.find(params[:id])
+    @instructor.destroy
     redirect_to instructors_path(@instructor)
   end
 
+  # def squad
+  #   @instructor = Instructor.find(params[:id])
+  #   @student = Student.where(squad_id: = :instructor_id)
+
+
+
   private
   def instructor_params
-    params.require(:instructor).permit(:name, :img_url, :squad_name)
+    params.require(:instructor).permit(:name, :img_url, :squad_name, :squad_id, :codey_id)
   end
 end

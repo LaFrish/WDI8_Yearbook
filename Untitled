@@ -1,0 +1,10 @@
+<button><%= link_to "Edit Student", edit_student_path(@student)%></h2></button>
+
+<%= link_to @instructor.github_url %>
+<%= link_to @instructor.portfolio_url %>
+
+
+# respond_to do |format|
+#   format.html
+#   format.json{render status: 200, json: @instructors }
+# end
