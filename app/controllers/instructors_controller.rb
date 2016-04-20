@@ -42,6 +42,7 @@ class InstructorsController < ApplicationController
 
   private
   def instructor_params
-    params.require(:instructor).permit(:name, :img_url, :squad_name, :squad_id, :codey_id)
+    params.require(:instructor).permit(:name, :img_url, :squad_name, :squad_id, :codey_id, :quote, :teaching, :memory, :favlang, :wisewords)
   end
 end
+:quote, :teaching, :memory, :favlang, :wisewords

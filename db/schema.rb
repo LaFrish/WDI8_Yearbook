@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419182409) do
+ActiveRecord::Schema.define(version: 20160420221225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,11 @@ ActiveRecord::Schema.define(version: 20160419182409) do
     t.string  "squad_name"
     t.integer "squad_id"
     t.integer "codey_id"
+    t.string  "quote"
+    t.integer "teaching"
+    t.string  "memory"
+    t.string  "favlang"
+    t.string  "wisewords"
   end
 
   add_index "instructors", ["codey_id"], name: "index_instructors_on_codey_id", using: :btree
