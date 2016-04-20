@@ -29134,3 +29134,11 @@ Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db6
 
 
 Started GET "/assets/application.self-f749e64ad02f848dd8939c513848d25526cb795ace1ae330e29e2966632ad4ee.js?body=1" for ::1 at 2016-04-20 01:16:51 -0400
+  [1m[36mInstructor Load (0.7ms)[0m  [1mSELECT "instructors".* FROM "instructors"[0m
+
+
+Started GET "/instructors" for ::1 at 2016-04-20 07:29:59 -0400
+Processing by InstructorsController#index as HTML
+  [1m[36mInstructor Load (1.0ms)[0m  [1mSELECT "instructors".* FROM "instructors"[0m
+  Rendered instructors/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 1.0ms)
