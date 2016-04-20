@@ -383,7 +383,7 @@ section {
 // }
 
 
-li {
+.index:li {
   list-style:none;
   border-radius:50%;
   display:
@@ -393,23 +393,23 @@ li {
   width:300px;
   height:300px;
   position: relative;
-  img {
+  index:img {
     border-radius:50%;
-    @include transition (all .3s ease-in-out);
+    @include transition (all .2s ease-in-out);
     width:300px;
     height:300px;
   }
-  span {
+  index:span {
     position:absolute;
     top:115px;
     left:90px;
     font-size:2.5em;
     color:white;
     opacity:0;
-     @include transition (all .3s ease-in-out);
+     @include transition (all .2s ease-in-out);
      display:block;}
   &:hover img {
-    opacity: 0.4;
+    opacity: 0.6;
     cursor:pointer;
   }
     &:hover span{

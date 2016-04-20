@@ -20,3 +20,19 @@
 
   @import "wdi8-yearbook/mixins";
   @import "wdi8-yearbook/base";
+
+
+  <section="photo gallery">
+  <h3>Tagged Photos</h3>
+  <% @students.photos.each do |photo| %>
+   <%= image_tag photo.url %>
+  <% end %>
+  </section>
+
+  <section="comments">
+  <h3>comments area</h3>
+  <% @student.comments.each do |comment| %>
+   <%= link_to comment.title, (@student, comment) %>
+   <p><%= post.body %></p>
+      <% end %>
+    </section>

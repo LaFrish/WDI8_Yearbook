@@ -2,7 +2,7 @@ class CommentsController < ActiveRecord::Base
 
   def index
     @student = Student.find(params[:student_id])
-    @comments = Comments.all
+    @comments = Comment.all
     @comments = @student.comments.where(data_type: "comment")
   end
 
