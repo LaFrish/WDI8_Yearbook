@@ -25,15 +25,7 @@ ActiveRecord::Schema.define(version: 20160419182409) do
   add_index "codeys", ["student_id"], name: "index_codeys_on_student_id", using: :btree
 
   create_table "comments", force: :cascade do |t|
-    t.string  "author"
-    t.string  "title"
-    t.string  "body"
-    t.integer "student_id"
-    t.integer "instructor_id"
   end
-
-  add_index "comments", ["instructor_id"], name: "index_comments_on_instructor_id", using: :btree
-  add_index "comments", ["student_id"], name: "index_comments_on_student_id", using: :btree
 
   create_table "instructors", force: :cascade do |t|
     t.string  "name"
@@ -43,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160419182409) do
     t.integer "codey_id"
   end
 
+  add_index "instructors", ["codey_id"], name: "index_instructors_on_codey_id", using: :btree
   add_index "instructors", ["squad_id"], name: "index_instructors_on_squad_id", using: :btree
 
   create_table "negatives", force: :cascade do |t|
@@ -81,6 +74,7 @@ ActiveRecord::Schema.define(version: 20160419182409) do
     t.string  "email"
   end
 
+  add_index "students", ["codey_id"], name: "index_students_on_codey_id", using: :btree
   add_index "students", ["instructor_id"], name: "index_students_on_instructor_id", using: :btree
   add_index "students", ["squad_id"], name: "index_students_on_squad_id", using: :btree
 
