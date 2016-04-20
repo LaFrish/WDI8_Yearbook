@@ -1,0 +1,9 @@
+<h2>Codeys</h2>
+<h2>Codeys Index</h2>
+  <% @codeys.each do |codey| %>
+<button><%= link_to @codey.name, codey%></button>
+
+<button><%= link_to "Add it here!", new_codey(@codey)%></h2></button>
+<button><%= link_to "Edit it here!", edit_codey(@codey)%></h2></button>
+
+  <% end %>

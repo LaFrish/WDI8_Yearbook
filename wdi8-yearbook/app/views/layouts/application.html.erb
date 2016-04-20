@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WDI8 Yearbook</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="wrapper">
+      <div class="overlay"></div>
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+          <ul class="nav sidebar-nav">
+              <li class="sidebar-brand">
+                  <a href="#">
+                     WDI8
+                  </a>
+              </li>
+              <li>
+                  <a href="http://localhost:3000/"><i class="fa fa-fw fa-home"></i> Home</a>
+              </li>
+              <li>
+                  <a href="http://localhost:3000/instructors"><i class="fa fa-fw fa-folder"></i> Instructors</a>
+              </li>
+              <li>
+                  <a href="http://localhost:3000/students"><i class="fa fa-fw fa-file-o"></i>Students</a>
+              </li>
+              <li>
+                  <a href="http://localhost:3000/codeys"><i class="fa fa-fw fa-cog"></i> Codeys</a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Project Gallery <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="dropdown-header">Dropdown heading</li>
+                  <li><a href="#">Project 1</a></li>
+                  <li><a href="#">Project 2</a></li>
+                  <li><a href="#">Project 3</a></li>
+                  <li><a href="#">Project 4</a></li>
+                </ul>
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-fw fa-bank"></i> Photo Gallery</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-fw fa-dropbox"></i> Words</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fa fa-fw fa-twitter"></i>More Words</a>
+              </li>
+          </ul>
+      </nav>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+          <span class="hamb-top"></span>
+          <span class="hamb-middle"></span>
+          <span class="hamb-bottom"></span>
+        </button>
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-8 col-lg-offset-2">
+                      <h1 class="page-header">WDI 8 Yearbook</h1>
+                      <p class="lead"></p>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+<%= yield %>
+
+</body>
+</html>
