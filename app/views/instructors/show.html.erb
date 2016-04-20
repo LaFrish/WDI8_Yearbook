@@ -1,10 +1,13 @@
+<button><%= link_to "edit", edit_instructor_path(@instructor)%></h2></button>
 
 <h1><%= @instructor.name %></h1>
  <%= image_tag @instructor.img_url %>
  <h2><%= @instructor.squad_name %></h2>
  <p> Squad team members</p>
 
- <h3>Tagged Photos</h3>
+ <h3>Photo Gallery w Tagged Photos</h3>
  <% @instructor.photos.each do |photo| %>
   <%= image_tag photo.url %>
  <% end %>
+
+ <h3>Photo Gallery w Tagged Photos</h3>

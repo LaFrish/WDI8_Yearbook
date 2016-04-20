@@ -1,20 +1,9 @@
 <h2>instructor Index</h2>
 
-
-
-
 <button><%= link_to "Add", new_instructor_path(@instructor)%></h2></button>
 
-
-
-
-<% @instructors.each do |instructor| %>
-<%#= link_to image_tag ("instructor.img_url", instructor)%>
-
 <div class="index">
-  <li>
+<% @instructors.each do |instructor| %>
   <%= link_to image_tag(instructor.img_url), instructor_path(instructor) %>
-</li>
-
   <% end %>
 </div>
