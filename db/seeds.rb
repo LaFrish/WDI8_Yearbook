@@ -11,7 +11,7 @@ Matt = Instructor.create!(name: "Matt Scilipoti", img_url: "", squad_name: "")
 Nick = Instructor.create!(name: "Nick Olds", img_url: "", squad_name: "")
 Robin = Instructor.create!(name: "Robin Thomas", img_url: "", squad_name: "")
 
-Adrian2 = Student.create!(name: "Adrian Wyatt", img_url: "", github_url:"", portfolio_url:"", project1_url:"", project2_url:"", project3_url:"", project4_url:"", quote:"", instructor_id: "", squad_id:"", codey_id: "")
+Adrian2 = Student.create!(name: "Adrian Wyatt", img_url: "http://i.imgur.com/AFP96hil.jpg", github_url:"https://github.com/Wyatt23", portfolio_url:"", project1_url:"", project2_url:"", project3_url:"", project4_url:"", quote:"Everything can be undone, except the thing you didn't do. ", instructor_id: "", squad_id:"", codey_id: "")
 Alexa = Student.create!(name: "Alexa Klein", img_url:"", github_url: "", portfolio_url: "", project1_url: "", project2_url: "", project3_url: "", project4_url: "",quote: "", instructor_id: "", squad_id: "", codey_id: "")
 Andrew = Student.create!(name: "Andrew Smith-Mui", img_url:"", github_url: "", portfolio_url: "", project1_url:  "", project2_url: "", project3_url: "", project4_url: "", quote: "", instructor_id: "", squad_id: "", codey_id: "")
 Anissa = Student.create!(name: "Anissa Jones", img_url: "", github_url: "", portfolio_url: "", project1_url: "", project2_url: "", project3_url: "", project4_url: "", quote: "", instructor_id: "", squad_id: "", codey_id: "")
