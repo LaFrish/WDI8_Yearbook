@@ -30159,3 +30159,443 @@ ORDER BY c.conname
   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.7ms)[0m  INSERT INTO "negatives" ("instructor_id", "photo_id") VALUES ($1, $2) RETURNING "id"  [["instructor_id", 39], ["photo_id", 9]]
   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mNegative Load (0.6ms)[0m  SELECT "negatives".* FROM "negatives"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "negatives" WHERE "negatives"."id" = $1  [["id", 5]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mStudent Load (0.9ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 198]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 199]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 200]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 201]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 202]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 203]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 204]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 205]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 206]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 207]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 208]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 209]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 210]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 211]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 212]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 213]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 214]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 215]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 216]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 217]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 218]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 219]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 220]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 221]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 222]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 223]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 224]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 225]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 226]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 227]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 228]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 229]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 230]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 231]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 232]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 233]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 234]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 235]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "students" WHERE "students"."id" = $1  [["id", 236]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mInstructor Load (0.6ms)[0m  SELECT "instructors".* FROM "instructors"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "instructors" WHERE "instructors"."id" = $1  [["id", 37]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "instructors" WHERE "instructors"."id" = $1[0m  [["id", 38]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "instructors" WHERE "instructors"."id" = $1  [["id", 39]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "instructors" WHERE "instructors"."id" = $1[0m  [["id", 40]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "instructors" WHERE "instructors"."id" = $1  [["id", 41]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "instructors" WHERE "instructors"."id" = $1[0m  [["id", 42]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "instructors" WHERE "instructors"."id" = $1  [["id", 43]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "photos" WHERE "photos"."id" = $1  [["id", 9]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "instructors" ("name", "img_url", "squad_name", "squad_id", "codey_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Adrian Maseda"], ["img_url", ""], ["squad_name", ""], ["squad_id", 1], ["codey_id", 41]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "instructors" ("name", "img_url", "squad_name", "squad_id", "codey_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Becky Beauchamp"], ["img_url", ""], ["squad_name", ""], ["squad_id", 2], ["codey_id", 42]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "instructors" ("name", "img_url", "squad_name", "squad_id", "codey_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Jesse Shawl"], ["img_url", ""], ["squad_name", "Jesse and the Rippers"], ["squad_id", 3], ["codey_id", 43]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "instructors" ("name", "img_url", "squad_name", "squad_id", "codey_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Joe Zaretsky"], ["img_url", ""], ["squad_name", ""], ["squad_id", 4], ["codey_id", 44]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "instructors" ("name", "img_url", "squad_name", "squad_id", "codey_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Matt Scilipoti"], ["img_url", ""], ["squad_name", ""], ["squad_id", 5], ["codey_id", 45]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "instructors" ("name", "img_url", "squad_name", "squad_id", "codey_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Nick Olds"], ["img_url", ""], ["squad_name", ""], ["squad_id", 6], ["codey_id", 46]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "instructors" ("name", "img_url", "squad_name", "squad_id", "codey_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Robin Thomas"], ["img_url", ""], ["squad_name", ""], ["squad_id", 7], ["codey_id", 47]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Adrian Wyatt"], ["img_url", "http://imgur.com/AFP96hi"], ["github_url", "https://github.com/Wyatt23"], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", "Everything can be undone, except the thing you didn't do."], ["instructor_id", 1], ["squad_id", 1], ["codey_id", 1], ["q1", "my naive sense of defiant romanticism..well, that and my GPS."], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", "https://www.facebook.com/AdrianWyatt23"], ["linkedin", "https://www.linkedin.com/in/adrianwyatt"], ["email", "AdrianWyatt@gmail.com "]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Alexa Klein"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 1], ["squad_id", 1], ["codey_id", 2], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Andrew Smith-Mui"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 1], ["squad_id", 1], ["codey_id", 3], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Anissa Jones"], ["img_url", ""], ["github_url", "https://github.com/SuperJones"], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", "https://steps-battle.herokuapp.com/"], ["project3_url", "https://vivalavegan.herokuapp.com/"], ["project4_url", ""], ["quote", "When you want something, all the universe conspires in helping you to achieve it. --Paulo Coehlo"], ["instructor_id", 1], ["squad_id", 1], ["codey_id", 4], ["q1", "Wombat"], ["q2", "My phone - though I still forget my one-on-ones"], ["q3", "I'm not guilty about it but anything zombie related even though they give me nightmares."], ["q4", ""], ["fb", ""], ["linkedin", "https://www.linkedin.com/in/anissadjones"], ["email", "anissajones10@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Bipin Neupane"], ["img_url", "https://scontent-lga3-1.xx.fbcdn.net/hphotos-xla1/v/t1.0-9/12347981_10153799731311052_2603207577644789666_n.jpg?oh=10cfd5dc73cb6c3a0520d667bf43ca69&oe=57C0230B"], ["github_url", "https://github.com/Bneupane"], ["portfolio_url", "http://bneupane.github.io"], ["project1_url", "http://bneupane.github.io/memory-game/"], ["project2_url", "http://projectcheerup.herokuapp.com"], ["project3_url", "http://whereismystuff.herokuapp.com"], ["project4_url", ""], ["quote", "'Nyron is trying to unfuck me.' -- some UXDI girl"], ["instructor_id", 2], ["squad_id", 2], ["codey_id", 5], ["q1", "When I performed 'My Relationship with Ruby' poem and the crowd went bananas!"], ["q2", "iPhone, glasses, laptop, friends, happy hour"], ["q3", "Looking at solution branch."], ["q4", ""], ["fb", "https://www.facebook.com/NeuBip"], ["linkedin", ""], ["email", "icomp2@hotmail.com"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Brendan Magee"], ["img_url", "http://i.imgur.com/msYfTL5l.jpg?1"], ["github_url", "https://github.com/brendaneamon"], ["portfolio_url", "http://brendaneamon.github.io/"], ["project1_url", "http://brendaneamon.github.io/project1-flashcards/"], ["project2_url", "https://kleos-app.herokuapp.com/"], ["project3_url", "http://zoosnapz.herokuapp.com/"], ["project4_url", ""], ["quote", "forsan et haec olim meminisse iuvabit. (Maybe someday you'll rejoice to remember even this.) —P. Vergilius Maro (The Aeneid, Book I, line 203)"], ["instructor_id", 1], ["squad_id", 1], ["codey_id", 6], ["q1", "Bipin's GA happy hour poetry slam performance"], ["q2", "The complete oeuvre of the band Rush"], ["q3", "Cookie Clicker, obvi"], ["q4", ""], ["fb", "https://www.facebook.com/Brendan.Eamon"], ["linkedin", "https://www.linkedin.com/in/brendaneamonmagee"], ["email", "bmagee@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Brittany Branson"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 2], ["squad_id", 2], ["codey_id", 7], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Caitlin Daitch"], ["img_url", "https://scontent-lga3-1.xx.fbcdn.net/hphotos-xlp1/v/t1.0-9/12718087_1194207560621759_5398938579378409241_n.jpg?oh=593f5a4f31ef57d8a8ff5a8c3f8dfeca&oe=57BE42ED"], ["github_url", "https://github.com/caitlindaitch"], ["portfolio_url", "www.caitlindaitch.com"], ["project1_url", "http://caitlindaitch.github.io/ConcentrationGame/"], ["project2_url", "https://bar-in-mind.herokuapp.com/"], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 2], ["squad_id", 2], ["codey_id", 8], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", "https://www.facebook.com/caitlin.dejcz"], ["linkedin", "https://www.linkedin.com/in/caitlindaitch"], ["email", "caitlin.daitch@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Cam Latimer"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 2], ["squad_id", 2], ["codey_id", 9], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Casey Gil"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 2], ["squad_id", 2], ["codey_id", 10], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Charles Hwang"], ["img_url", "http://i.imgur.com/htWHGUV.jpg"], ["github_url", "https://github.com/charlesthwang"], ["portfolio_url", "charlesthwang.github.io"], ["project1_url", ""], ["project2_url", "https://climbr-beta.herokuapp.com/"], ["project3_url", "http://zoosnapz.herokuapp.com"], ["project4_url", ""], ["quote", "With hard work and determination, you can even!"], ["instructor_id", 2], ["squad_id", 2], ["codey_id", 11], ["q1", "Open Mic Night"], ["q2", "Glasses/Contacts"], ["q3", "Late-night talk shows"], ["q4", ""], ["fb", "http://facebook.com/charlesthwang"], ["linkedin", "https://www.linkedin.com/in/charlesthwang"], ["email", "charlesthwang@gmail.com"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Christine Movius"], ["img_url", "http://i.imgur.com/qJ7gZy2l.jpg"], ["github_url", "https://github.com/cmmovius"], ["portfolio_url", "http://www.christinemovius.com/"], ["project1_url", "https://dndr.herokuapp.com/"], ["project2_url", "http://zoosnapz.herokuapp.com/"], ["project3_url", ""], ["project4_url", ""], ["quote", "'Only those who risk going too far can possibly find out how far one can go.' -T.S. Eliot"], ["instructor_id", 2], ["squad_id", 2], ["codey_id", 12], ["q1", "The moments when I witness a fellow classmate celebrating after finally getting their code to work after struggling through a really hard problem."], ["q2", "Chapstick. I can't go anywhere without it!"], ["q3", "Watching streams of the video game, Hearthstone. But I'm not guilty about it!"], ["q4", ""], ["fb", "https://www.facebook.com/christine.marian13"], ["linkedin", "https://www.linkedin.com/in/christinemovius"], ["email", "christine.movius@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Clarissa Stark"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 3], ["squad_id", 3], ["codey_id", 13], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Craig Eisen"], ["img_url", "http://i.imgur.com/00vZ2AHl.jpg?1"], ["github_url", "https://github.com/Ceisen9"], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", "https://craig-eisen-bestbet-rails.herokuapp.com/"], ["project3_url", "http://johnblakeman.com:7777/#/"], ["project4_url", ""], ["quote", "A wizard is never late, nor is he early, he arrives precisely when he means to. -Lord of the Rings: The Return of the King"], ["instructor_id", 3], ["squad_id", 3], ["codey_id", 14], ["q1", "I do not have a specific memory, but will always remember the enthusiasm shared by the teachers, students, and admins at GA"], ["q2", "Good food and coffee"], ["q3", "Binge watching online tv in lieu of sleeping"], ["q4", ""], ["fb", "https://www.facebook.com/craig.eisen"], ["linkedin", "https://www.linkedin.com/in/craigeisen"], ["email", "ceisen91@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Farishta Haider"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 3], ["squad_id", 3], ["codey_id", 15], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Hilary Masland"], ["img_url", "http://i.imgur.com/AkpYyvHl.jpg"], ["github_url", "https://github.com/hilarymasland"], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", "'Everything you can imagine is real' - Picasso"], ["instructor_id", 3], ["squad_id", 3], ["codey_id", 16], ["q1", "When Mohammed defined 'sharding' ---still laughing."], ["q2", ""], ["q3", "pretzels, goldfish, family guy, bloody mary's"], ["q4", ""], ["fb", "https://www.facebook.com/grizzly.masland"], ["linkedin", "https://www.linkedin.com/in/maslandhilary"], ["email", "hilarymasland@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Isaac Hayes"], ["img_url", ""], ["github_url", "https://github.com/crunchwrap78 "], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", "'It is better to be pissed off than be pissed on' or 'life may not be the party we'd hope for, but while we're here, we might as well dance'"], ["instructor_id", 3], ["squad_id", 3], ["codey_id", 17], ["q1", "Learning how to make rails apps"], ["q2", "Glasses"], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Jeffrey Eaton"], ["img_url", "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAaoAAAAJGRjNjIwMmViLTExYWQtNDViOC1iNjg2LTQ4NzBhYTBlNTZmNg.jpg"], ["github_url", "https://github.com/jeffreyeaton76"], ["portfolio_url", "http://jeffreyeaton76.github.io/"], ["project1_url", "https://jeffreyeaton76-lifelist.herokuapp.com/"], ["project2_url", "https://jeffreyeaton76-ihavetogo.herokuapp.com/"], ["project3_url", "http://cryptly.herokuapp.com/"], ["project4_url", ""], ["quote", ""], ["instructor_id", 4], ["squad_id", 4], ["codey_id", 19], ["q1", ""], ["q2", "coffee"], ["q3", ""], ["q4", ""], ["fb", "https://www.facebook.com/profile.php?id=100010912957903"], ["linkedin", "https://www.linkedin.com/in/jeffreyeaton76"], ["email", "jeffreyeaton.dc@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "John Blakeman"], ["img_url", "http://i.imgur.com/8YBxfQEl.jpg"], ["github_url", "https://www.github.com/jblakeman"], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 4], ["squad_id", 4], ["codey_id", 20], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Kaira Johnson"], ["img_url", "http://i.imgur.com/21ivHG5l.jpg"], ["github_url", "https://github.com/kairajohnson"], ["portfolio_url", "IAMNichol.com"], ["project1_url", "https://github.com/kairajohnson/project1"], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 4], ["squad_id", 4], ["codey_id", 21], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Keith Prifte"], ["img_url", "http://i.imgur.com/VIpdgf2l.jpg"], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 4], ["squad_id", 4], ["codey_id", 22], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", "https://www.facebook.com/keith.prifte"], ["linkedin", "https://www.linkedin.com/in/keithprifte"], ["email", "kprift@gmail.com"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Kimberly Cabbagestock"], ["img_url", "http://i.imgur.com/AE5bcM4.jpg?4"], ["github_url", "github.com/kcabbagestalk"], ["portfolio_url", "kcabbagestalk.github.io"], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 5], ["squad_id", 5], ["codey_id", 23], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", "https://www.linkedin.com/in/kimberlycabbagestalk"], ["email", "kim@cabbagestalk.com"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Lyndsey Newsome"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", "Chocolate doesn't ask questions. Chocolate understands..."], ["instructor_id", 5], ["squad_id", 5], ["codey_id", 24], ["q1", "Almost every project week, homework assignment, and lab."], ["q2", "Food."], ["q3", "Nothing. I have no guilt."], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Matt Stevens"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 5], ["squad_id", 5], ["codey_id", 25], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Matthew Kerns"], ["img_url", "http://i.imgur.com/qkDjYpQl.jpg"], ["github_url", "https://github.com/mkernsNCR"], ["portfolio_url", ""], ["project1_url", "http://mkernsncr.github.io/project-war"], ["project2_url", "https://pianogram.herokuapp.com/"], ["project3_url", "https://starfax.herokuapp.com/#/"], ["project4_url", ""], ["quote", ""], ["instructor_id", 5], ["squad_id", 5], ["codey_id", 26], ["q1", "Project Week 2."], ["q2", "GA Experience."], ["q3", "Anime"], ["q4", ""], ["fb", "https://www.facebook.com/mkerns3"], ["linkedin", "https://www.linkedin.com/in/matthewkerns1"], ["email", "matthewkerns@gmail.com"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Maureen Vogel"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 5], ["squad_id", 5], ["codey_id", 27], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Maximillian Kaye"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 5], ["squad_id", 5], ["codey_id", 28], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Melissa Miller"], ["img_url", "http://i.imgur.com/6oVAGX8l.jpg"], ["github_url", "https://github.com/holytoastr"], ["portfolio_url", "http://holytoastr.github.io/"], ["project1_url", "http://holytoastr.github.io/project1/"], ["project2_url", "https://emotional-corgum.herokuapp.com/"], ["project3_url", "https://jeffreyeaton76-ihavetogo.herokuapp.com/"], ["project4_url", ""], ["quote", "'It's kind of fun to do the impossible' --Walt Disney"], ["instructor_id", 6], ["squad_id", 6], ["codey_id", 29], ["q1", ""], ["q2", "Cell phone's GPS"], ["q3", "Disney World!"], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", "lis.d.miller@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Mohamed Chalal"], ["img_url", "http://i.imgur.com/GLkF9oDl.png"], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 6], ["squad_id", 6], ["codey_id", 30], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Nyron Waite"], ["img_url", "http://i.imgur.com/idU8KFal.jpg"], ["github_url", "https://github.com/nyron"], ["portfolio_url", "https://profiles.generalassemb.ly/profiles/nyron-waite"], ["project1_url", "https://github.com/nyron/TriviaGame.git"], ["project2_url", "http://nyron.github.io/QuickSearch/quicksearch.html "], ["project3_url", ""], ["project4_url", ""], ["quote", "No one can make you feel inferior without your consent"], ["instructor_id", 6], ["squad_id", 6], ["codey_id", 31], ["q1", "Happy Hours!"], ["q2", "Brain"], ["q3", "Chiptole"], ["q4", ""], ["fb", ""], ["linkedin", "https://www.linkedin.com/in/nyronwaite"], ["email", "nyroncurtiswaite@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Patrick Moran"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 6], ["squad_id", 6], ["codey_id", 32], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Robel Tekeste"], ["img_url", "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAhyAAAAJGZhYjkxOTZkLTA2NGEtNGQ0Ny1hODhhLWE2Zjk0ZWY3OGU2MQ.jpg"], ["github_url", "https://github.com/Robizzy27"], ["portfolio_url", "https://profiles.generalassemb.ly/profiles/robel"], ["project1_url", ""], ["project2_url", "robs-westeros.herokuapp.com"], ["project3_url", "dcvsmarvel.herokuapp.com"], ["project4_url", ""], ["quote", "Time is limited, don't waste it living someone else's life. (Steve Jobs)"], ["instructor_id", 6], ["squad_id", 6], ["codey_id", 33], ["q1", "Juan 'The Wombat' Jaunnsen"], ["q2", "Mac... iPhone... iPad... "], ["q3", "Binge watching Scrubs, Big Bang Theory, Star Trek Voyager, etc. "], ["q4", ""], ["fb", "https://www.facebook.com/Robizzy27"], ["linkedin", "https://www.linkedin.com/in/robeltekeste"], ["email", "Robel.Tekeste@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Ryan Krolick"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 6], ["squad_id", 6], ["codey_id", 34], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Sanjaya Satyal"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 7], ["squad_id", 7], ["codey_id", 34], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Sarah Ivey"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 7], ["squad_id", 7], ["codey_id", 35], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Toni Langley"], ["img_url", "http://i.imgur.com/Dj3nWQ5l.jpg"], ["github_url", "https://github.com/Chibiania"], ["portfolio_url", "https://chibiania.github.io/"], ["project1_url", "http://chibiania.github.io/game-lab/"], ["project2_url", "http://book2adapt.herokuapp.com/"], ["project3_url", "https://the-snack-app.herokuapp.com/#/"], ["project4_url", ""], ["quote", "Live the Life You Love"], ["instructor_id", 7], ["squad_id", 7], ["codey_id", 37], ["q1", "Picture Day!"], ["q2", "Cellphone"], ["q3", "Fan fiction (still)"], ["q4", ""], ["fb", "https://www.facebook.com/langley5"], ["linkedin", "https://www.linkedin.com/in/tlangley"], ["email", "chibia2@gmail.com"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Vijender Bajwa"], ["img_url", ""], ["github_url", ""], ["portfolio_url", ""], ["project1_url", ""], ["project2_url", ""], ["project3_url", ""], ["project4_url", ""], ["quote", ""], ["instructor_id", 7], ["squad_id", 7], ["codey_id", 38], ["q1", ""], ["q2", ""], ["q3", ""], ["q4", ""], ["fb", ""], ["linkedin", ""], ["email", ""]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"  [["name", "Winisha Smith"], ["img_url", "https://github.com/WinishaSmith"], ["github_url", "https://avatars0.githubusercontent.com/u/16657107?v=3&s=400"], ["portfolio_url", ""], ["project1_url", "http://winishasmith.github.io/Jeopardy_Winnie/"], ["project2_url", "undone.herokuapp.com"], ["project3_url", "vivalavegan.herokuapp.com"], ["project4_url", ""], ["quote", "“No matter how you feel, get up, dress up and show up.” - Regina Brett"], ["instructor_id", 7], ["squad_id", 7], ["codey_id", 39], ["q1", "Project Showcases & Campus Lunches"], ["q2", "Macbook"], ["q3", "Rom-Coms (Romantic Comedies)"], ["q4", ""], ["fb", ""], ["linkedin", "https://www.linkedin.com/in/winishasmith"], ["email", "winishasmith@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "students" ("name", "img_url", "github_url", "portfolio_url", "project1_url", "project2_url", "project3_url", "project4_url", "quote", "instructor_id", "squad_id", "codey_id", "q1", "q2", "q3", "q4", "fb", "linkedin", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING "id"[0m  [["name", "Woo Yun"], ["img_url", "http://namooyoga.com/wp-content/uploads/2015/09/woosub-1.jpg"], ["github_url", "https://github.com/hh747hh"], ["portfolio_url", "woosubyun.com"], ["project1_url", "https://github.com/hh747hh/project_memory_card"], ["project2_url", "https://github.com/hh747hh/essential-oil-remedies"], ["project3_url", "https://github.com/hh747hh/Project3"], ["project4_url", ""], ["quote", "The best way to predict the future is to create it."], ["instructor_id", 7], ["squad_id", 7], ["codey_id", 40], ["q1", "Working with fun, smart people."], ["q2", "Eye glasses"], ["q3", "I love eating ramen at night."], ["q4", ""], ["fb", "https://www.facebook.com/woosub.yun.7"], ["linkedin", "https://www.linkedin.com/in/woosubyun"], ["email", "hh747hh@gmail.com"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Adrian Wyatt"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Alexa Klein"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Andrew Smith-Mui"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Anissa Jones"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Bipin Neupane"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Brendan Magee"], ["award", ""]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Brittany Branson"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Caitlin Daitch"], ["award", ""]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Cam Latimer"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Casey Gil"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Charles Hwang"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Christine Movius"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Clarissa Stark"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Craig Eisen"], ["award", ""]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Farishta Haider"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Hilary Masland"], ["award", ""]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Isaac Hayes"], ["award", ""]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Fatai Agiri"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Jeffrey Eaton"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "John Blakeman"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Kaira Johnson"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Keith Prifte"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Kimberly Cabbagestock"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Lyndsey Newsome"], ["award", ""]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Matt Stevens"], ["award", ""]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Matthew Kerns"], ["award", ""]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Maureen Vogel"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Maximillian Kaye"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Melissa Miller"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Mohamed Chalal"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Nyron Waite"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Patrick Moran"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Robel Tekeste"], ["award", ""]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Ryan Krolick"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Sanjaya Satyal"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Sarah Ivey"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Toni Langley"], ["award", ""]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Vijender Bajwa"], ["award", ""]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Winisha Smith"], ["award", ""]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Woo Yun"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Adrian Maseda"], ["award", ""]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Becky Beauchamp"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Jesse Shawl"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Joe Zaretsky"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Matt Scilipoti"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Nick Olds"], ["award", ""]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "codeys" ("name", "award") VALUES ($1, $2) RETURNING "id"  [["name", "Robin Thomas"], ["award", ""]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "photos" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://cache-blog.credit.com/wp-content/uploads/2013/04/student-loans-ts-1360x860.jpg"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "photos" ("url") VALUES ($1) RETURNING "id"  [["url", "https://www.sdcity.edu/Portals/0/CollegeServices/StudentSupportResources/Counseling/new_students.jpg"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "negatives" ("instructor_id", "photo_id") VALUES ($1, $2) RETURNING "id"[0m  [["instructor_id", 46], ["photo_id", 11]]
+  [1m[35m (0.3ms)[0m  COMMIT
