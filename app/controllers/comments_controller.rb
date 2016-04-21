@@ -18,11 +18,10 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(params.require(:comment).permit(:task))
-    user = current_user
     if @comment.save
-        redirect_to student_path(@student), alert:"Comment created successfully."
+        redirect_to student_params(@student), alert:"Comment created successfully."
     else
-        redirect_to student_path(@student), alert: "Error creating comment."
+        redirect_to student_params(@student), alert: "Error creating comment."
     end
   end
 
