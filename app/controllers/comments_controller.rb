@@ -1,13 +1,13 @@
 class CommentsController < ApplicationController
 
   def index
-    # @student = Student.find(params[:student_id])
+    @student = Student.find(params[:student_id])
     @comments = Comment.all
-    # @comments = @student.comments.where(data_type: "comment")
+    @comments = @student.comments.where(data_type: "comment")
   end
 
   def show
-    # @student = Student.find(params[:student_id])
+    @student = Student.find(params[:student_id])
     @comment = Comment.find(params[:id])
   end
 
@@ -17,15 +17,19 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.create!(comment_params.merge(user: current_user))
-    redirect_to comment_path(@post)
-    # @comment = @student.comments.create!(comment_params)
-    # redirect_to to student_path(@student)
-    @comment.save
+    @comment = Comment.new(params.require(:comment).permit(:task))
+    user = current_user
+    if @comment.save
+        redirect_to student_path(@student), alert:"Comment created successfully."
+    else
+        redirect_to student_path(@student), alert: "Error creating comment."
+    end
   end
 
+
+
   def edit
-    # @student = Student.find(params[:student_id])
+    @student = Student.find(params[:student_id])
     @comment = Comment.find(params[:id])
   end
 
