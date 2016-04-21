@@ -2,10 +2,19 @@
 
 <h1><%= @instructor.name %></h1>
  <%= image_tag @instructor.img_url %>
- <h2><%= @instructor.squad_name %></h2>
- <p> Squad team members</p>
 
-
+<div class="container">
+ <%= @instructor.squad_name %> </br>
+ <%= @instructor.squad_id %> </br>
+ <%= @instructor.codey_id %> </br>
+ <%= @instructor.quote %> </br>
+ <%= @instructor.teaching %> </br>
+ <%= @instructor.memory %> </br>
+ <%= @instructor.favlang %> </br>
+ <%= @instructor.wisewords %> </br>
+</div>
+ <h2><%= @instructor.squad_name %> </br>
+ <p> Squad team members</p><h2>
 
 
  <div class="container">
@@ -17,5 +26,17 @@
   <%= image_tag photo.url %>
  <% end %>
 
+</div>
+</div>
+<button><%= link_to "Post a new comment", new_comment_path(@comment) %></button>
+
+<div class="container">
+  <h2 class="text-center">comment area</h2>
+  <div class="posts">
+ <h3></h3>
+<% @instructor.comments.each do |comment| %>
+  <!-- #<%=  post version of image_tag photo.url %> -->
+<h3>comments area</h3>
+ <% end %>
 </div>
 </div>

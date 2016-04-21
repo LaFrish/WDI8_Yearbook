@@ -8,9 +8,6 @@ class TagsController < ApplicationController
     @tag = Tag.new
   end
 
-  def new
-    @tag = Tag.new
-  end
 
   def create
     @tag = Tag.create!(tag_params)
@@ -37,7 +34,7 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
     @tag.destroy
 
-    redirect_to 
+    redirect_to
   end
 
   private

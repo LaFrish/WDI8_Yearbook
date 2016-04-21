@@ -45,4 +45,4 @@ class InstructorsController < ApplicationController
     params.require(:instructor).permit(:name, :img_url, :squad_name, :squad_id, :codey_id, :quote, :teaching, :memory, :favlang, :wisewords)
   end
 end
-:quote, :teaching, :memory, :favlang, :wisewords
+ 

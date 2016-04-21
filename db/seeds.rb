@@ -2,13 +2,14 @@ Negative.destroy_all
 Student.destroy_all
 Instructor.destroy_all
 Photo.destroy_all
+Comment.destroy_all
 
-Adrian = Instructor.create!(name: "Adrian Maseda", img_url: "", squad_name: "", squad_id: 1, codey_id: 41, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
-Becky = Instructor.create!(name: "Becky Beauchamp", img_url: "", squad_name: "", squad_id: 2, codey_id: 42, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
-Jesse = Instructor.create!(name: "Jesse Shawl", img_url: "", squad_name: "Jesse and the Rippers", squad_id: 3, codey_id: 43, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
-Joe = Instructor.create!(name: "Joe Zaretsky", img_url: "", squad_name: "", squad_id: 4, codey_id: 44, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
-Matt = Instructor.create!(name: "Matt Scilipoti", img_url: "", squad_name: "", squad_id: 5, codey_id: 45, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
-Nick = Instructor.create!(name: "Nick Olds", img_url: "", squad_name: "", squad_id: 6, codey_id: 46, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
+Adrian = Instructor.create!(name: "Adrian Maseda", img_url: "http://orig02.deviantart.net/789b/f/2011/284/c/0/minus_the_bear_logo_by_mrjiggles4-d4cjd90.png", squad_name: "", squad_id: 1, codey_id: 41, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
+Becky = Instructor.create!(name: "Becky Beauchamp", img_url: "https://pbs.twimg.com/profile_images/566317879713214465/jzp0Z10y.jpeg", squad_name: "", squad_id: 2, codey_id: 42, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
+Jesse = Instructor.create!(name: "Jesse Shawl", img_url: "https://pbs.twimg.com/profile_images/494612822740197377/4ldXwgN5_400x400.jpeg", squad_name: "Jesse and the Rippers", squad_id: 3, codey_id: 43, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
+Joe = Instructor.create!(name: "Joe Zaretsky", img_url: "http://media.vogue.com/r//2015/03/11/cinderella-gifs-steven-dam-06.gif", squad_name: "", squad_id: 4, codey_id: 44, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
+Matt = Instructor.create!(name: "Matt Scilipoti", img_url: "https://avatars0.githubusercontent.com/u/31929?v=3&s=400", squad_name: "", squad_id: 5, codey_id: 45, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
+Nick = Instructor.create!(name: "Nick Olds", img_url: "http://i.giphy.com/1Lks5PFkIekO4.gif", squad_name: "", squad_id: 6, codey_id: 46, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
 
 Robin = Instructor.create!(name: "Robin Thomas", img_url: "https://avatars3.githubusercontent.com/u/6268177?v=3&s=460", squad_name: "Team Water Cooler", squad_id: 7, codey_id: 47, quote:"They don't think it be like it is, but it do.", teaching: 1.5, memory:"Watching the kickass Project 3 presentations!", favlang:"Javascript", wisewords:"Go teach! Do a free 'Beginner's HTML' class at your library or church. What you have, everyone else wants!")
 
@@ -129,7 +130,10 @@ Codey46 = Codey.create!(name: "Nick Olds", award:  "", student_id: "")
 Codey47 = Codey.create!(name: "Robin Thomas", award:  "", student_id: "")
 
 
-first_photo = Photo.create(url:"http://cache-blog.credit.com/wp-content/uploads/2013/04/student-loans-ts-1360x860.jpg")
-Photo.create(url:"https://www.sdcity.edu/Portals/0/CollegeServices/StudentSupportResources/Counseling/new_students.jpg")
+first_photo = Photo.create!(url:"http://cache-blog.credit.com/wp-content/uploads/2013/04/student-loans-ts-1360x860.jpg")
+Photo.create!(url:"https://www.sdcity.edu/Portals/0/CollegeServices/StudentSupportResources/Counseling/new_students.jpg")
+
+second_photo= Photo.create!(url:"https://media4.popsugar-assets.com/files/2013/08/12/833/n/1922398/3a9296910b700fb0_tumblr_mj1k17kIL61qfjyrro1_500.xxxlarge.gif")
 
 Jesse.photos << first_photo
+Robin.photos << second_photo
