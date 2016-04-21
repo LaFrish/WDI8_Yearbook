@@ -4,16 +4,15 @@ Rails.application.routes.draw do
 
 
 
-  resources :instructors
-  # do
-  #   resources :comments
-  # end
-  resources :students
-  #  do
-  #   resources :comments
-  # end
+  resources :instructors do
+    resources :comments
+  end
+
+  resources :students do
+    resources :comments
+  end
+
   resources :yearbook
   resources :codeys
   resources :squads
-  resources :comments
 end
