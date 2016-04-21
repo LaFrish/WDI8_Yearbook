@@ -23,10 +23,21 @@
 <%=link_to @student.codey_id %>
 
 
-<section="photo_gallery">
-<h3>photo_gallery</h3>
-</section>
+<div class="container">
+  <h2 class="text-center">Photo Gallery w Tagged Photos</h2>
+  <div class="gallery">
 
+<h3></h3>
+<% @student.photo.each do |photo| %>
+ <%= image_tag photo.url %>
+<% end %>
+</div>
+</div>
+
+<div class="container">
+  <h2 class="text-center">Photo Gallery w Tagged Photos</h2>
+  <div class="gallery">
 <section="comments">
+<% @student.comments.each do |comment| %>
 <h3>comments area</h3>
 </section>
