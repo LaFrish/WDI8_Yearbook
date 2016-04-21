@@ -2,6 +2,7 @@ Negative.destroy_all
 Student.destroy_all
 Instructor.destroy_all
 Photo.destroy_all
+Comment.destroy_all
 
 Adrian = Instructor.create!(name: "Adrian Maseda", img_url: "http://orig02.deviantart.net/789b/f/2011/284/c/0/minus_the_bear_logo_by_mrjiggles4-d4cjd90.png", squad_name: "", squad_id: 1, codey_id: 41, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
 Becky = Instructor.create!(name: "Becky Beauchamp", img_url: "https://pbs.twimg.com/profile_images/566317879713214465/jzp0Z10y.jpeg", squad_name: "", squad_id: 2, codey_id: 42, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")

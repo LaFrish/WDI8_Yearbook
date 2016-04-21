@@ -1,18 +1,18 @@
 class CommentsController < ActiveRecord::Base
 
   def index
-    @student = Student.find(params[:student_id])
+    # @student = Student.find(params[:student_id])
     @comments = Comment.all
-    @comments = @student.comments.where(data_type: "comment")
+    # @comments = @student.comments.where(data_type: "comment")
   end
 
   def show
-    @student = Student.find(params[:student_id])
+    # @student = Student.find(params[:student_id])
     @comment = Comment.find(params[:id])
   end
 
   def new
-    @student = Student.find(params[:student_id])
+    # @student = Student.find(params[:student_id])
     @comment = Comment.new
   end
 
@@ -24,7 +24,7 @@ class CommentsController < ActiveRecord::Base
   end
 
   def edit
-    @student = Student.find(params[:student_id])
+    # @student = Student.find(params[:student_id])
     @comment = Comment.find(params[:id])
   end
 
@@ -51,3 +51,5 @@ class CommentsController < ActiveRecord::Base
   private
   def comment_params
     params.require(:comment).permit(:author, :title, :body)
+  end
+end
