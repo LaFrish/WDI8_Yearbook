@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController::Base
+class CommentsController < ApplicationController
 
   def index
     # @student = Student.find(params[:student_id])
