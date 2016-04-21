@@ -1,6 +1,5 @@
 How to get squad members listed under instructor.
 
-How to get comment to go to the correct path back.
 
 
 

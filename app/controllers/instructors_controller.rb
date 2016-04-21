@@ -16,6 +16,7 @@ class InstructorsController < ApplicationController
 
   def show
     @instructor = Instructor.find(params[:id])
+    @students = Student.where(squad_id: @instructor.squad_id)
   end
 
   def edit
@@ -45,4 +46,3 @@ class InstructorsController < ApplicationController
     params.require(:instructor).permit(:name, :img_url, :squad_name, :squad_id, :codey_id, :quote, :teaching, :memory, :favlang, :wisewords)
   end
 end
- 

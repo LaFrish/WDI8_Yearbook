@@ -31,15 +31,15 @@
 </div>
 </div>
 
-<button><%= link_to "Post a new comment", new_comment_path(@comment) %></button>
 
  <div class="container">
    <h2 class="text-center">comment area</h2>
    <div class="posts">
  <h3></h3>
+ <h3>comments area</h3>
 <% @student.comments.each do |comment| %>
-  <!-- #<%=  post version of image_tag photo.url %> -->
-<h3>comments area</h3>
+ <%= comment.body %>
+
  <% end %>
 </div>
 </div>
