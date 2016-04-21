@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Commment.create!(comment_params.merge(user: current_user))
+    @comment = Comment.create!(comment_params.merge(user: current_user))
     redirect_to comment_path(@post)
     # @comment = @student.comments.create!(comment_params)
     # redirect_to to student_path(@student)
