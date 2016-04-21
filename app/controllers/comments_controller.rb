@@ -1,4 +1,4 @@
-class CommentsController < ActiveRecord::Base
+class CommentsController < ApplicationController::Base
 
   def index
     # @student = Student.find(params[:student_id])
@@ -21,6 +21,7 @@ class CommentsController < ActiveRecord::Base
     redirect_to comment_path(@post)
     # @comment = @student.comments.create!(comment_params)
     # redirect_to to student_path(@student)
+    @comment.save
   end
 
   def edit
