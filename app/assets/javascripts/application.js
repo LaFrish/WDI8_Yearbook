@@ -14,36 +14,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
 
-$(document).ready(function () {
-  var trigger = $('.hamburger'),
-      overlay = $('.overlay'),
-     isClosed = false;
+	$("nav a").on("click", function(event){
+		event.preventDefault();
+		$("nav").addClass("fixed");
+		id = ($(this).attr("href"));
+		scrollVertical = $(id).offset().top;
 
-    trigger.click(function () {
-      hamburger_cross();
-    });
+		$("body, html").animate({scrollTop: scrollVertical});
+	});
 
-    function hamburger_cross() {
+	$(document).on("scroll", function(){
+		secondPage = $("nav li:nth-child(2) a").attr("href");
 
-      if (isClosed == true) {
-        overlay.hide();
-        trigger.removeClass('is-open');
-        trigger.addClass('is-closed');
-        isClosed = false;
-      } else {
-        overlay.show();
-        trigger.removeClass('is-closed');
-        trigger.addClass('is-open');
-        isClosed = true;
-      }
-  }
+		if ( $("body").scrollTop() >= $("nav").height() )
+		{
+			$("nav").addClass("fixed");
+		} else {
+			$("nav").removeClass("fixed");
+		}
+	});
 
-  $('[data-toggle="offcanvas"]').click(function () {
-        $('#wrapper').toggleClass('toggled');
-  });
 });
-
 // Create a lightbox
 
 var $lightbox = $("<div class='lightbox'></div>");
@@ -52,89 +45,247 @@ var $caption = $("<p class='caption'></p>");
 
 
 // Add image and caption to lightbox
-
-$lightbox
-	.append($img)
-	.append($caption);
-
-// Add lighbox to document
-
-$('body').append($lightbox);
-
-
-$('.gallery li').click(function (e) {
-	e.preventDefault();
-
-	// Get image link and description
-	var src = $(this).children('img').attr("src");
-	var cap = $(this).children('img').attr("alt");
-
-	// Add data to lighbox
-
-	$img.attr('src',src);
-	$caption.text(cap);
-
-	// $lightbox.append('<img src="' + src + '"></img><p class="caption">' + caption + '</p>');
-
-	// Show lightbox
-
-	$lightbox.fadeIn('fast');
-
-	$lightbox.click(function () {
-		$lightbox.fadeOut('fast');
-	});
-});
-
-
-'use strict';
-
-var transEndEventNames = {
-			'WebkitTransition': 'webkitTransitionEnd',
-			'MozTransition': 'transitionend',
-			'OTransition': 'oTransitionEnd',
-			'msTransition': 'MSTransitionEnd',
-			'transition': 'transitionend'
-		},
-		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-		support = { transitions : Modernizr.csstransitions },
-    overlay = document.querySelector("#overlay");
+//
+// $lightbox
+// 	.append($img)
+// 	.append($caption);
+//
+// // Add lighbox to document
+//
+// $('body').append($lightbox);
+//
+//
+// $('.gallery li').click(function (e) {
+// 	e.preventDefault();
+//
+// 	// Get image link and description
+// 	var src = $(this).children('img').attr("src");
+// 	var cap = $(this).children('img').attr("alt");
+//
+// 	// Add data to lighbox
+//
+// 	$img.attr('src',src);
+// 	$caption.text(cap);
+//
+// 	// $lightbox.append('<img src="' + src + '"></img><p class="caption">' + caption + '</p>');
+//
+// 	// Show lightbox
+//
+// 	$lightbox.fadeIn('fast');
+//
+// 	$lightbox.click(function () {
+// 		$lightbox.fadeOut('fast');
+// 	});
+// });
+//
+// $('li').on('click', function(e) {
+//   var img = $(this).find('img').attr('src');
+//   console.log(img);
+//   var newcss = $('#main-image').css('background-image', "url('" + img + "')");
+// });
 
 
-var app = angular.module('app', [])
-.controller('GalleryController', ['$scope', function($scope){
+setTimeout(function() {
+var gallery = [],
+	n = 0,
+	imgSize = 0,
+	// Used to define one variable for both for loops. Both for loops must have same number of iterations.
+	// This variable is based on the number of galleries.
+	count = document.getElementsByClassName('imgGallery').length;
 
-  // array of images
-  $scope.images = [
-    {url:"https://c1.staticflickr.com/9/8141/7356885112_80610dfa01_c.jpg",title:"Landscape",author:'Moyan Brenn',link:"https://www.flickr.com/photos/aigle_dore/7356885112/in/set-72157630056313707",comments:[
-      {username:"anon123", message:"This is a really cool image."}
-    ]},
-    {url:"https://c1.staticflickr.com/5/4052/4543929183_58d0651c14.jpg",title:"Kurdistan Nature, Landscape",author:'jan Sefti',link:'https://www.flickr.com/photos/kurdistan4all/4543929183',comments:[]},
-    {url:"https://c2.staticflickr.com/4/3642/3489892189_19d41228f0_z.jpg?zz=1",title:"Landscape",author:'Kenny Teo',link:'https://www.flickr.com/photos/cheishichiyo/3489892189/',comments:[]},
-    {url:"https://c1.staticflickr.com/1/159/351894183_f716cf8172_b.jpg",title:"landscape",author:'mike138',link:'https://www.flickr.com/photos/72486075@N00/351894183',comments:[
-      {username:"theDude", message:"Awesome, man!"},
-      {username:"otherGuy", message:"Ya, this is my fav"},
-      {username:"kermitt", message:"Not my cup of tea..."},
-      {username:"kermittSUX", message:"kermitt,you're an idiot!"}
-    ]},
-    {url:"https://c2.staticflickr.com/6/5567/15041625752_2d393562ce_c.jpg",title:"Landscape",author:'Vasile Hurghis',link:'https://www.flickr.com/photos/94186910@N03/15041625752',comments:[]},
-    {url:"https://c2.staticflickr.com/8/7611/16783852181_928f020b32_c.jpg",title:"Landscape in Soft Light",author:'Christian Weidinger',link:'https://www.flickr.com/photos/ch-weidinger/16783852181/',comments:[]},
-    {url:"https://c1.staticflickr.com/3/2720/4297479145_4bf8deef54.jpg",title:"Southwest Desert Landscape",author:'Bo Insogna',link:'https://www.flickr.com/photos/thelightningman/4297479145',comments:[]},
-    {url:"https://c1.staticflickr.com/1/11/16859633_62d97df1e1_z.jpg?zz=1",title:"Paysage / Landscape",author:'Frédéric Vissault',link:'https://www.flickr.com/photos/nomad-photography/16859633',comments:[
-      {username:"142567", message:"Me likey!"},
-      {username:"shermanator3000", message:"me too"}
-    ]},
-    {url:"https://c4.staticflickr.com/8/7351/16186049017_f605c97b0f_z.jpg",title:"Landscape Tutorial",author:'Lies Thru a Lens',link:'https://www.flickr.com/photos/danrocha/16186049017/',comments:[]}
-  ];
+function photoGallery(i) {
+	return function() {
 
-  // open overlay fullscreen view
-  $scope.launchDetail = function(image){
-    $scope.detail = image;
-    overlay.classList.add("open");
-  };
-  // close overlay
-  $scope.closeDetail = function(){
-    overlay.classList.remove("open");
-  };
+	  // Dynamically adds repeating elements. Doing it this way cleans up the HTML code since these elements repeat anyway.
+	  document.getElementsByClassName('imgGalleryExpanded')[i].appendChild(document.createElement("div")).className = 'imgData';
+	  document.getElementsByClassName('imgGalleryExpanded')[i].appendChild(document.createElement("div")).className = 'imgTitle';
+	  document.getElementsByClassName('imgGalleryExpanded')[i].appendChild(document.createElement("button")).className = 'galleryBack';
+	  document.getElementsByClassName('imgGalleryExpanded')[i].appendChild(document.createElement("button")).className = 'galleryNext';
 
+	  // Dynamically sets the html for the ImgTitle to match the name given to the imgGallery
+	  document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('imgTitle')[0].innerHTML = document.getElementsByClassName('imgGallery')[i].getAttribute('name');
 
-}]);
+	  // Variable defined to tell the function how many <img>'s are present so it loops around correctly.
+	  var galleryLength = (document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img').length - 1);
+
+	  // Listens for clicks on gallery thumbnails. Uses an if statement to check if the gallery improperly
+	  // has an open class when no galleries are open. If not, adds open class to open gallery.
+	  document.getElementsByClassName('imgGallery')[i].addEventListener('click', function() {
+		if (this.classList.contains('open')) {
+		  this.classList.remove('open');
+		} else {
+		  this.classList.add('open');
+		  setTimeout(boundingBox(),290);
+		}
+	  });
+
+	  // The below code is used to assign the gallery count and loacation displayed below the gallery image. It is
+	  // displayed using a CSS pseudo element on the back button. 1 is added to each value to display each value with
+	  // the starting point as one instead of zero. It is repeat in the back and next functions, as well as the close
+	  // function, to change on click. Unfortunatly, CSS transtitions are not supported on pseudo element content values,
+	  // so this is the only dynamic peice that doesn't fade in and out properly.
+	  document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('galleryBack')[0].setAttribute('data-count', (n+1) + '/' + (galleryLength+1));
+
+	  // Removes active class when overlay detects a mouseup event. Note: anywhere on overlay is fine.
+	  // The X in the corner is done with CSS pseudo elements and is completely asthetic.
+	  // Also resets n and opacities per gallery so that each time you open a gallery you start
+	  // on the first image. The touchend fucntion is a duplicate function to listen to touch end
+	  // on mobile.
+	  document.addEventListener('mouseup',function(e){
+		  if (e.target.parentNode.className != 'galleryImgs' && e.target.className != 'galleryNext' && e.target.className != 'galleryBack') {
+			for (var u = 0; u < document.getElementsByClassName('imgGallery').length; u++) {
+				document.getElementsByClassName('imgGallery')[u].classList.remove('open');
+			};
+			n = 0;
+
+			setTimeout(function() {
+				document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('galleryBack')[0].setAttribute('data-count', (n+1) + '/' + (galleryLength+1));
+			},290);
+
+			for (var p = 0; p < document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img').length; p++) {
+				document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[p].style.opacity= 0;
+			};
+
+			document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.opacity = 1;
+		  };
+		});
+
+		document.addEventListener('touchend',function(e){
+		  if (e.target.parentNode.className != 'galleryImgs' && e.target.className != 'galleryNext' && e.target.className != 'galleryBack') {
+			for (var u = 0; u < document.getElementsByClassName('imgGallery').length; u++) {
+				document.getElementsByClassName('imgGallery')[u].classList.remove('open');
+			};
+			n = 0;
+
+			setTimeout(function() {
+				document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('galleryBack')[0].setAttribute('data-count', (n+1) + '/' + (galleryLength+1));
+			},290);
+
+			for (var p = 0; p < document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img').length; p++) {
+				document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[p].style.opacity= 0;
+			};
+
+			document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.opacity = 1;
+		  };
+		});
+
+	  // Sets the first image's opacity to 1 on function load. Ensures that the first image is visible fomr start.
+	  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[0].style.opacity = 1;
+
+	  // Check to make sure a name is given to the gallery. If, it applies that name to the inner gallery element.
+	  if (typeof(document.getElementsByClassName('galleryImgs')[i]) != 'undefined') {
+		document.getElementsByClassName('galleryImgs')[i].setAttribute('name', document.getElementsByClassName('imgGallery')[i].getAttribute('name'));
+	  };
+
+	  // This function determines the placement, size, and content of the name box on the opened gallery. The full size of the image is obtained through
+	  // .getBoundingClientRect() and then checked to see if the height or width is larger i.e. portrait or landscape.
+	  function boundingBox() {
+		  // A bounding rectanlge is obtained for each galleries first image
+		  imgSize = document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].getBoundingClientRect();
+
+		  // Using the bounding rectanle, the image is determined to be portrait or landscape. Then the images height and width
+		  // are set to be a percentage of the viewport with limts at either end.
+		  // For portrait;
+		  if (imgSize.height > imgSize.width) {
+			  if (window.innerWidth*.8 > 1000) {
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.height = '750px';
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.width = 'auto';
+			  } else if (window.innerWidth*.8 < 300) {
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.height = '225px';
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.width = 'auto';
+			  } else {
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.height = (window.innerWidth*.8)*.75 + 'px';
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.width = 'auto';
+			  }
+			// For landscape;
+		  } else {
+			  if (window.innerWidth*.8 > 1000) {
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.width = '1000px';
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.height = 'auto';
+			  } else if (window.innerWidth*.8 < 300) {
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.width = '300px';
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.height = 'auto';
+			  } else {
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.width = (window.innerWidth*.8) + 'px';
+				  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.height = 'auto';
+			  }
+		  };
+
+		  // Once the image has been resized, it's new bounding rectangle is observed
+		  imgSize = document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].getBoundingClientRect();
+
+		  // If the img has a 'data' attribute, the .imgData <div>'s height and width properties are set equal to the image's
+		  // respective properties that were obtained through the use of the bounding rectangle. The .imgData has it's 'data'
+		  // attribute set to be that of the <img>
+		  if (document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].hasAttribute('data')) {
+			  document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('imgData')[0].style.opacity = 1;
+			  document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('imgData')[0].style.width = imgSize.width  + 2 + 'px';
+			  document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('imgData')[0].style.transform =
+			  	'translate(-50%,'+(imgSize.top + imgSize.height - document.getElementsByClassName('imgData')[0].clientHeight + 1)  +'px)'
+			  ;
+
+			  document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('imgData')[0].setAttribute('data',
+				document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].getAttribute('data')
+			  );
+		  // If the <img> has no 'data' attribute, the .imgData <div>'s opacity is set to zero and hidden.
+		  } else {
+			 document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('imgData')[0].style.opacity = 0;
+		  }
+	  };
+
+	  setTimeout(boundingBox,0);
+	  window.addEventListener('resize',boundingBox);
+
+	  // The function of the next button. The if statement is in place so that once the gallery reaches the
+	  // end of the images, as defined by galleryLength, it loops back around and starts over. Each click also refires
+	  // the boundingBox function to check if the new <img> has a 'data' attribute.
+	  document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('galleryNext')[0].addEventListener('click', function() {
+		if (n < galleryLength) {
+		  n++;
+
+		  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n - 1].style.opacity = 0;
+		  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.opacity = 1;
+		} else {
+		  n = 0;
+		  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[galleryLength].style.opacity = 0;
+		  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.opacity = 1;
+		}
+		document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('galleryBack')[0].setAttribute('data-count', (n+1) + '/' + (galleryLength+1));
+
+		boundingBox();
+
+	  });
+
+	  // The function of the back button. Similar to the next button, the if statement included is in place
+	  // for looping. If n goes below zero, the if statment gets n to the galleryLength before changing
+	  // the image's opacity.  Each click also refires the boundingBox function to check if the new <img> has a 'data' attribute.
+	  document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('galleryBack')[0].addEventListener('click', function() {
+		if (n > 0) {
+		  n--;
+		  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n + 1].style.opacity = 0;
+		  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.opacity = 1;
+		} else {
+		  n = galleryLength;
+		  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[0].style.opacity = 0;
+		  document.getElementsByClassName('galleryImgs')[i].getElementsByTagName('img')[n].style.opacity = 1;
+		}
+		document.getElementsByClassName('imgGalleryExpanded')[i].getElementsByClassName('galleryBack')[0].setAttribute('data-count', (n+1) + '/' + (galleryLength+1));
+
+		boundingBox();
+
+	  });
+
+	};
+  }
+
+  // Mulitple for loops in place to "break" Javascript's function-only variable scope. More information
+  // on this can be found at the page located at the http link at the top of this function.
+  for (var i = 0; i < count; i++) {
+	gallery[i] = photoGallery(i);
+  }
+
+  for (var j = 0; j < count; j++) {
+	gallery[j]();
+  }
+
+}, 0);

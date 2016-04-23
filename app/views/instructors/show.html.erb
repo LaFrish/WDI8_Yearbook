@@ -13,15 +13,12 @@
  <%= @instructor.favlang %> </br>
  <%= @instructor.wisewords %> </br>
 </div>
+<div class="index">
  <h2><%= @instructor.squad_name %></h2>
- <p> Squad team members</p>
 <% @students.each do |student| %>
 <%= link_to image_tag(student.img_url), student_path(student) %>
 <% end %>
-
-
-
-
+</div></br>
  <div class="container">
    <h2 class="text-center">Photo Gallery w Tagged Photos</h2>
    <div class="gallery">
@@ -35,9 +32,7 @@
 </div>
 
 
-<div class="container">
-  <h2 class="text-center">comment area</h2>
-  <div class="posts">
+  <div class="textarea-field">
  <h3></h3>
  <h3>comments area</h3>
 <% @instructor.comments.each do |comment| %>
