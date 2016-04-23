@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'yearbook#index'
+  get 'tags/:tag', to: 'photo#index', as: :tag
 
-get 'tags/:tag', to: 'articles#index', as: :tag
 
   resources :instructors do
     resources :comments
@@ -12,7 +12,7 @@ get 'tags/:tag', to: 'articles#index', as: :tag
     resources :comments
   end
 
-  resources :yearbook
+    resources :photos
   resources :codeys
   resources :squads
 end
