@@ -2,6 +2,11 @@
  *= require_self
  */
 
+@font-face {
+  font-family:"Sketch_Rockwell";
+  src:url("Sketch_Rockwell.ttf");
+}
+
 
 @import "http://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
@@ -504,4 +509,17 @@ img:hover {
 	line-height: 1.5;
 	font-weight: 700;
 	color: #eee;
+}
+
+h1 {
+  font-family: "Sketch_Rockwell";
+}
+
+//tag gem
+#tag_cloud {
+  width: 400px;
+  line-height: 1.6em;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
 }
