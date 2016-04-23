@@ -203,7 +203,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   activerecord-postgis-adapter
-  acts-as-taggable-on
+  acts-as-taggable-on (~> 3.4)
   bourbon
   byebug
   coffee-rails (~> 4.1.0)

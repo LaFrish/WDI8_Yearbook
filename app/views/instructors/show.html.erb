@@ -16,8 +16,11 @@
  <h2><%= @instructor.squad_name %></h2>
  <p> Squad team members</p>
 <% @students.each do |student| %>
-<%= student.name %>
+<%= link_to image_tag(student.img_url), student_path(student) %>
 <% end %>
+
+
+
 
  <div class="container">
    <h2 class="text-center">Photo Gallery w Tagged Photos</h2>
