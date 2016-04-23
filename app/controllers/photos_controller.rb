@@ -38,6 +38,10 @@ class PhotoController < ApplicationController
     redirect_to photo_path(@photo)
   end
 
+  def attr_accessible
+    @photo = Photo.find(params[:id])
+  end
+
   private
   def photo_params
     params.require(:photo).permit(:img_url, :tag_list)

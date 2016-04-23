@@ -5,6 +5,4 @@ class Student < ActiveRecord::Base
   has_many :comments
   has_many :negatives
   has_many :photos, through: :negatives
-  attr_accessible :photos, :name, :tag_list
-  acts_as_taggable
 end
