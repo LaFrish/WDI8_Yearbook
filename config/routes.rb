@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'yearbook#index'
 
-
+get 'tags/:tag', to: 'articles#index', as: :tag
 
   resources :instructors do
     resources :comments

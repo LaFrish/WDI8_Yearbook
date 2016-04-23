@@ -10,7 +10,7 @@ gem 'puma'
 gem 'activerecord'
 gem 'pry'
 gem 'pry-rails'
-
+gem 'acts-as-taggable-on'
 gem 'bourbon'
 gem 'compass'
 gem 'susy'
