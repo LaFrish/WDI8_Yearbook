@@ -1,15 +1,21 @@
-<h1> New comment post</h1>
+<div class="comments">
+		<div class="comment-wrap">
+				<div class="comment-block">
+						<form action="">
 
-<%= form_for [@comment] do |f| %>
+  <%= form_for [@comment] do |f| %>
   <%= f.label :author %>
   <%= f.text_field :author %>
 </br>
-  <%=f.label :title %>
-  <%=f.text_field :title %>
-</br>
+<textarea name="" id="" cols="30" rows="3" placeholder="Add comment...">
   <%=f.label :body %>
   <%=f.text_field :body %>
+  </textarea>
 </br>
   <%=f.submit %>
   <% end %>
 </br>
+</form>
+</div>
+</div>
+</div>

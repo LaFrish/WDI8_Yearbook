@@ -6,31 +6,41 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>
-	<meta charset="UTF-8">
-	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <meta charset="UTF-8">
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
-		<section id="home">
+  <section id="home">
 
-			<div class="overlay">
+    <div class="overlay">
 
-				<nav role="navigation">
-					<ul class="vertical-list">
-						<li><a href="#home">Home</a></li>
-						<li><a href="/students">Students</a></li>
-						<li><a href="/instructors">Instructors</a></li>
-            <li><a href="#photos">Gallery</a></li>
-					</ul>
-				</nav>
+      <nav role="navigation">
+        <ul class="vertical-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="/students">Students</a></li>
+          <img url(GA_Cog_Large_Red_RGB.png)>
+          <li><a href="/instructors">Instructors</a></li>
+          <li><a href="#photos">Gallery</a></li>
+        </ul>
+        <div class="stage">
+            <div class="searchbar">
 
-				<div>
-					<h1><span class="logo">WDI8 Yearbook</span><small></small></h1>
-				</div>
-			</div>
-		</section>
+              <input type="text" class="btn-extended" placeholder="search" />
 
-		<section id="about">
-</section>
+              <div class="btn-search"></div>
+
+            </div><!-- .searchbar -->
+        </div><!-- .stage -->
+      </nav>
+
+      <div>
+        <h1><span class="logo">WDI8 Yearbook</span><small></small></h1>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <img src="GA_Cog_Large_Red_RGB.png">
+  </section>
 
 
 
