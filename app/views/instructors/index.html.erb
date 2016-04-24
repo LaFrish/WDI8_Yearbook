@@ -1,15 +1,7 @@
 <h2>instructor Index</h2>
-
-  <div class="circle">
-    <!-- <figure> -->
-        <!-- <div class="bg8"></div> -->
-        <% @instructors.each do |instructor| %>
-          <%= link_to image_tag(instructor.img_url), instructor_path(instructor) %>
-        <caption class="caption circle-caption">
-    <%=instructor.name%>
-</caption>
-      <!-- </figure> -->
-
+<div class="index">
+  <% @instructors.each do |instructor| %>
+  <%= link_to image_tag(instructor.img_url), instructor_path(instructor) %>
+  <%=instructor.name%>
   <% end %>
-  </div>
-  </div>
+</div>

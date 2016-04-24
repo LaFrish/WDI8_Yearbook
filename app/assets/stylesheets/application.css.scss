@@ -2,6 +2,18 @@
  *= require_self
  */
 
+ $ptsans: "PT Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+ $placeholder: #ced2db;
+ $text-color: #555f77;
+ $links: #0095ff;
+ $grey-1   : #333;
+ $blue-1   : #00D7D8;
+ $purple-1 : #9261DF;
+ $purple-2 : #6434A2;
+
+ $font: 'Montserrat', "helvetica neue", helvetica, arial, sans-serif;
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import "http://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 @import "https://daneden.github.io/animate.css/animate.min.css";
@@ -19,118 +31,42 @@
     font-style: normal;
 }
 
-button{
-  background-color: red;
-}
-//circle index img
-// .index img {
-//   height: 300px;
-//   width: 300px;
-//   border-radius: 50%;
-//   border: 4px solid white;
-//   box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-//   margin: 25px;
-//   flex: 0 1 calc(20% - 50px);
-//   min-width:140px;
-//   overflow:hidden;
-//   position: relative;
-//   cursor: pointer;
-//   float: left;
-//   -webkit-animation: index imgSlideIn .65s .15s ease forwards;
-//   animation: index imgSlideIn .65s .15s ease forwards;
-// }
-//
-// .index img:hover {
-//   background-color: red;
-//   opacity: 0.4;
-//   cursor:pointer;
-//   z-index: 1;
-// }
-
-.circle img{
+.index img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  margin: 25px;
+  flex: 0 1 calc(20% - 50px);
+  min-width:140px;
+  overflow:hidden;
   position: relative;
-  width: 300px;
-  height:300px;
-  border-radius: 50%;
-  background: #FF8C94;
-  float:left;
-  margin:10px 10px 80px 10px;
-  overflow: hidden;
+  cursor: pointer;
+  float: left;
+  // -webkit-animation: index imgSlideIn .65s .15s ease forwards;
+  // animation: index imgSlideIn .65s .15s ease forwards;
 }
-.circle div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  display: table;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-// .bg8 {
-//   background-image:url("http://www.outil-hydraulique.com/img/14.jpg");
-//   background-size: cover;
-//   background-size: 300px auto;
-// }
-//
-// .circle figure {
-//   margin: 0px;
-//   padding: 0px;
-// }
 
-.circle figure img {
-  width: 100%;
-  height: 100%;
-  width: 300px;
-  height:300px;
-  border-radius: 50%;
-}
-.circle-caption {
-  font-weight:300;
-  position: absolute;
+.index img:hover {
+  background-color: red;
+  opacity: 0.4;
+  cursor:pointer;
   z-index: 1;
-  background: linear-gradient(to bottom, rgba(255, 140, 148,0.7) 0%, rgba(255, 140, 148, 0.7) 100%);
-  color: #fff;
-  text-align: center;
-}
-.caption {
-  left: 0;
-  right: 0;
-  bottom: -100%;
-  height: 50%;
-  -webkit-transition: bottom .3s linear;
-  transition: bottom .3s linear;
 }
 
-.circle:hover .caption{
-  bottom: 0;
-}
-
-* {
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	font-family: 'sketch_rockwell', serif;
-	font-size: 20px;
-}
-
-li {
-	list-style: none;
-}
 
 a {
 	color: white;
 }
 
 a:hover, a:focus {
-	color: white;
-	text-decoration: none;
+	color: yellow;
 }
 
+li {
+	list-style: none;
+}
 
 h1 {
 	color: white;
@@ -168,10 +104,9 @@ h6 {
 	color: #F0F0F0;
 }
 
-
 h1 .logo {
-	font-size: 230%;
-	font-family: 'Brush Script MT', cursive;
+	font-size: 200%;
+	font-family: "Montserrat";
 	width: 200px;
 	margin-left: -20px;
 }
@@ -180,7 +115,7 @@ h1 .logo {
 .noir {
 	display: block;
 	background-color: black;
-	padding: 18px;
+	padding: 1px;
 	border: 3px solid white;
 }
 
@@ -214,13 +149,13 @@ h1 .logo {
 	background-color: rgba(4,14,22,.83);
 	height: 100%;
 	width: 100%;
-	padding-bottom: 80px;
+	padding-bottom: 20px;
 }
 
 #home nav {
 	margin: 0 auto;
 	width: 700px;
-	padding-top: 80px;
+	padding-top: 50px;
 }
 
 #home nav ul {
@@ -511,7 +446,7 @@ h1 .logo {
 
 
 #contact {
-	background: url("https://lh3.googleusercontent.com/UOSc1LGGq93WFTl1SxUC6mqn3IY-L6aKHlGAjpYsZ2FKa_wbHKYfceWi8vwd7QSbmuihw5sEtLjO1F5eqkhki11h7MIR9uZWgwvxyOQZu5ufj_0xbxLkg9afQTqjV8G5yQ6NsXGXfOrAyt5bSXfsHR98eYX_1_wRYG8kik0_PWrzRR357zO-7MmaJdzW7y0ZB48p8cFn1lmPWGt0HVylwqR0Jkvi3ODOxV9bXsLGm77wtbQKwa-bSFU1a_7a7QIEaf-4o3f0jQ30yDhcK7n53RZEvBrfJ6zj9gVzxEkkZJX86Q9S38lFIiNNY6aaF2WEhKaMKFVkb1OCGtdlt8jKay0Ba6DQhze6CDvqvBt5-_DnGFiIymJ0aR7rtIaC-anhHTRknHamUyXdfq4cvJcAP4PcwmXDQ0qGWbGzRUS1ILis7qMAlSgjpRpnw2BNy_eEXQ2QlgG1rAvH2mT9kOO2Plmb26Z2bCh-U-zipuzncILHYPozF-3m071YX8EWvbI8Nvcd4RJH4nt46O1GlKPewbSIfml7unBt9cJo5stLaQ=w925-h674-no") no-repeat;
+	background: url() no-repeat;
 	background-size: cover;
 }
 
@@ -758,7 +693,7 @@ h1 .logo {
 
 
 //lightbox
-.container{
+.lightboxContainer{
 	max-width: 640px;
 	margin: 5% auto;
 	padding: 20px;
@@ -847,7 +782,7 @@ h1 .logo {
 
 
 //img gallery
-.imgGallery Container {
+.imgGalleryContainer {
   display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
@@ -1175,4 +1110,243 @@ h1 .logo {
   	text-align: center;
 	color:#fcfcfc;
 	text-shadow: 0 2px 10px rgba(0,0,0,.42);
+}
+
+
+// //comment box
+
+input, textarea {
+  outline: none;
+  border: none;
+  display: block;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	font-family: $ptsans;
+	font-size: rem(16);
+  color: $text-color;
+  @include placeholder {
+		color: $placeholder;
+	}
+}
+
+p {
+  line-height: rem(21);
+}
+
+.comments {
+  margin: rem(40) auto 0;
+  max-width: rem(972);
+  padding: 0 rem(20);
+  background-color: #f0f2fa;
+}
+
+.comment-wrap {
+  margin-bottom: rem(20);
+  display: table;
+  width: 100%;
+  min-height: rem(85);
+}
+
+.photo {
+  background-color: #ff6666;
+  padding-top: rem(10);
+  display: table-cell;
+  width: rem(56);
+
+  .avatar {
+    @include size(rem(36));
+    background-color: #0094ff;
+    border-radius: 50%;
+    background-size: contain;
+  }
+}
+
+.comment-block {
+  padding: rem(16);
+  background-color: #fff;
+  display: table-cell;
+  vertical-align: top;
+  border-radius: rem(3);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+
+  textarea {
+    width: 100%;
+		resize: none;
+  }
+}
+
+.comment-text {
+  margin-bottom: rem(20);
+}
+
+.bottom-comment {
+  color: #acb4c2;
+  font-size: rem(14);
+}
+
+.comment-date {
+  float: left;
+}
+
+.comment-actions {
+  float: right;
+
+  li {
+    display: inline;
+		margin: -2px;
+		cursor: pointer;
+
+    &.complain {
+      padding-right: rem(12);
+      border-right: 1px solid #e1e5eb;
+    }
+
+    &.reply {
+      padding-left: rem(12);
+			padding-right: rem(2);
+    }
+
+		&:hover {
+      color: $links;
+			text-decoration: underline;
+    }
+  }
+}
+
+
+.button{
+  background-color: #acb4c2;
+	position:relative;
+	padding:14px 0;
+	border:2px red solid;
+	float:left;
+	color: red;
+  text-color: #000;
+	cursor:pointer;
+	font-family:$font;
+	font-size:.9em;
+	text-transform:uppercase;
+	transition:  color 0.4s, background-color 0.4s;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1em;
+	outline: none;
+	text-align: center;
+	text-decoration: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 210px;
+  top: 50%;
+  left: 50%;
+	margin: 0 -105px;
+	width: 210px;
+  &:hover,
+  &:focus {
+    transition: color 0.4s, background-color 0.4s;
+    color: #000;
+    text-decoration: none;
+    background-color: red;
+  }
+}
+
+.container{
+	max-width: 800px;
+	margin: 5% auto;
+	padding: 20px;
+	background-color: red;
+	border-radius: 10px;
+	overflow: hidden;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px #222;
+}
+
+.stage{
+  background-color: $purple-1;
+  transition: all 0.3s ease-in-out;
+
+  &.faded{
+    background-color: $purple-2;
+  }
+}
+
+
+.searchbar{
+  position: relative;
+
+  &.clicked{
+
+    .btn-search{
+      border-radius: 0 40px 40px 0;
+      margin-left: 115px;
+    }
+    .btn-extended{
+      margin-left: -185px;
+      width: 300px;
+      padding: 20px 30px;
+      opacity: 1;
+      border-radius: 40px 0 0 40px;
+    }
+  }
+
+  .btn-search{
+    position: absolute;
+    background: url("GA_Cog_Large_Red_RGB.png");
+    color: white;
+    width : 70px;
+    height: 70px;
+    left: 50%;
+    margin-left: -35px;
+    top: 50%;
+    margin-top:  -35px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+
+    &:before{
+      position: absolute;
+      content:'';
+      display: block;
+      top: 24px; left: 24px;
+      width: 15px; height: 15px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 0px 3px #fff;
+    }
+
+      &:after{
+        content: "";
+        position: absolute;
+        width: 15px; height: 4px;
+        top: 42px; left: 37px;
+        background-color: #fff;
+        transform: rotateZ(45deg);
+        border-radius: 3px;
+      }
+
+
+  }
+
+  .btn-extended{
+    position: absolute;
+    width: 0px; height: 70px;
+    left: 50%;  margin-left: 35px;
+    top: 50%;   margin-top:  -35px;
+    border-radius: 40px;
+    padding: 0;
+    font-size: 16px;
+    border: none;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+
+
+    &:focus{
+      outline-width: 0px;
+    }
+  }
+
 }

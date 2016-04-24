@@ -14,6 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$('.btn-search').click(function(){
+  $('.searchbar').toggleClass('clicked');
+  $('.stage').toggleClass('faded');
+
+
+  if($('.searchbar').hasClass('clicked')){
+    $('.btn-extended').focus();
+  }
+});
+
+
 $(document).ready(function(){
 
 	$("nav a").on("click", function(event){
