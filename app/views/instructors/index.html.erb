@@ -1,7 +1,7 @@
 <h2>instructor Index</h2>
 <div class="index">
   <% @instructors.each do |instructor| %>
-  <%= link_to image_tag(instructor.img_url), instructor_path(instructor) %>
-  <%=instructor.name%>
+  <%= link_to image_tag(instructor.img_url, :size => "100x50"), instructor_path(instructor) %>
+  <%= instructor.name %>
   <% end %>
 </div>

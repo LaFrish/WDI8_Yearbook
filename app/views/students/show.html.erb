@@ -1,92 +1,48 @@
 
 <h2>Student Show aka Profile Page</h2>
 
-  <div class="button"><%= link_to "Edit Student", edit_student_path(@student)%></h2></div>
+<div class="button"><%= link_to "Edit Student", edit_student_path(@student)%></h2></div>
 <div class="container">
-<h1> <%= @student.name %> </h1>
-<p>
-<%= image_tag @student.img_url %> </br>
-<%= link_to @student.github_url %>
-<%= link_to @student.portfolio_url %>
-<%= @student.quote %>
-<%= @student.q1 %>
-<%= @student.q2 %>
-<%= @student.q3 %>
-<%= @student.q4 %>
-<%=link_to @student.project1_url %>
-<%=link_to @student.project2_url %>
-<%=link_to @student.project3_url %>
-<%=link_to @student.project4_url %>
-<%=link_to @student.email %>
-<%=link_to @student.fb %>
-<%=link_to @student.linkedin %>
-<%=link_to @student.squad_id %>
-<%=link_to @student.codey_id %>
-</p>
+  <h1> <%= @student.name %> </h1>
+  <p>
+    <%= image_tag @student.img_url %> </br>
+    <%= link_to @student.github_url %>
+    <%= link_to @student.portfolio_url %>
+    <%= @student.quote %>
+    <%= @student.q1 %>
+    <%= @student.q2 %>
+    <%= @student.q3 %>
+    <%= @student.q4 %>
+    <%=link_to @student.project1_url %>
+    <%=link_to @student.project2_url %>
+    <%=link_to @student.project3_url %>
+    <%=link_to @student.project4_url %>
+    <%=link_to @student.email %>
+    <%=link_to @student.fb %>
+    <%=link_to @student.linkedin %>
+    <%=link_to @student.squad_id %>
+    <%=link_to @student.codey_id %>
+  </p>
 </div>
 <div class="container">
   <h2 class="text-center">Photo Gallery w Tagged Photos</h2>
   <div class="gallery">
 
-</div>
+  </div>
 </div>
 
 
- <div class="container">
-   <h2 class="text-center">comment area</h2>
-   <div class="posts">
- <h3></h3>
- <h3>comments area</h3>
-<% @student.comments.each do |comment| %>
- <%= comment.body %>
+<div class="container">
+  <h2 class="comments">comment area</h2>
+  <div class="comment-wrap">
+    <h3></h3>
+    <div class="comment-block">
+    </div>
+    <h3>comments area</h3>
+    <% @student.comments.each do |comment| %>
+    <%= comment.body %>
 
- <% end %>
-</div>
+    <% end %>
+  </div>
 </div>
 </br>
-
-<div class="comments">
-		<div class="comment-wrap">
-				<div class="photo">
-						<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg')"></div>
-				</div>
-				<div class="comment-block">
-						<form action="">
-								<textarea name="" id="" cols="30" rows="3" placeholder="Add comment..."></textarea>
-						</form>
-				</div>
-		</div>
-
-		<div class="comment-wrap">
-				<div class="photo">
-						<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg')"></div>
-				</div>
-				<div class="comment-block">
-						<p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam reprehenderit quasi
-								sapiente modi tempora at perspiciatis mollitia, dolores voluptate. Cumque, corrupti?</p>
-						<div class="bottom-comment">
-								<div class="comment-date">Aug 24, 2014 @ 2:35 PM</div>
-								<ul class="comment-actions">
-										<li class="complain">Complain</li>
-										<li class="reply">Reply</li>
-								</ul>
-						</div>
-				</div>
-		</div>
-
-		<div class="comment-wrap">
-				<div class="photo">
-						<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/felipenogs/128.jpg')"></div>
-				</div>
-				<div class="comment-block">
-						<p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam.</p>
-						<div class="bottom-comment">
-								<div class="comment-date">Aug 23, 2014 @ 10:32 AM</div>
-								<ul class="comment-actions">
-										<li class="complain">Complain</li>
-										<li class="reply">Reply</li>
-								</ul>
-						</div>
-				</div>
-		</div>
-</div>
