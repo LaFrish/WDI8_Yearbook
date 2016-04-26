@@ -4,28 +4,21 @@
   <title>WDI8 Yearbook</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
   <%= csrf_meta_tags %>
   <meta charset="UTF-8">
   <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
   <section id="home">
-
     <div class="overlay">
-
       <nav role="navigation">
-
         <ul class="vertical-list">
-
           <li><%= link_to "Students", students_path(@student) %></li>
           <li><%= link_to "Instructors", instructors_path(@instructor) %></li>
           <li><%= link_to "Gallery", photos_path(@photo) %></li>
-          <li><%= link_to "Codey Index", codeys_path(@codey) %></li>
+          <li><%= link_to "Codey", codeys_path(@codey) %></li>
         </ul>
-        <%= link_to image_tag("GA_Cog_Large_Red_RGB.png"), root_path %>
       </nav>
-
 </div>
       <div class="logo">
         <h1>WDI8 Yearbook</h1>
@@ -36,6 +29,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/main.js"></script>
+<%= link_to image_tag("GA_Cog_Large_Red_RGB.png"), root_path %>
 </body>
 <%= yield %>
 
