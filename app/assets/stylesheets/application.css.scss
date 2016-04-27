@@ -18,16 +18,9 @@
 @import "https://daneden.github.io/animate.css/animate.min.css";
 @import "bourbon";
 
-@font-face {
-    font-family: 'sketch_rockwellregular';
-    src: url('sketch_rockwell-webfont.eot');
-    src: url('sketch_rockwell-webfont.eot?#iefix') format('embedded-opentype'),
-         url('sketch_rockwell-webfont.woff2') format('woff2'),
-         url('sketch_rockwell-webfont.woff') format('woff'),
-         url('sketch_rockwell-webfont.ttf') format('truetype'),
-         url('sketch_rockwell-webfont.svg#sketch_rockwellregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+@font-face{
+	font-family:"Sketch Rockwell";
+	src:url("http://www.myfontfree.com/data/1/s/sketch-rockwell/dahot.SketchRockwell-Bold.ttf");
 }
 
 .index img {
@@ -68,10 +61,11 @@ li {
 }
 
 h1 {
-	color: white;
+	color: #e11a61;
 	text-align: center;
 	margin-top: 4%;
 	font-size: 412.5%;
+  	font-family: "Sketch Rockwell";
 }
 
 
@@ -105,7 +99,8 @@ h6 {
 
 h1 .logo {
 	font-size: 200%;
-	font-family: "Montserrat";
+	font-family: "Sketch Rockwell";
+  color: #e11a61;
 	width: 200px;
 	margin-left: -20px;
 }
