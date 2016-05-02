@@ -18,9 +18,14 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.create!(photo_params)
+    if @photo.save
+      flash[:success] = "The photo was added"
 
     redirect_to photo_path(@photo)
+  else
+    render 'new'
   end
+end
 
   def edit
     @photo = Photo.find(params[:id])
@@ -44,6 +49,6 @@ class PhotosController < ApplicationController
 
   private
   def photo_params
-    params.require(:photo).permit(:img_url, :tag_list)
+    params.require(:photo).permit(:image, :title, :caption, :img_url, :tag_list)
   end
 end
