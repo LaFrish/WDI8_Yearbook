@@ -1,0 +1,22 @@
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/rgeo-0.5.3/ext/proj4_c_impl
+/Users/LaFrish/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20160501-60990-6n4m.rb extconf.rb
+checking for proj_api.h... no
+**** WARNING: Unable to find Proj headers or Proj version is too old.
+**** Compiling without Proj support.
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/extensions/x86_64-darwin-15/2.3.0/rgeo-0.5.3/mkmf.log
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/rgeo-0.5.3/ext/proj4_c_impl
+make "DESTDIR=" clean
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/rgeo-0.5.3/ext/proj4_c_impl
+make "DESTDIR="
+compiling main.c
+linking shared-object rgeo/coord_sys/proj4_c_impl.bundle
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/rgeo-0.5.3/ext/proj4_c_impl
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 proj4_c_impl.bundle ./.gem.20160501-60990-gc22fy/rgeo/coord_sys

@@ -1,6 +1,6 @@
 
 source 'https://rubygems.org'
-ruby '2.2.4'
+ruby '2.3.0'
 
 gem 'sass'
 # Use postgresql as the database for Active Record
@@ -10,7 +10,7 @@ gem 'puma'
 gem 'activerecord'
 gem 'pry'
 gem 'pry-rails'
-gem 'acts-as-taggable-on', '~> 3.4'
+gem 'acts-as-taggable-on'
 gem 'bourbon'
 gem 'compass'
 gem 'susy'
@@ -18,7 +18,7 @@ gem 'aws-sdk', '~> 2.0'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 # gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.0.0.beta1'
+gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15.1'
 # Use SCSS for stylesheets

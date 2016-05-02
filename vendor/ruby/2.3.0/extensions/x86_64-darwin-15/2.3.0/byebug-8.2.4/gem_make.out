@@ -1,0 +1,19 @@
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/byebug-8.2.4/ext/byebug
+/Users/LaFrish/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20160501-60990-hrdk51.rb extconf.rb
+creating Makefile
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/byebug-8.2.4/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/byebug-8.2.4/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/byebug-8.2.4/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20160501-60990-fmtz5x/byebug

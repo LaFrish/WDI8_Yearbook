@@ -6,21 +6,21 @@ class Photo < ActiveRecord::Base
   acts_as_taggable
   acts_as_taggable_on :name
 
-
-validates_attachment :image,
-                     content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
-has_attached_file :image,
-                  styles: { thumb: ["64x64#", :jpg] }
-
-                  has_attached_file :image,
-                                    styles: { thumb: ["64x64#", :jpg],
-                                              original: ['500x500>', :jpg] },
-                                    convert_options: { thumb: "-quality 75 -strip",
-                                                       original: "-quality 85 -strip" },
-                                    storage: :s3,
-                                    s3_credentials: {access_key_id: ENV["AWS_KEY"], secret_access_key: ENV["AWS_SECRET"]},
-                                    bucket: "wdi8"
-s3_region: ENV["aws_region"],
+#
+# validates_attachment :image,
+#                      content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
+# has_attached_file :image,
+#                   styles: { thumb: ["64x64#", :jpg] }
+#
+#                   has_attached_file :image,
+#                                     styles: { thumb: ["64x64#", :jpg],
+#                                               original: ['500x500>', :jpg] },
+#                                     convert_options: { thumb: "-quality 75 -strip",
+#                                                        original: "-quality 85 -strip" },
+#                                     storage: :s3,
+#                                     s3_credentials: {access_key_id: ENV["AWS_KEY"], secret_access_key: ENV["AWS_SECRET"]},
+#                                     bucket: "wdi8"
+# s3_region: ENV["aws_region"],
                   end
 # def self.tagged_with(name)
 #   Tag.find_by_name!(name).articles
