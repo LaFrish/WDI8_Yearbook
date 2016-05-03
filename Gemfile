@@ -15,7 +15,7 @@ gem 'bourbon'
 gem 'compass'
 gem 'susy'
 gem 'aws-sdk', '~> 2.0'
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+
 # gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
