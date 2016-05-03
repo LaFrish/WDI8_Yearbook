@@ -141,3 +141,9 @@ Robin.photos << second_photo
 
 Robin.comments.create!( author: "Jesse", title: "hiiii", body: "hi")
 Alexa.comments.create!( author: "Jesse", title: "hiiii", body: "what up")
+
+
+gallery1 = Photo.create!(
+url: "https://lh3.googleusercontent.com/JZ-7KKH5eQVjlODoyt7zOSl3fXCEDx_8PTTs-zxTbqAoxbA9fd7DtQewhsPJGQ3TC2XUKwBRo78m=w2334-h944");
+
+gallery2 = Photo.create!(url: "https://lh6.googleusercontent.com/igxyyxt36-04ZLmF3Mupaq2GPdALwLlEYU2x2ToOSxGRfcTGcPcJuZ6NB44UZMzSnCqrNw=w2356-h944");

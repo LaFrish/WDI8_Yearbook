@@ -49,6 +49,6 @@ end
 
   private
   def photo_params
-    params.require(:photo).permit(:image, :title, :caption, :img_url, :tag_list)
+    params.require(:photo).permit(:image, :title, :caption, :img_url, :tag_list, :all_tags)
   end
 end
