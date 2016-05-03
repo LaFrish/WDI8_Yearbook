@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include ActsAsTaggableOn::TagsHelper
 
   def tag_cloud(tags, classes)
     max = tags.sort_by(&:count).last

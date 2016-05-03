@@ -1,0 +1,15 @@
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+/Users/LaFrish/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20160501-60990-1k1rypn.rb extconf.rb
+creating Makefile
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20160501-60990-v47a1k
