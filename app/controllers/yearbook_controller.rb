@@ -1,19 +1,11 @@
 class YearbookController < ApplicationController
 
   def index
-    # @student = Student.find(params[:student_id])
-    # @instructor = Instructor.find(params[:instructor_id])
     @yearbook = Yearbook.all
-
-    # respond_to do |format|
-    #   format.html
-    #   format.json{render status: 200, json: @yearbooks }
-    # end
   end
 
   def show
     @yearbook = Yearbook.find(params[:id])
-    # render status: 200, json: @yearbook
   end
 
   def new
@@ -40,5 +32,14 @@ class YearbookController < ApplicationController
     @yearbook = Yearbook.find(params[:id])
     @yearbook.destroy
     redirect_to yearbook_path(@yearbook)
+  end
+
+  def attr_accessible
+    @photo = Photo.find(params[:id])
+  end
+
+  private
+  def yearbook_params
+    params.require(:yearbook).permit(:photos, :name, :tag_list)
   end
 end

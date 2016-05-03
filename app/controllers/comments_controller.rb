@@ -1,8 +1,9 @@
-class CommentsController < ActiveRecord::Base
+class CommentsController < ApplicationController
 
   def index
+    id = params[:student_id] 
     @student = Student.find(params[:student_id])
-    @comments = Comments.all
+    @comments = Comment.all
     @comments = @student.comments.where(data_type: "comment")
   end
 
@@ -12,34 +13,48 @@ class CommentsController < ActiveRecord::Base
   end
 
   def new
-    @student = Student.find(params[:student_id])
+    # @student = Student.find(params[:student_id])
     @comment = Comment.new
   end
 
   def create
-    @student = Student.find(params[:student_id])
-    @comment = @student.comments.create!(comment_params)
-
-    redirect_to to student_path(@student)
+    @comment = Comment.new(params.require(:comment).permit(:task))
+    if @comment.save
+        redirect_to student_params(@student), alert:"Comment created successfully."
+    else
+        redirect_to student_params(@student), alert: "Error creating comment."
+    end
   end
 
-    def edit
-      @student = Student.find(params[:student_id])
-      @comment = Comment.find(params[:id])
+
+
+  def edit
+    @student = Student.find(params[:student_id])
+    @comment = Comment.find(params[:id])
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
+    if @comment.user == current_user
+      @comment.update(student_params)
+    else
+      flash[:alert] = "Only the author of the comment can edit it!"
     end
+    redirect_to student_params(@student)
+  end
 
-    def update
-        @comment = Comment.find(params[:id])
-        @comment.update(student_params)
-        redirect_to student_params(@student)
-      end
+  def destroy
+    @comment = Comment.find(params[:id])
+    if @comment.user == current_user
+      @comment.destroy
+    else
+      flash[:alert] = "Only the author of the comment can delete"
+    end
+    redirect_to student_path(@student)
+  end
 
-      def destroy
-        @comment = Comment.find(params[:id])
-        @comment.destroy
-        redirect_to student_path(@student)
-      end
-
-      private
-      def comment_params
-        params.require(:comment).permit(:author, :title, :body)
+  private
+  def comment_params
+    params.require(:comment).permit(:author, :title, :body)
+  end
+end

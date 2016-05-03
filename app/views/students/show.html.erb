@@ -1,23 +1,48 @@
 
 <h2>Student Show aka Profile Page</h2>
 
-  <button><%= link_to "Edit Student", edit_student_path(@student)%></h2></button>
+<div class="button"><%= link_to "Edit Student", edit_student_path(@student)%></h2></div>
+<div class="container">
+  <h1> <%= @student.name %> </h1>
+  <p>
+    <%= image_tag @student.img_url %> </br>
+    <%= link_to @student.github_url %>
+    <%= link_to @student.portfolio_url %>
+    <%= @student.quote %>
+    <%= @student.q1 %>
+    <%= @student.q2 %>
+    <%= @student.q3 %>
+    <%= @student.q4 %>
+    <%=link_to @student.project1_url %>
+    <%=link_to @student.project2_url %>
+    <%=link_to @student.project3_url %>
+    <%=link_to @student.project4_url %>
+    <%=link_to @student.email %>
+    <%=link_to @student.fb %>
+    <%=link_to @student.linkedin %>
+    <%=link_to @student.squad_id %>
+    <%=link_to @student.codey_id %>
+  </p>
+</div>
+<div class="container">
+  <h2 class="text-center">Photo Gallery w Tagged Photos</h2>
+  <div class="gallery">
 
-<h1>  <%= @student.name %> </h1>
-<%= image_tag @student.img_url %>
-<%= link_to @student.github_url %>
-<%= link_to @student.portfolio_url %>
-<%= @student.quote %>
-<%= @student.q1 %>
-<%= @student.q2 %>
-<%= @student.q3 %>
-<%= @student.q4 %>
-<%=link_to @student.project1_url %>
-<%=link_to @student.project2_url %>
-<%=link_to @student.project3_url %>
-<%=link_to @student.project4_url %>
-<%=link_to @student.email %>
-<%=link_to @student.fb %>
-<%=link_to @student.linkedin %>
-<%=link_to @student.squad_id %>
-<%=link_to @student.codey_id %>
+  </div>
+</div>
+
+
+<div class="container">
+  <h2 class="comments">comment area</h2>
+  <div class="comment-wrap">
+    <h3></h3>
+    <div class="comment-block">
+    </div>
+    <h3>comments area</h3>
+    <% @student.comments.each do |comment| %>
+    <%= comment.body %>
+
+    <% end %>
+  </div>
+</div>
+</br>
