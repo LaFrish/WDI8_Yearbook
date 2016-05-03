@@ -1,0 +1,16 @@
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+/Users/LaFrish/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20160501-60990-1us8jlz.rb extconf.rb
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /Users/LaFrish/wdi/projects/wdi8-yearbook/vendor/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.

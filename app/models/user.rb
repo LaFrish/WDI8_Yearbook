@@ -7,4 +7,15 @@ class User < ActiveRecord::Base
   has_many :photos
   has_many :comments
   has_many :negatives
+  acts_as_taggable # Alias for acts_as_taggable_on :tags
+  acts_as_taggable_on :names
 end
+# @user = User.new
+# @user.tag_list
+# @user.save
+#
+# @user.tag_list
+# @user.save
+#
+# @user.reload
+# @user.tag_list
