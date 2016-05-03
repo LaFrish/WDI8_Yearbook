@@ -10,43 +10,45 @@
 </head>
 <body>
 
-<header id="navigation_container">
-  <div class="inner" id="row">
-    <!-- <div class="logo">WDI8 Yearbook</div> -->
-    <nav role='navigation'>
-      <ul>
-        <div class="nav_link col-xs-1 tab"><li><%= link_to "Student", students_path %></div>
-        <div class="nav_link col-xs-1 tab"><li><%= link_to "Instructors", instructors_path %></div>
-        <div id="logo" class="nav_link col-xs-2 tab"><li><%= link_to image_tag("General_Assembly.png"), root_path %></div>
-        <div class="nav_link col-xs-1 tab"><li><%= link_to "Gallery", photos_path %></div>
-        <div class="nav_link col-xs-1 tab"><li><%= link_to "Codey", codeys_path %></div>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header id="navigation_container">
+    <div class="inner" id="row">
+      <!-- <div class="logo">WDI8 Yearbook</div> -->
+      <nav role='navigation'>
+        <ul>
+          <div class="nav_link col-xs-1 tab"><li><%= link_to "Student", students_path %></div>
+            <div class="nav_link col-xs-1 tab"><li><%= link_to "Instructors", instructors_path %></div>
+              <div class="nav_link col-xs-1 tab"><li><%= link_to "Gallery", photos_path %></div>
+                <div class="nav_link col-xs-1 tab"><li><%= link_to "Codey", codeys_path %></div>
+                </ul>
+              </nav>
+            </div>
+            <div class="ga-btn">
+            <%= link_to image_tag("General_Assembly.png"), root_path %>
+</div>
+          </header>
 
-<section>
+          <section>
+            <div class="inner">
+              <p><span> </span></p>
+            </div>
+          </br>
+        </br>
+      </br>
+    </br>
+  </section>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="/assets/javascripts/application.js"></script>
+  <%= yield %>
+  <!-- <section class="alternate" id="demosection2">
   <div class="inner">
-    <p><span> </span></p>
-  </div>
-</br>
-</br>
-</br>
-</br>
+  <p>GA Details</p> -->
+  <!-- <p><span><%= link_to image_tag("GA_Cog_Large_Red_RGB.png"), root_path %> </span></p> -->
+</div>
 </section>
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/assets/javascripts/application.js"></script>
-<%= yield %>
-<!-- <section class="alternate" id="demosection2">
-  <div class="inner">
-<p>GA Details</p> -->
 <!-- <p><span><%= link_to image_tag("GA_Cog_Large_Red_RGB.png"), root_path %> </span></p> -->
-      </div>
-    </section>
-    <!-- <p><span><%= link_to image_tag("GA_Cog_Large_Red_RGB.png"), root_path %> </span></p> -->
-  </body>
+</body>
 </html>
