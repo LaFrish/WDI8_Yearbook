@@ -28,16 +28,12 @@ ActiveRecord::Schema.define(version: 20160502003926) do
     t.string  "author"
     t.string  "title"
     t.string  "body"
-    t.integer "photo_id"
     t.integer "student_id"
     t.integer "instructor_id"
-    t.integer "user_id"
   end
 
   add_index "comments", ["instructor_id"], name: "index_comments_on_instructor_id", using: :btree
-  add_index "comments", ["photo_id"], name: "index_comments_on_photo_id", using: :btree
   add_index "comments", ["student_id"], name: "index_comments_on_student_id", using: :btree
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "instructors", force: :cascade do |t|
     t.string  "name"
@@ -52,7 +48,6 @@ ActiveRecord::Schema.define(version: 20160502003926) do
     t.string  "wisewords"
   end
 
-  add_index "instructors", ["codey_id"], name: "index_instructors_on_codey_id", using: :btree
   add_index "instructors", ["squad_id"], name: "index_instructors_on_squad_id", using: :btree
 
   create_table "negatives", force: :cascade do |t|
@@ -95,7 +90,6 @@ ActiveRecord::Schema.define(version: 20160502003926) do
     t.string  "email"
   end
 
-  add_index "students", ["codey_id"], name: "index_students_on_codey_id", using: :btree
   add_index "students", ["instructor_id"], name: "index_students_on_instructor_id", using: :btree
   add_index "students", ["squad_id"], name: "index_students_on_squad_id", using: :btree
 
@@ -141,10 +135,6 @@ ActiveRecord::Schema.define(version: 20160502003926) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "comments", "instructors"
-  add_foreign_key "comments", "photos"
-  add_foreign_key "comments", "students"
-  add_foreign_key "comments", "users"
   add_foreign_key "negatives", "instructors"
   add_foreign_key "negatives", "photos"
   add_foreign_key "negatives", "students"

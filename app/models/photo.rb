@@ -1,5 +1,4 @@
 class Photo < ActiveRecord::Base
-  attr_accesible :tag_list
   has_many :negatives
   has_many :instructors, through: :negatives
   has_many :students, through: :negatives
