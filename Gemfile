@@ -10,7 +10,7 @@ gem 'puma'
 gem 'activerecord'
 gem 'pry'
 gem 'pry-rails'
-gem 'acts-as-taggable-on'
+# gem 'acts-as-taggable-on'
 gem 'bourbon'
 gem 'compass'
 gem 'susy'
@@ -40,6 +40,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "devise"
+
+# this is for the tag feature
+gem 'foundation-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

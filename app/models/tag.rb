@@ -1,8 +1,7 @@
 class Tag < ActiveRecord::Base
-  acts_as_taggable
-  acts_as_taggable_on 
-  belongs_to :students
-  belongs_to :instructors
-  belongs_to :codeys
-  belongs_to :yearbook
+  has_many :taggings
+  has_many :photos, through: :taggings
+  # has_many :students, through: :taggings
+  # has_many :instructors, through: :taggings
+  # has_many :codeys, through: :taggings
 end
