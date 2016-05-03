@@ -3,10 +3,16 @@
 
 <div class="page-header"><h1>Photos</h1></div>
 
+<div class="row">
+  <div class="large-8 columns">
+    <%= render partial: "photos/new" %>
+  </div>
+</div>
+
 <div id="tag_cloud">
-  <%= tag_cloud Photo.tag_counts, %w[s m l] do |tag, css_class| %>
-  <%= link_to tag.name, tag_path(tag), css_class %>
-  <% end %>
+  <!-- tag_cloud Photo.tag_counts, %w[s m l] do |tag, css_class| -->
+  <!-- link_to tag.name, tag_path(tag), css_class -->
+  <!-- end -->
 </div>
 
 <div id="photos">
@@ -15,6 +21,7 @@
   <p>Tags: <%= raw photo.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(", ") %>
 <% end %>
 </div>
+
 
   <%= render @photos %>
 

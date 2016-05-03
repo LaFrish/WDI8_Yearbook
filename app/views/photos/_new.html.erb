@@ -1,0 +1,13 @@
+<div class="row text-center">
+  <%= form_for(Photo.new) do |f| %>
+    <div class="large-10 large-centered columns">
+      <%= f.text_field :url, placeholder: "Enter the photo URL" %>
+    </div>
+    <div class="large-10 large-centered columns">
+      <%= f.text_field :all_tags, placeholder: "Enter your tags, separated with commas" %>
+    </div>
+    <div class="large-10 large-centered columns">
+      <%= f.submit "Post", class: "button"%>
+    </div>
+  <% end %>
+</div>
