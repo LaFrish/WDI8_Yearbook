@@ -1,0 +1,14 @@
+/Users/LaFrish/.rvm/rubies/ruby-2.2.4/bin/ruby -r ./siteconf20160505-87249-b50cef.rb extconf.rb
+checking for proj_api.h... no
+**** WARNING: Unable to find Proj headers or Proj version is too old.
+**** Compiling without Proj support.
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling main.c
+linking shared-object rgeo/coord_sys/proj4_c_impl.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 proj4_c_impl.bundle ./.gem.20160505-87249-1doblbp/rgeo/coord_sys
