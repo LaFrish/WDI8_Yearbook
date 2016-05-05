@@ -4,7 +4,13 @@
 Welcome</br> to WDI8 Yearbook</h1>
 
 </br>
-  <div class="button"><%= link_to "Yearbook Index", photos_path(@photo)%></div></br>
+  <div class="button"><%= link_to "Yearbook Index", root_path(@yearbook)%></div></br>
+</br>
+</br>
+  <div class="button"><%= link_to "Photo Index", photos_path(@photo)%></div></br>
+</br>
+</br>
+  <div class="button"><%= link_to "New Photo", new_photo_path(@photo)%></div></br>
 </br>
   <div class="button"><%= link_to "Add Students", new_student_path(@student)%></div></br>
 </br>
