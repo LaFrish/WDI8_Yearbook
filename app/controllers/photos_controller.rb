@@ -21,7 +21,7 @@ class PhotosController < ApplicationController
     if @photo.save
       flash[:success] = "The photo was added"
 
-    redirect_to photo_path(@photo)
+    redirect_to photos_path(@photo)
   else
     render 'new'
   end
@@ -34,7 +34,7 @@ end
   def update
     @photo = Photo.find(params[:id])
     @photo.update(photo_params)
-    redirect_to photo_path(@photo)
+    redirect_to photos_path(@photo)
   end
 
   def destroy
