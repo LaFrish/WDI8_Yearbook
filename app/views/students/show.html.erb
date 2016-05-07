@@ -1,162 +1,156 @@
 <style>
 @charset "utf-8";
 
-#studentShow
-#studentShow .userAvatar
-{
-  background : #FFFFFF;
-  background : rgba(255, 255, 255, 1);
+/*#studentShow .topRow{
+  background : white;
   border-style : Solid;
   border-color : #000000;
-  border-color : rgba(0, 0, 0, 1);
   border-width : 1px;
-  position : absolute ;
-  left : 70px;
-  top : 366px;
-  width : 632px;
-  height : 280px;
-}
-#studentShow .topContainer
-{
-  background : pink;
-  background : rgba(255, 255, 255, 1);
+  left : 294px;
+  top : 22px;
+  width : 1000px;
+  height : 600px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 200px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  height : 35px;
+      z-index: 2;
+}*/
+
+#studentShow .topContainer {
+  background : white;
+  text-align: center;
   border-style : Solid;
   border-color : #000000;
-  border-color : rgba(0, 0, 0, 1);
+  border-width : 1px;
+  left : 294px;
+  top : 500px;
+  width : 1000px;
+  height : 600px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 200px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  margin: auto;
+}
+
+#studentShow .row{
+  background : white;
+  border-style : Solid;
+  border-color : #000000;
   border-width : 1px;
   position : absolute ;
   left : 294px;
   top : 22px;
-  width : 185px;
-  height : 185px;
-}
-#studentShow .photoGallery
-{
-  background : blue;
-  background : rgba(255, 255, 255, 1);
-  border-style : Solid;
-  border-color : #000000;
-  border-color : rgba(0, 0, 0, 1);
-  border-width : 1px;
-  position : absolute ;
-  left : 70px;
-  top : 83px;
-  width : 632px;
-  height : 283px;
-  border-radius : 12px;
-  -moz-border-radius : 12px;
-  -webkit-border-radius : 12px;
-}
-#studentShow .row1
-{
-  background : #FF1500;
-  background : rgba(255, 21, 0, 1);
-  border-style : Solid;
-  border-color : #000000;
-  border-color : rgba(0, 0, 0, 1);
-  border-width : 1px;
-  position : absolute ;
-  left : 70px;
-  top : 352px;
-  width : 632px;
+  width : 1000px;
+  height : 600px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 200px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
   height : 35px;
+      z-index: 1;
 }
-.row2
-{
-  background : #FF1500;
-  background : rgba(255, 21, 0, 1);
+
+#studentShow .photoGallery{
   border-style : Solid;
   border-color : #000000;
-  border-color : rgba(0, 0, 0, 1);
   border-width : 1px;
-  position : absolute ;
-  left : 70px;
-  top : 630px;
-  width : 632px;
-  height : 35px;
+  left : 294px;
+  top : 800px;
+  width : 1000px;
+  height : 600px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  margin: auto;
 }
-#studentShow .commentGallery
-{
-  background : yellow;
-  background : rgba(255, 255, 255, 1);
+#studentShow .commentGallery{
   border-style : Solid;
   border-color : #000000;
-  border-color : rgba(0, 0, 0, 1);
   border-width : 1px;
+  left : 294px;
+  width : 1000px;
+  height : 600px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  margin: auto;
+}
+
+#studentShow .profileImg{
+  margin: auto;
+  /*height: 300px;
+  width: 300px;*/
   position : absolute ;
-  left : 70px;
-  top : 647px;
-  width : 632px;
-  height : 280px;
+  left : 550px;
+  border: 4px solid black;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  min-width:140px;
+  overflow:hidden;
+  cursor: pointer;
+  float: left;
+    z-index: 100;
+}
+
+#studentShow img{
+  text-align: center;
 }
 </style>
 
+
 <div id="studentShow">
+  <section>
+
 <div class="button"><%= link_to "Edit Student", edit_student_path(@student)%></h2></div>
-
+<div class="profileImg">
+ <%= image_tag @student.img_url %>
+</div>
+      <div class="topContainer">
   <h1> <%= @student.name %> </h1>
-  <p>
-    <%= image_tag @student.img_url %> </br>
-    <%= link_to @student.github_url %>
-    <%= link_to @student.portfolio_url %>
-    <%= @student.quote %>
-    <%= @student.q1 %>
-    <%= @student.q2 %>
-    <%= @student.q3 %>
-    <%= @student.q4 %>
-    <%=link_to @student.project1_url %>
-    <%=link_to @student.project2_url %>
-    <%=link_to @student.project3_url %>
-    <%=link_to @student.project4_url %>
-    <%=link_to @student.email %>
-    <%=link_to @student.fb %>
-    <%=link_to @student.linkedin %>
-    <%=link_to @student.squad_id %>
-    <%=link_to @student.codey_id %>
-  </p>
+</br>
+    <%= link_to @student.github_url %></br>
+    <%= link_to @student.portfolio_url %></br>
+    <%= @student.quote %></br>
+    <%= @student.q1 %></br>
+    <%= @student.q2 %></br>
+    <%= @student.q3 %></br>
+    <%= @student.q4 %></br>
+    <%=link_to @student.project1_url %></br>
+    <%=link_to @student.project2_url %></br>
+    <%=link_to @student.project3_url %></br>
+    <%=link_to @student.project4_url %></br>
+    <%=link_to @student.email %></br>
+    <%=link_to @student.fb %></br>
+    <%=link_to @student.linkedin %></br>
+    <%=link_to @student.squad_id %></br>
+    <%=link_to @student.codey_id %></br>
 </div>
 
-  <h2 class="text-center">Photo Gallery w Tagged Photos</h2>
-  <div class="gallery">
-
-  </div>
+<div class="photoGallery">
+  <% @student.photos.each do |photo| %>
+   <%= image_tag photo.url %>
+  <% end %>
 </div>
-
-
-
-  <h2 class="comments">comment area</h2>
-  <div class="comment-wrap">
-    <h3></h3>
-    <div class="comment-block">
-    </div>
-    <h3>comments area</h3>
+<div class="commentGallery">
+  <!-- <div class="comment-wrap">
+    <div class="comment-block"> -->
     <% @student.comments.each do |comment| %>
     <%= comment.body %>
-
     <% end %>
-  </div>
-</div>
-</br>
-
-
-
-
-
-
-<div class="userAvatar">
-  <div class="topContainer">
-  </div>
+    </div>
 </div>
 
-<div class="row1">
-  <h2> Photo Gallery</h2>
-</div>
-<div class="photoGallery">
 
-</div>
-<div class="row2">
-  <h2> Comment Gallery</h2>
-</div>
-  <div class="commentGallery">
-  </div>
-</div>
+
+
+  <!-- </div>
+  </div> -->
+</section>

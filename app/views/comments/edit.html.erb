@@ -1,15 +1,2 @@
-<h1> Edit comment</h1>
-
-<%= form_for [@student, @instructor, @comments] do |f| %>
-  <%= f.label :author %>
-  <%= f.text_field :author %>
-</br>
-  <%=f.label :title %>
-  <%=f.text_field :title %>
-</br>
-  <%=f.label :body %>
-  <%=f.text_field :body %>
-</br>
-  <%=f.submit %>
-  <% end %>
-</br>
+<h2>Edit comment</h2>
+<%= render "form" %>

@@ -1,54 +1,163 @@
-<div class="button"><%= link_to "edit", edit_instructor_path(@instructor)%></h2></div>
+<style>
 
-<h1><%= @instructor.name %></h1>
- <%= image_tag @instructor.img_url %>
+#instructorShow .topContainer {
+  background : white;
+  text-align: center;
+  border-style : Solid;
+  border-color : #000000;
+  border-width : 1px;
+  left : 294px;
+  top : 500px;
+  width : 1000px;
+  height : 600px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 200px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  margin: auto;
+}
 
-<div class="container">
+#instructorShow .row{
+  background : white;
+  border-style : Solid;
+  border-color : #000000;
+  border-width : 1px;
+  position : absolute ;
+  left : 294px;
+  top : 22px;
+  width : 1000px;
+  height : 600px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 200px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  height : 35px;
+  z-index: 1;
+}
 
- <%= @instructor.squad_id %> </br>
- <%= @instructor.codey_id %> </br>
- <%= @instructor.quote %> </br>
- <%= @instructor.teaching %> </br>
- <%= @instructor.memory %> </br>
- <%= @instructor.favlang %> </br>
- <%= @instructor.wisewords %> </br>
+#instructorShow .studentGallery{
+  border-style : Solid;
+  border-color : #000000;
+  border-width : 1px;
+  left : 294px;
+  top : 800px;
+  width : 1000px;
+  height : 600px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  margin: auto;
+}
+#instructorShow .photoGallery{
+  border-style : Solid;
+  border-color : #000000;
+  border-width : 1px;
+  left : 294px;
+  top : 800px;
+  width : 1000px;
+  height : 600px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  margin: auto;
+}
+#instructorShow .commentGallery{
+  border-style : Solid;
+  border-color : #000000;
+  border-width : 1px;
+  left : 294px;
+  width : 1000px;
+  height : 600px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  margin: auto;
+}
+
+#instructorShow .profileImg{
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  position : absolute ;
+  left : 550px;
+  border-radius: 50%;
+  border: 4px solid black;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  min-width:140px;
+  overflow:hidden;
+  cursor: pointer;
+  float: left;
+  z-index: 100;
+  /*// -webkit-animation: index imgSlideIn .65s .15s ease forwards;
+  // animation: index imgSlideIn .65s .15s ease forwards;*/
+}
+</style>
+
+<div id="instructorShow">
+  <section>
+    <div class="button"><%= link_to "edit", edit_instructor_path(@instructor)%></h2></div>
+  </br>
+  <div class="profileImg">
+  <%= image_tag @instructor.img_url %>
 </div>
-<div class="container">
- <h2><%= @instructor.squad_name %></h2>
- <div class="index">
-<% @students.each do |student| %>
-<%= link_to image_tag(student.img_url), student_path(student) %>
-<% end %>
+  <div class="topContainer">
+    <h1><%= @instructor.name %></h1>
+
+    <%= @instructor.squad_id %> </br>
+    <%= @instructor.codey_id %> </br>
+    <%= @instructor.quote %> </br>
+    <%= @instructor.teaching %> </br>
+    <%= @instructor.memory %> </br>
+    <%= @instructor.favlang %> </br>
+    <%= @instructor.wisewords %> </br>
+  </div>
+
+  <div class="studentGallery">
+    <h2><%= @instructor.squad_name %></h2>
+    <div class="index">
+      <% @students.each do |student| %>
+      <%= link_to image_tag(student.img_url), student_path(student) %>
+      <% end %>
+    </div>
+  </div>
+
+
+
+  <div class="photoGallery">
+    <div class="gallery">
+      <ul>
+        <li>
+          <h3></h3>
+<h2>Pics Please</h2>
+          <% @instructor.photos.each do |photo| %>
+          <%= image_tag photo.url %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+
+    <section id="comment">
+      <div class="commentGallery">
+        <div class="overlay">
+          <h2>keep in touch...</h2>
+
+  <% if current_user %>
+  <%= link_to "Add new comment", new_comment_path(@comment) %>
+  <% end %>
+  <% @instructor.comments.each do |comment| %>
+    <p>
+      <%= comment.body %>
+    </p>
+    <% if current_user && current_user == comment.user %>
+    <%= link_to "Edit", edit_comment_path(@comment) %> |
+    <%= link_to "Delete", comment_path(@comment), method: :delete %>
+    <% end %>
+  </div>
+  <% end %>
 </div>
-</div>
-</br>
-
-
- <div class="lightboxContainer">
- <div class="gallery">
-   <ul>
-     <li>
- <h3></h3>
- <% @instructor.photos.each do |photo| %>
-  <%= image_tag photo.url %>
- <% end %>
- </li>
-</ul>
-</div>
-</br>
-<section id="contact">
-</br>
-  <div class="overlay">
-    </br>
-      <h2>get in touch...</h2>
-</br>
-
-
-<% @instructor.comments.each do |comment| %>
-<%= comment.body %>
-
- <% end %>
-</div>
-</div>
-
+</section>
 </section>
