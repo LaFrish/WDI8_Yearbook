@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require lightbox
 
 $(document).ready(function(){
   $(window).scroll(function(){

@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../dist/css/lightbox.min.css">
+  <script scr="assets/stylesheets/lightbox2-master/dist/js/lightbox.min.js"></script>
 <h1> WDI 8 Photo Gallery </h1>
 
 <div class="page-header"><h1>Photos</h1></div>
@@ -15,147 +17,19 @@
   <!-- end -->
 </div>
 
-<div id="photos">
+<div class="lightboxContainer">
+<div class="gallery">
+<!-- <div id="photos"> -->
+<ul>
+  <li>
   <% @photos.each do |photo| %>
   <%= image_tag photo.url %>
   <p>Tags: <%= raw photo.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(", ") %>
 <% end %>
+<%= render @photos %>
+
+  </li>
+  </ul>
+<!-- </div> -->
 </div>
-
-
-  <%= render @photos %>
-
-  <div class='imgGalleryContainer'>
-    <div class='imgGallery' name='WDI8'>
-      <img src='images/General+Assembly (1).png'>
-    </div>
-
-    <div class='imgGalleryExpanded'>
-      <div class='galleryImgs'>
-        <!-- Gallery images go here  -------------------------------->
-  <%= render @photos %>
-        
-
-        <!----------------------------------------------------------->
-      </div>
-    </div>
-
-    <div class='imgGallery' name='Sunset'>
-      <img src='https://unsplash.imgix.net/photo-1434139240289-56c519f77cb0?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-    </div>
-
-    <div class='imgGalleryExpanded'>
-      <div class='galleryImgs'>
-        <!-- Gallery images go here  -------------------------------->
-
-        <img src='https://unsplash.imgix.net/photo-1434139240289-56c519f77cb0?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/photo-1433959352364-9314c5b6eb0b?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://unsplash.imgix.net/photo-1434077471918-4ea96e6e45d5?fit=crop&fm=jpg&h=800&q=75&w=1050'>
-
-        <!----------------------------------------------------------->
-      </div>
-    </div>
-
-    <div class='imgGallery' name='Morning Majesty'>
-      <img src='https://ununsplash.imgix.net/photo-1430916273432-273c2db881a0?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-    </div>
-
-    <div class='imgGalleryExpanded'>
-      <div class='galleryImgs'>
-        <!-- Gallery images go here  -------------------------------->
-
-        <img src='https://ununsplash.imgix.net/photo-1430916273432-273c2db881a0?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/photo-1429308755210-25a272addeb3?fit=crop&fm=jpg&h=725&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/uploads/1412443967017d95e2723/2919e13b?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/photo-1430866880825-336a7d7814eb?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://unsplash.imgix.net/photo-1430747562296-5556d17a15a5?fit=crop&fm=jpg&h=725&q=75&w=1050'>
-        <img src='https://unsplash.imgix.net/photo-1430598825529-927d770c194f?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-
-        <!----------------------------------------------------------->
-      </div>
-    </div>
-
-    <div class='imgGallery' name='Blonde Beauty'>
-      <img src='https://ununsplash.imgix.net/photo-1429277005502-eed8e872fe52?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-    </div>
-
-    <div class='imgGalleryExpanded'>
-      <div class='galleryImgs'>
-        <!-- Gallery images go here  -------------------------------->
-
-        <img src='https://ununsplash.imgix.net/photo-1429277005502-eed8e872fe52?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/photo-1429277158984-614d155e0017?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://unsplash.imgix.net/photo-1429198739803-7db875882052?fit=crop&fm=jpg&h=1575&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/photo-1429030150151-548690082f0b?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-
-        <!----------------------------------------------------------->
-      </div>
-    </div>
-    <div class='imgGallery' name='A Man in a Car'>
-      <img src='https://unsplash.imgix.net/photo-1434210330765-8a00109fc773?fit=crop&fm=jpg&h=600&q=75&w=1050'>
-    </div>
-
-    <div class='imgGalleryExpanded'>
-      <div class='galleryImgs'>
-        <!-- Gallery images go here  -------------------------------->
-
-        <img src='https://unsplash.imgix.net/photo-1434210330765-8a00109fc773?fit=crop&fm=jpg&h=600&q=75&w=1050'>
-        <img src='https://unsplash.imgix.net/photo-1438232992991-995b7058bbb3?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://unsplash.imgix.net/photo-1438212852830-ae13426f3f9c?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-
-        <!----------------------------------------------------------->
-      </div>
-    </div>
-
-    <div class='imgGallery' name='Sunset'>
-      <img src='https://unsplash.imgix.net/photo-1434139240289-56c519f77cb0?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-    </div>
-
-    <div class='imgGalleryExpanded'>
-      <div class='galleryImgs'>
-        <!-- Gallery images go here  -------------------------------->
-
-        <img src='https://unsplash.imgix.net/photo-1434139240289-56c519f77cb0?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/photo-1433959352364-9314c5b6eb0b?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://unsplash.imgix.net/photo-1434077471918-4ea96e6e45d5?fit=crop&fm=jpg&h=800&q=75&w=1050'>
-
-        <!----------------------------------------------------------->
-      </div>
-    </div>
-
-    <div class='imgGallery' name='Morning Majesty'>
-      <img src='https://ununsplash.imgix.net/photo-1430916273432-273c2db881a0?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-    </div>
-
-    <div class='imgGalleryExpanded'>
-      <div class='galleryImgs'>
-        <!-- Gallery images go here  -------------------------------->
-
-        <img src='https://ununsplash.imgix.net/photo-1430916273432-273c2db881a0?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/photo-1429308755210-25a272addeb3?fit=crop&fm=jpg&h=725&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/uploads/1412443967017d95e2723/2919e13b?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/photo-1430866880825-336a7d7814eb?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://unsplash.imgix.net/photo-1430747562296-5556d17a15a5?fit=crop&fm=jpg&h=725&q=75&w=1050'>
-        <img src='https://unsplash.imgix.net/photo-1430598825529-927d770c194f?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-
-        <!----------------------------------------------------------->
-      </div>
-    </div>
-
-    <div class='imgGallery' name='Blonde Beauty'>
-      <img src='https://ununsplash.imgix.net/photo-1429277005502-eed8e872fe52?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-    </div>
-
-    <div class='imgGalleryExpanded'>
-      <div class='galleryImgs'>
-        <!-- Gallery images go here  -------------------------------->
-
-        <img src='https://ununsplash.imgix.net/photo-1429277005502-eed8e872fe52?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/photo-1429277158984-614d155e0017?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-        <img src='https://unsplash.imgix.net/photo-1429198739803-7db875882052?fit=crop&fm=jpg&h=1575&q=75&w=1050'>
-        <img src='https://ununsplash.imgix.net/photo-1429030150151-548690082f0b?fit=crop&fm=jpg&h=700&q=75&w=1050'>
-
-        <!----------------------------------------------------------->
-      </div>
-    </div>
-  </div>
+</div>
