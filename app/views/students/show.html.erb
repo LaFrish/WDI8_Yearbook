@@ -1,8 +1,99 @@
+<style>
+@charset "utf-8";
 
-<h2>Student Show aka Profile Page</h2>
+#studentShow
+#studentShow .userAvatar
+{
+  background : #FFFFFF;
+  background : rgba(255, 255, 255, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 1px;
+  position : absolute ;
+  left : 70px;
+  top : 366px;
+  width : 632px;
+  height : 280px;
+}
+#studentShow .topContainer
+{
+  background : pink;
+  background : rgba(255, 255, 255, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 1px;
+  position : absolute ;
+  left : 294px;
+  top : 22px;
+  width : 185px;
+  height : 185px;
+}
+#studentShow .photoGallery
+{
+  background : blue;
+  background : rgba(255, 255, 255, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 1px;
+  position : absolute ;
+  left : 70px;
+  top : 83px;
+  width : 632px;
+  height : 283px;
+  border-radius : 12px;
+  -moz-border-radius : 12px;
+  -webkit-border-radius : 12px;
+}
+#studentShow .row1
+{
+  background : #FF1500;
+  background : rgba(255, 21, 0, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 1px;
+  position : absolute ;
+  left : 70px;
+  top : 352px;
+  width : 632px;
+  height : 35px;
+}
+.row2
+{
+  background : #FF1500;
+  background : rgba(255, 21, 0, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 1px;
+  position : absolute ;
+  left : 70px;
+  top : 630px;
+  width : 632px;
+  height : 35px;
+}
+#studentShow .commentGallery
+{
+  background : yellow;
+  background : rgba(255, 255, 255, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 1px;
+  position : absolute ;
+  left : 70px;
+  top : 647px;
+  width : 632px;
+  height : 280px;
+}
+</style>
 
+<div id="studentShow">
 <div class="button"><%= link_to "Edit Student", edit_student_path(@student)%></h2></div>
-<div class="container">
+
   <h1> <%= @student.name %> </h1>
   <p>
     <%= image_tag @student.img_url %> </br>
@@ -24,7 +115,7 @@
     <%=link_to @student.codey_id %>
   </p>
 </div>
-<div class="container">
+
   <h2 class="text-center">Photo Gallery w Tagged Photos</h2>
   <div class="gallery">
 
@@ -32,7 +123,7 @@
 </div>
 
 
-<div class="container">
+
   <h2 class="comments">comment area</h2>
   <div class="comment-wrap">
     <h3></h3>
@@ -46,3 +137,26 @@
   </div>
 </div>
 </br>
+
+
+
+
+
+
+<div class="userAvatar">
+  <div class="topContainer">
+  </div>
+</div>
+
+<div class="row1">
+  <h2> Photo Gallery</h2>
+</div>
+<div class="photoGallery">
+
+</div>
+<div class="row2">
+  <h2> Comment Gallery</h2>
+</div>
+  <div class="commentGallery">
+  </div>
+</div>

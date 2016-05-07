@@ -465,16 +465,16 @@ section .inner {
 }
 
 //login
-label {
+#login label {
   cursor: pointer;
   color: #666;
 }
 
-label input[type="checkbox"] {
+#login label input[type="checkbox"] {
   display: none;
 }
 
-label input[type="checkbox"] + .label-text:before {
+#login label input[type="checkbox"] + .label-text:before {
   content: "\f096";
   font-family: "FontAwesome";
   speak: none;
@@ -489,21 +489,21 @@ label input[type="checkbox"] + .label-text:before {
   margin-right: 5px;
 }
 
-label input[type="checkbox"]:checked + .label-text:before {
+#login label input[type="checkbox"]:checked + .label-text:before {
   content: "\f14a";
   color: #06a3e9;
 }
 
-label input[type="checkbox"]:disabled + .label-text {
+#login label input[type="checkbox"]:disabled + .label-text {
   color: #aaa;
 }
 
-label input[type="checkbox"]:before {
+#login label input[type="checkbox"]:before {
   content: "\f0c8";
   color: #ccc;
 }
 
-body{
+#login body{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -511,20 +511,20 @@ body{
   font-family: 'Lato', sans-serif;
 }
 
-h1{
+#login h1{
   color: #fff;
   text-align: center;
   font-size: 50px;
   font-weight: 100;
 }
 
-.login__form{
+#login .login__form{
   background-color: #fff;
   padding: 30px;
   border-radius: 5px;
 }
 
-.form__control{
+#login .form__control{
   display: block;
   margin-bottom: 10px;
   height: 45px;
@@ -533,14 +533,14 @@ h1{
   border: 1px solid #ccc;
 }
 
-.form__control:focus{
+#login .form__control:focus{
   outline:none;
   border:1px solid #29B6F6;
   -webkit-box-shadow: 0px 0px 5px  #E91E63;
   box-shadow: 0px 0px 1px  #29B6F6;
 }
 
-.btn{
+#login .btn{
   display: block;
   border: 1px solid transparent;
   height: 45px;
@@ -553,13 +553,13 @@ h1{
   font-weight: 600;
 }
 
-.btn__login{
+#login .btn__login{
   background-color: #E91E63;
   color: #fff;
   font-size: 18px;
 }
 
-.btn__login:hover{
+#login .btn__login:hover{
   background-color: #fff;
   color: #E91E63;
   border: 1px solid #E91E63;
@@ -575,23 +575,23 @@ h1{
   padding-left: 40px;
 }
 
-.forgot__password{
+#login .forgot__password{
   text-decoration: none;
   color: #4B5052;
   float: right;
 }
 
-.login__options{
+#login .login__options{
   margin-bottom: 30px;
   font-weight: 600;
   font-size: 17px;
 }
 
-.form__group{
+#login .form__group{
   margin-bottom: 15px;
 }
 
-h5{
+#login h5{
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #dbdbdb;
@@ -599,16 +599,16 @@ h5{
   margin: 30px 0 20px;
 }
 
-h5 span {
+#login h5 span {
   background:#fff;
   padding:0 10px;
 }
 
-.social__login{
+#login .social__login{
   display: flex;
 }
 
-.social__login a{
+#login .social__login a{
   flex: 1;
   text-align: center;
   text-decoration: none;
@@ -616,43 +616,43 @@ h5 span {
   margin: 3px;
 }
 
-.social__login i{
+#login .social__login i{
   margin-right: 10px;
 }
 
-.btn__google{
+#login .btn__google{
   background-color: #e74c3c;
   color: #fff;
   font-size: 18px;
 }
 
-.btn__google:hover{
+#login .btn__google:hover{
   background-color: #fff;
   color: #e74c3c;
   border: 1px solid #e74c3c;
 }
 
-.btn__facebook{
+#login .btn__facebook{
   background-color: #06a3e9;
   color: #fff;
   font-size: 18px;
 }
 
-.btn__facebook:hover{
+#login .btn__facebook:hover{
   background-color: #fff;
   color: #06a3e9;
   border: 1px solid #06a3e9;
 }
 
-.signup__link a{
+#login .signup__link a{
   text-decoration: none;
   color: #E91E63;
 }
 
-.signup__link{
+#login .signup__link{
   font-weight: 600;
 }
 
-.signup__link span{
+#login .signup__link span{
   color: #4B5052;
 }
