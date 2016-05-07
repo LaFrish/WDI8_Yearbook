@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'yearbook#index'
   get 'tags/:tag', to: 'photo#index', as: "tag"
 
+
   resources :instructors do
     resources :comments
   end

@@ -1,4 +1,6 @@
-<div class="page-content-wrapper">
+
+<div id="studentIndex">
+  <div class="page-content-wrapper">
   <h1 class="page-header">Student Index</h1>
 
   <button><%= link_to "Add Student", new_student_path(@student)%></h2></button>
@@ -13,5 +15,6 @@
 <%= link_to image_tag(student.img_url, :size => "100x100"), student_path(student) %>
   <h5><%=student.name%></h5)>
   <% end %>
+</div>
 </div>
 </div>
