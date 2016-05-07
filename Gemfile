@@ -14,6 +14,7 @@ gem 'pry-rails'
 gem 'bourbon'
 gem 'compass'
 gem 'susy'
+gem 'font-awesome-rails'
 gem 'aws-sdk', '~> 2.0'
 
 # gem 'rails_12factor', group: :production
