@@ -1,14 +1,19 @@
 class CommentsController < ApplicationController
 
   def index
-    id = params[:student_id] 
-    @student = Student.find(params[:student_id])
     @comments = Comment.all
+    # if
+    id = params[:student_id]
+    @student = Student.find(params[:student_id])
     @comments = @student.comments.where(data_type: "comment")
+  # else
+  #   id = params[:instructor_id]
+  #   @instructor = Instructor.find(params[:instructor_id])
+  #   @comments = @instructor.comments.where(data_type: "comment")
   end
 
   def show
-    @student = Student.find(params[:student_id])
+    # @student = Student.find(params[:student_id])
     @comment = Comment.find(params[:id])
   end
 

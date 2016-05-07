@@ -1,20 +1,21 @@
 
 <div id="studentIndex">
   <div class="page-content-wrapper">
-  <h1 class="page-header">Student Index</h1>
+    <h1 class="page-header">Student Index</h1>
 
-  <button><%= link_to "Add Student", new_student_path(@student)%></h2></button>
+    <button><%= link_to "Add Student", new_student_path(@student)%></h2></button>
 
 
-  <% @students.each do |student| %>
-<button><%= link_to student.name, student%></button>
-  <% end %>
+    <!-- <% @students.each do |student| %>
+    <%= link_to student.name, student%>
+    <% end %> -->
 
-<div class="index">
-<% @students.each do |student| %>
-<%= link_to image_tag(student.img_url, :size => "100x100"), student_path(student) %>
-  <h5><%=student.name%></h5)>
-  <% end %>
-</div>
-</div>
-</div>
+    <div class="index">
+      <% @students.each do |student| %>
+      <%= link_to image_tag(student.img_url), student_path(student) %>
+      <figcaption><%=student.name%></figcaption>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
