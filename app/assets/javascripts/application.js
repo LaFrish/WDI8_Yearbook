@@ -81,45 +81,45 @@ var $img = $("<img>");
 var $caption = $("<p class='caption'></p>");
 
 
-// Add image and caption to lightbox
-//
-// $lightbox
-// 	.append($img)
-// 	.append($caption);
-//
-// // Add lighbox to document
-//
-// $('body').append($lightbox);
-//
-//
-// $('.gallery li').click(function (e) {
-// 	e.preventDefault();
-//
-// 	// Get image link and description
-// 	var src = $(this).children('img').attr("src");
-// 	var cap = $(this).children('img').attr("alt");
-//
-// 	// Add data to lighbox
-//
-// 	$img.attr('src',src);
-// 	$caption.text(cap);
-//
-// 	// $lightbox.append('<img src="' + src + '"></img><p class="caption">' + caption + '</p>');
-//
-// 	// Show lightbox
-//
-// 	$lightbox.fadeIn('fast');
-//
-// 	$lightbox.click(function () {
-// 		$lightbox.fadeOut('fast');
-// 	});
-// });
-//
-// $('li').on('click', function(e) {
-//   var img = $(this).find('img').attr('src');
-//   console.log(img);
-//   var newcss = $('#main-image').css('background-image', "url('" + img + "')");
-// });
+Add image and caption to lightbox
+
+$lightbox
+	.append($img)
+	.append($caption);
+
+// Add lighbox to document
+
+$('body').append($lightbox);
+
+
+$('.gallery li').click(function (e) {
+	e.preventDefault();
+
+	// Get image link and description
+	var src = $(this).children('img').attr("src");
+	var cap = $(this).children('img').attr("alt");
+
+	// Add data to lighbox
+
+	$img.attr('src',src);
+	$caption.text(cap);
+
+	// $lightbox.append('<img src="' + src + '"></img><p class="caption">' + caption + '</p>');
+
+	// Show lightbox
+
+	$lightbox.fadeIn('fast');
+
+	$lightbox.click(function () {
+		$lightbox.fadeOut('fast');
+	});
+});
+
+$('li').on('click', function(e) {
+  var img = $(this).find('img').attr('src');
+  console.log(img);
+  var newcss = $('#main-image').css('background-image', "url('" + img + "')");
+});
 
 
 setTimeout(function() {
