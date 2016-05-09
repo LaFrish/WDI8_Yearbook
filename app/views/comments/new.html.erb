@@ -1,21 +1,10 @@
-<div class="comments">
-	<div class="comment-wrap">
-		<div class="comment-block">
-			<form action="">
 
-				<%= form_for [@comment] do |f| %>
-				<%= f.label :author %>
-				<%= f.text_field :author %>
-			</br>
-			<textarea name="" id="" cols="30" rows="3" placeholder="Add comment...">
-				<%=f.label :body %>
-				<%=f.text_field :body %>
-			</textarea>
-			</br>
-			<%=f.submit %>
-			<% end %>
-			</br>
-			</form>
-		</div>
-	</div>
-</div>
+<%= form_for [@student, @instructor, @comment] do |f| %>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  <%= f.label :title %>
+  <%= f.text_area :title %>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  <%= f.submit %>
+<% end %>

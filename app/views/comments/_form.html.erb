@@ -1,8 +1,9 @@
-<%= form_for @comment do |f| %>
-<%= f.label :author %>
-<%= f.text_field :author %>
+
+<%= form_for [@student, @instructor] do |f| %>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_area :title %>
   <%= f.label :body %>
   <%= f.text_area :body %>
   <%= f.submit %>

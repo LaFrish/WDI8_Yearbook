@@ -125,20 +125,22 @@
     </div>
   </div>
 
+  <section id="photo">
+    <div class="photoGallery">
 
-
-  <div class="photoGallery">
-    <div class="gallery">
-      <ul>
-        <li>
-          <h3></h3>
-<h2>Pics Please</h2>
+  <div class="imgGalleryContainer">
+    <div class="imgGallery">
+    </div>
+    <div class="imgGalleryExpanded">
+      <div class="galleryImgs">
+        <h2>Pics Please</h2>
           <% @instructor.photos.each do |photo| %>
           <%= image_tag photo.url %>
           <% end %>
-        </li>
-      </ul>
-    </div>
+        </div>
+      </div>
+
+    </section>
 
     <section id="comment">
       <div class="commentGallery">
@@ -146,15 +148,15 @@
           <h2>keep in touch...</h2>
 
   <% if current_user %>
-  <%= link_to "Add new comment", new_comment_path(@comment) %>
+  <%= link_to "Add new comment", new_instructor_comment_path(@instructor) %>
   <% end %>
   <% @instructor.comments.each do |comment| %>
     <p>
       <%= comment.body %>
     </p>
     <% if current_user && current_user == comment.user %>
-    <%= link_to "Edit", edit_comment_path(@comment) %> |
-    <%= link_to "Delete", comment_path(@comment), method: :delete %>
+    <%= link_to "Edit", edit_instructor_comment_path(@instructor) %> |
+    <%= link_to "Delete", instructor_comment_path(@instructor), method: :delete %>
     <% end %>
   </div>
   <% end %>

@@ -2,41 +2,37 @@ class CommentsController < ApplicationController
 
   def index
     @comments = Comment.all
-    # if
-    id = params[:student_id]
-    @student = Student.find(params[:student_id])
-    @comments = @student.comments.where(data_type: "comment")
-  # else
-  #   id = params[:instructor_id]
-  #   @instructor = Instructor.find(params[:instructor_id])
-  #   @comments = @instructor.comments.where(data_type: "comment")
   end
 
   def show
-    # @student = Student.find(params[:student_id])
+    @comment = Comment.find(params[:id])
+  end
+
+  def edit
     @comment = Comment.find(params[:id])
   end
 
   def new
-    # @student = Student.find(params[:student_id])
+    @student = Student.find(params[:student_id])
+    # @instructor = Instructor.find(params[:instructor_id])
     @comment = Comment.new
+
   end
 
   def create
+    @student = Student.find(params[:student_id])
+    # @comment = Student.comment.create!(comment_params)
     @comment = Comment.new(params.require(:comment).permit(:task))
+    @comment.save
     if @comment.save
-        redirect_to student_params(@student), alert:"Comment created successfully."
+      flash[:alert] = "Comment created successfully."
+        redirect_to comment_params([:student_id])
     else
-        redirect_to student_params(@student), alert: "Error creating comment."
+        flash[:alert] = "Error creating comment."
+        redirect_to comment_params([:student_id])
     end
   end
 
-
-
-  def edit
-    @student = Student.find(params[:student_id])
-    @comment = Comment.find(params[:id])
-  end
 
   def update
     @comment = Comment.find(params[:id])

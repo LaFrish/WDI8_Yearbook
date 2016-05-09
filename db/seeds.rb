@@ -1,8 +1,11 @@
+
 Comment.destroy_all
 Negative.destroy_all
 Student.destroy_all
 Instructor.destroy_all
 Photo.destroy_all
+Tagging.destroy_all
+Tag.destroy_all
 
 
 Adrian = Instructor.create!(name: "Adrian Maseda", img_url: "http://orig02.deviantart.net/789b/f/2011/284/c/0/minus_the_bear_logo_by_mrjiggles4-d4cjd90.png", squad_name: "", squad_id: 1, codey_id: 41, quote: "", teaching: "", memory: "", favlang: "", wisewords: "")
@@ -136,12 +139,14 @@ Photo.create!(url:"https://www.sdcity.edu/Portals/0/CollegeServices/StudentSuppo
 
 second_photo= Photo.create!(url:"https://media4.popsugar-assets.com/files/2013/08/12/833/n/1922398/3a9296910b700fb0_tumblr_mj1k17kIL61qfjyrro1_500.xxxlarge.gif")
 
+
+
 Jesse.photos << first_photo
 Robin.photos << second_photo
 
+
 Robin.comments.create!( author: "Jesse", title: "hiiii", body: "hi")
 Alexa.comments.create!( author: "Jesse", title: "hiiii", body: "what up")
-
 
 gallery1 = Photo.create!(
 url: "https://lh3.googleusercontent.com/JZ-7KKH5eQVjlODoyt7zOSl3fXCEDx_8PTTs-zxTbqAoxbA9fd7DtQewhsPJGQ3TC2XUKwBRo78m=w2334-h944");
