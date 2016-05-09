@@ -17,19 +17,28 @@
   <!-- end -->
 </div>
 
-<div class="lightboxContainer">
-<div class="gallery">
-<!-- <div id="photos"> -->
-<ul>
-  <li>
+<section id="photo">
+  <div class="photoGallery">
+    <div class='imgGalleryContainer'>
+      <div class='imgGallery' name='Yearbook Images'>
+    <img src='http://i36.photobucket.com/albums/e21/lithium_green/yearbook.gif'>
+  </div>
+    <div class='imgGalleryExpanded'>
+        <div class='galleryImgs'>
+<h2>Pics Please</h2>
+<!-- <ul>
+  <li> -->
   <% @photos.each do |photo| %>
   <%= image_tag photo.url %>
   <p>Tags: <%= raw photo.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(", ") %>
 <% end %>
 <%= render @photos %>
 
-  </li>
-  </ul>
-<!-- </div> -->
+
+  <!-- </li>
+  </ul> -->
 </div>
 </div>
+</div>
+</div>
+</section>

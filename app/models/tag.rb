@@ -4,6 +4,4 @@ class Tag < ActiveRecord::Base
   # has_many :students, through: :taggings
   # has_many :instructors, through: :taggings
   # has_many :codeys, through: :taggings
-  
-
 end

@@ -75,52 +75,52 @@ $(document).ready(function(){
 
 });
 // Create a lightbox
-
-var $lightbox = $("<div class='lightbox'></div>");
-var $img = $("<img>");
-var $caption = $("<p class='caption'></p>");
-
-
-Add image and caption to lightbox
-
-$lightbox
-	.append($img)
-	.append($caption);
-
-// Add lighbox to document
-
-$('body').append($lightbox);
-
-
-$('.gallery li').click(function (e) {
-	e.preventDefault();
-
-	// Get image link and description
-	var src = $(this).children('img').attr("src");
-	var cap = $(this).children('img').attr("alt");
-
-	// Add data to lighbox
-
-	$img.attr('src',src);
-	$caption.text(cap);
-
-	// $lightbox.append('<img src="' + src + '"></img><p class="caption">' + caption + '</p>');
-
-	// Show lightbox
-
-	$lightbox.fadeIn('fast');
-
-	$lightbox.click(function () {
-		$lightbox.fadeOut('fast');
-	});
-});
-
-$('li').on('click', function(e) {
-  var img = $(this).find('img').attr('src');
-  console.log(img);
-  var newcss = $('#main-image').css('background-image', "url('" + img + "')");
-});
-
+//
+// var $lightbox = $("<div class='lightbox'></div>");
+// var $img = $("<img>");
+// var $caption = $("<p class='caption'></p>");
+//
+//
+// Add image and caption to lightbox
+//
+// $lightbox
+// 	.append($img)
+// 	.append($caption);
+//
+// // Add lighbox to document
+//
+// $('body').append($lightbox);
+//
+//
+// $('.gallery li').click(function (e) {
+// 	e.preventDefault();
+//
+// 	// Get image link and description
+// 	var src = $(this).children('img').attr("src");
+// 	var cap = $(this).children('img').attr("alt");
+//
+// 	// Add data to lighbox
+//
+// 	$img.attr('src',src);
+// 	$caption.text(cap);
+//
+// 	// $lightbox.append('<img src="' + src + '"></img><p class="caption">' + caption + '</p>');
+//
+// 	// Show lightbox
+//
+// 	$lightbox.fadeIn('fast');
+//
+// 	$lightbox.click(function () {
+// 		$lightbox.fadeOut('fast');
+// 	});
+// });
+//
+// $('li').on('click', function(e) {
+//   var img = $(this).find('img').attr('src');
+//   console.log(img);
+//   var newcss = $('#main-image').css('background-image', "url('" + img + "')");
+// });
+//
 
 setTimeout(function() {
 var gallery = [],
@@ -326,3 +326,32 @@ function photoGallery(i) {
   }
 
 }, 0);
+
+//photoGallery
+// function gallery(){
+// var $overlay = $('<div id="overlay"></div>');
+// var $image = $("<img>");
+//
+// //An image to overlay
+// $overlay.append($image);
+//
+// //Add overlay
+// $("body").append($overlay);
+//
+//   //click the image and a scaled version of the full size image will appear
+//   $("#photo-gallery a").click( function(event) {
+//     event.preventDefault();
+//     var imageLocation = $(this).attr("href");
+//
+//     //update overlay with the image linked in the link
+//     $image.attr("src", imageLocation);
+//
+//     //show the overlay
+//     $overlay.show();
+//   } );
+//
+//   $("#overlay").click(function() {
+//     $( "#overlay" ).hide();
+//   });
+// }
+// gallery();

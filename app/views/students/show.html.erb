@@ -166,12 +166,18 @@ z-index: 2;
   </div>
   </section>
 
-<section id="photo">
-  <div class="photoGallery">
-    <h2>pics</h2>
+  <section id="photo">
+    <div class="photoGallery">
+<div id="photo-gallery">
+  <h2>Pics Please</h2>
+  <ul>
+    <li>
     <% @student.photos.each do |photo| %>
     <%= image_tag photo.url %>
     <% end %>
+  </ul>
+</li>
+<button> <%= link_to "Add new photo", new_photo_path(@student) %></button>
   </div>
 </section>
 
