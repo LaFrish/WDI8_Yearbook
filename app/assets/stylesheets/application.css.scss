@@ -209,13 +209,13 @@ nav a:hover {
   border-color: #e11a61;
 }
 
-// .logo {
-//   float: left;
-//   color: #fff;
-//   font-size: 50px;
-//   line-height: 50px;
-//   transition: 0.7s all;
-// }
+.logo {
+  float: left;
+  color: #fff;
+  font-size: 50px;
+  line-height: 50px;
+  transition: 0.7s all;
+}
 
 .alt-header .logo {
   color: #000;
@@ -432,9 +432,6 @@ section .inner {
   padding:0;
 }
 
-body {
-  padding:25px;
-}
 
 /*======= Photo Gallery Styles ======================*/
 
@@ -826,13 +823,53 @@ Photo
 //
 // }
 
-h4 {
-  margin-bottom: 0;
+#photo ul.row {
+  padding: 0px;
+  margin: 0px;
 }
-.section {
-  border-bottom: 1px solid #dddddd;
-  padding: 20px;
+
+#photo .row li {
+  list-style: none;
+  padding: 0px 10px 0px 10px;
+  margin: 25px 0px 0px 0px;
 }
-.odd {
-  background: #f5f5f5;
+
+#photo img {
+	border: 1.5px solid #ccc;
+	width: 600px;
+	height: 400px;
+  padding: 0px;
+  margin: 0px;
+	// border: 1.5px solid #ccc;
+ padding: 10px;
+ margin: 2% 1.5%;
+  border-radius: 20px;
+	border: 1px solid #313636;
+	// -webkit-backface-visibility: hidden;
+	// backface-visibility: hidden;
+	// -webkit-filter: drop-shadow(0 0 10px rgba(0,0,0,.69));
+	// filter: drop-shadow(0 0 10px rgba(0,0,0,.69));
+	// // -webkit-transform: translate(-50%,-50%);
+	// // transform: translate(-50%,-50%);
+	// -webkit-transition: opacity .290s ease;
+	// transition: opacity .290s ease;
+}
+
+#photo img:hover{
+  cursor:pointer;
+}
+
+#photo .pad-up {
+  padding-top: 3%;
+}
+
+#photo #line-hght {
+  line-height: 150%;
+}
+#photo table {
+  text-align: center;
+  font-size: 110%;
+}
+#photo .center {
+  text-align: center;
 }
