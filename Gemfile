@@ -2,7 +2,6 @@
 source 'https://rubygems.org'
 ruby '2.2.4'
 
-gem 'sass'
 # Use postgresql as the database for Active Record
 gem "activerecord-postgis-adapter"
 # gem 'cowsay'
@@ -12,18 +11,15 @@ gem 'pry'
 gem 'pry-rails'
 # gem 'acts-as-taggable-on'
 gem 'bourbon'
-gem 'compass'
-gem 'susy'
 gem 'font-awesome-rails'
 gem 'aws-sdk', '~> 2.0'
-
+gem 'fancybox2-rails', '~> 0.2.8'
 # gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -42,7 +38,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "devise"
 
-gem 'lightbox2-rails'
 # this is for the tag feature
 gem 'foundation-rails'
 

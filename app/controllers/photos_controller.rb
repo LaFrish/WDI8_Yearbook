@@ -33,14 +33,14 @@ end
 
   def update
     @photo = Photo.find(params[:id])
-    @photo.update(photo_params)
+    @photo.update(photo_params.merge([:id]))
     redirect_to photos_path(@photo)
   end
 
   def destroy
     @photo = Photo.find(params[:id])
     @photo.destroy
-    redirect_to photo_path(@photo)
+    redirect_to photos_path(@photo)
   end
 
   def attr_accessible
