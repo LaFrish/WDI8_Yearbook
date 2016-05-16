@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160503173219) do
+ActiveRecord::Schema.define(version: 20160516062650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,11 +25,13 @@ ActiveRecord::Schema.define(version: 20160503173219) do
   add_index "codeys", ["student_id"], name: "index_codeys_on_student_id", using: :btree
 
   create_table "comments", force: :cascade do |t|
-    t.string  "author"
-    t.string  "title"
-    t.string  "body"
-    t.integer "student_id"
-    t.integer "instructor_id"
+    t.string   "author"
+    t.string   "title"
+    t.string   "body"
+    t.integer  "student_id"
+    t.integer  "instructor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "comments", ["instructor_id"], name: "index_comments_on_instructor_id", using: :btree
@@ -66,6 +68,7 @@ ActiveRecord::Schema.define(version: 20160503173219) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "caption"
   end
 
   create_table "students", force: :cascade do |t|

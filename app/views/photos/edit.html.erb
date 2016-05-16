@@ -1,7 +1,7 @@
 
 <h2>Edit photo</h2>
 <div class="row text-center">
-  <%= form_for(Photo.new) do |f| %>
+  <%= form_for @photo do |f| %>
     <div class="large-10 large-centered columns">
       <%= f.text_field :url, placeholder: "Enter the photo URL" %>
     </div>

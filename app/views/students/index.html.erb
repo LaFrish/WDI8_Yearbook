@@ -1,13 +1,10 @@
-<div id="studentIndex">
-  <div class="page-content-wrapper">
-    <h1 class="page-header">Student Index</h1>
+<section id="studentIndex">
+    <h1 class="page-header">Students</h1>
     <div class="index">
-      <% @students.each do |student| %>
-      <%= link_to student_path(student) do  %>
-      <%= image_tag(student.img_url) %>
-      <figcaption> <%= student.name %> </figcaption>
-      <%end%>
-      <% end %>
-    </div>
-  </div>
-</div>
+      <ul class="grid">
+        <li><% @students.each do |student| %>
+          <%= link_to image_tag(student.img_url), student_path(student) %></li>
+          <%end%>
+        </ul>
+      </div>
+    </section>
