@@ -111,11 +111,11 @@ z-index: 2;
     overflow:hidden;
   }
 
-  /*.profileImg:before {
+  .profileImg:before {
     content: "";
     position: absolute;
     width: 120px;
-    height: 120px;*/
+    height: 120px;
 
 }
 
@@ -200,27 +200,23 @@ z-index: 2;
 
   <section id="photo">
     <div class="photoGallery">
-<div id="photo-gallery">
-  <h2>Pics Please</h2>
-  <ul>
-    <li>
-    <% @student.photos.each do |photo| %>
-    <%= image_tag photo.url %>
-    <% end %>
-  </ul>
-</li>
-<button> <%= link_to "Add new photo", new_photo_path(@student) %></button>
-  </div>
-</section>
+      <h2>Pics Please</h2>
+      <ul>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><% @student.photos.each do |photo| %>
+          <%= image_tag photo.url %></li>
+          <% end %>
+        </ul>
+        <button> <%= link_to "Add new photo", new_photo_path(@student) %></button>
+      </div>
+    </section>
 
   <section id="comment">
     <div class="commentGallery">
       <div class="overlay">
         <h2>keep in touch...</h2>
 
-<% if current_user %>
+
 <button> <%= link_to "Add new comment", new_student_comment_path(@student) %></button>
-<% end %>
 <% @student.comments.each do |comment| %>
   <p>
     <%= comment.body %>

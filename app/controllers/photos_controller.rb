@@ -9,7 +9,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @photos = Photo.find(params[:id])
+    @photos = Photo.find_by_id(params[:id])
   end
 
   def new
@@ -21,25 +21,27 @@ class PhotosController < ApplicationController
     if @photo.save
       flash[:success] = "The photo was added"
 
-    redirect_to photos_path(@photo)
+    redirect_to photo_path(@photo)
   else
     render 'new'
   end
 end
 
   def edit
-    @photo = Photo.find(params[:id])
+    @photo = Photo.find_by_id(params[:id])
   end
 
   def update
-    @photo = Photo.find(params[:id])
-    @photo.update(photo_params.merge([:id]))
-    redirect_to photos_path(@photo)
+    @photo = Photo.find_by_id(params[:id])
+    # @photo.update(photo_params.merge([:id]))
+    redirect_to photo_path(@photo)
   end
 
   def destroy
-    @photo = Photo.find(params[:id])
+    @photo = Photo.find_by_id(params[:id])
+    if @photo.present?
     @photo.destroy
+  end
     redirect_to photos_path(@photo)
   end
 
@@ -49,6 +51,6 @@ end
 
   private
   def photo_params
-    params.require(:photo).permit(:image, :title, :caption, :img_url, :tag_list, :all_tags)
+    params.require(:photo).permit(:image, :title, :caption, :url, :tag_list, :all_tags)
   end
 end
