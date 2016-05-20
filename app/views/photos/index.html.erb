@@ -27,7 +27,7 @@
   </div>
 </div>
 
-<div id="tag_cloud">
+<!-- <div id="tag_cloud"> -->
   <!-- tag_cloud Photo.tag_counts, %w[s m l] do |tag, css_class| -->
   <!-- link_to tag.name, tag_path(tag), css_class -->
   <!-- end -->
@@ -44,12 +44,12 @@
     <div class='imgGalleryExpanded'>
         <div class='galleryImgs'> -->
 <img class="img-responsive">  <% @photos.each do |photo| %>
-  <%= image_tag photo.url %></img>
+  <%= image_tag photo.img_url %></img>
 <button><%= link_to "Edit", edit_photo_path(photo) %> </button>
 <button><%= link_to "Delete", photo_path(photo),  method: :delete %> </button>
-  <p>Tags: <%= raw photo.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(", ") %></p>
-<% end %>
+
 <%= render @photos %>
+<% end %>
   </li>
   </ul>
 </div>

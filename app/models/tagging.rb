@@ -3,4 +3,5 @@ class Tagging < ActiveRecord::Base
   belongs_to :photo
   belongs_to :instructors
   belongs_to :students
+  belongs_to :users
 end

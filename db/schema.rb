@@ -11,64 +11,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516062650) do
+ActiveRecord::Schema.define(version: 20160519032755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "codeys", force: :cascade do |t|
-    t.string  "name"
-    t.string  "award"
-    t.integer "student_id"
-  end
-
-  add_index "codeys", ["student_id"], name: "index_codeys_on_student_id", using: :btree
-
   create_table "comments", force: :cascade do |t|
-    t.string   "author"
-    t.string   "title"
-    t.string   "body"
-    t.integer  "student_id"
-    t.integer  "instructor_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string  "name"
+    t.string  "body"
+    t.integer "wdier_id"
   end
 
-  add_index "comments", ["instructor_id"], name: "index_comments_on_instructor_id", using: :btree
-  add_index "comments", ["student_id"], name: "index_comments_on_student_id", using: :btree
+  add_index "comments", ["wdier_id"], name: "index_comments_on_wdier_id", using: :btree
 
   create_table "instructors", force: :cascade do |t|
     t.string  "name"
     t.string  "img_url"
     t.string  "squad_name"
-    t.integer "squad_id"
-    t.integer "codey_id"
     t.string  "quote"
-    t.integer "teaching"
+    t.string  "teaching"
     t.string  "memory"
     t.string  "favlang"
     t.string  "wisewords"
+    t.string  "email"
+    t.string  "password"
+    t.integer "squad_id"
+    t.integer "user_id"
+    t.integer "wdier_id"
   end
 
   add_index "instructors", ["squad_id"], name: "index_instructors_on_squad_id", using: :btree
+  add_index "instructors", ["user_id"], name: "index_instructors_on_user_id", using: :btree
+  add_index "instructors", ["wdier_id"], name: "index_instructors_on_wdier_id", using: :btree
 
   create_table "negatives", force: :cascade do |t|
     t.integer "photo_id"
-    t.integer "student_id"
     t.integer "instructor_id"
+    t.integer "student_id"
+    t.integer "user_id"
+    t.integer "wdier_id"
   end
 
   add_index "negatives", ["instructor_id"], name: "index_negatives_on_instructor_id", using: :btree
   add_index "negatives", ["photo_id"], name: "index_negatives_on_photo_id", using: :btree
   add_index "negatives", ["student_id"], name: "index_negatives_on_student_id", using: :btree
+  add_index "negatives", ["user_id"], name: "index_negatives_on_user_id", using: :btree
+  add_index "negatives", ["wdier_id"], name: "index_negatives_on_wdier_id", using: :btree
 
   create_table "photos", force: :cascade do |t|
-    t.string   "url"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.string   "caption"
+    t.string "img_url"
+    t.string "caption"
   end
 
   create_table "students", force: :cascade do |t|
@@ -81,9 +73,6 @@ ActiveRecord::Schema.define(version: 20160516062650) do
     t.string  "project3_url"
     t.string  "project4_url"
     t.string  "quote"
-    t.integer "instructor_id"
-    t.integer "squad_id"
-    t.integer "codey_id"
     t.string  "q1"
     t.string  "q2"
     t.string  "q3"
@@ -91,29 +80,17 @@ ActiveRecord::Schema.define(version: 20160516062650) do
     t.string  "fb"
     t.string  "linkedin"
     t.string  "email"
+    t.string  "password"
+    t.integer "instructor_id"
+    t.integer "squad_id"
+    t.integer "user_id"
+    t.integer "wdier_id"
   end
 
   add_index "students", ["instructor_id"], name: "index_students_on_instructor_id", using: :btree
   add_index "students", ["squad_id"], name: "index_students_on_squad_id", using: :btree
-
-  create_table "taggings", force: :cascade do |t|
-    t.integer  "tag_id"
-    t.integer  "photo_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "taggings", ["photo_id"], name: "index_taggings_on_photo_id", using: :btree
-  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
-
-  create_table "tags", force: :cascade do |t|
-    t.string  "name"
-    t.integer "photo_id"
-    t.integer "taggings_count", default: 0
-  end
-
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
-  add_index "tags", ["photo_id"], name: "index_tags_on_photo_id", using: :btree
+  add_index "students", ["user_id"], name: "index_students_on_user_id", using: :btree
+  add_index "students", ["wdier_id"], name: "index_students_on_wdier_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -128,14 +105,66 @@ ActiveRecord::Schema.define(version: 20160516062650) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "img_url"
+    t.string   "github_url"
+    t.string   "portfolio_url"
+    t.string   "project1_url"
+    t.string   "project2_url"
+    t.string   "project3_url"
+    t.string   "quote"
+    t.string   "squad_name"
+    t.string   "teaching"
+    t.string   "memory"
+    t.string   "favlang"
+    t.string   "wisewords"
+    t.string   "tag_list"
+    t.string   "q1"
+    t.string   "q2"
+    t.string   "q3"
+    t.string   "fb"
+    t.string   "linkedin"
+    t.integer  "squad_id"
+    t.integer  "student_id"
+    t.integer  "instructor_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "negatives", "instructors"
-  add_foreign_key "negatives", "photos"
-  add_foreign_key "negatives", "students"
-  add_foreign_key "taggings", "photos"
-  add_foreign_key "taggings", "tags"
+  create_table "wdiers", force: :cascade do |t|
+    t.string  "name"
+    t.string  "img_url"
+    t.string  "github_url"
+    t.string  "portfolio_url"
+    t.string  "project1_url"
+    t.string  "project2_url"
+    t.string  "project3_url"
+    t.string  "quote"
+    t.string  "squad_name"
+    t.integer "teaching"
+    t.integer "memory"
+    t.integer "favlang"
+    t.integer "wisewords"
+    t.integer "tag_list"
+    t.integer "q1"
+    t.integer "q2"
+    t.integer "q3"
+    t.integer "fb"
+    t.integer "linkedin"
+    t.integer "email"
+    t.integer "role"
+    t.integer "password"
+    t.integer "squad_id"
+    t.integer "codey_id"
+    t.integer "student_id"
+    t.integer "instructor_id"
+  end
+
+  add_index "wdiers", ["codey_id"], name: "index_wdiers_on_codey_id", using: :btree
+  add_index "wdiers", ["instructor_id"], name: "index_wdiers_on_instructor_id", using: :btree
+  add_index "wdiers", ["squad_id"], name: "index_wdiers_on_squad_id", using: :btree
+  add_index "wdiers", ["student_id"], name: "index_wdiers_on_student_id", using: :btree
+
+  add_foreign_key "comments", "wdiers"
 end

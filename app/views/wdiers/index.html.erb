@@ -1,0 +1,10 @@
+<section id="studentIndex">
+    <h1 class="page-header">Students</h1>
+    <div class="index">
+      <ul class="grid">
+        <li><% @wdiers.each do |wdier| %>
+          <%= link_to image_tag(wdier.img_url), wdier_path(wdier) %></li>
+          <%end%>
+        </ul>
+      </div>
+    </section>

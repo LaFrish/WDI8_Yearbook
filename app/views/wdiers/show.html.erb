@@ -1,0 +1,154 @@
+<style>
+
+#wdierShow .topContainer {
+  background : white;
+  text-align: center;
+  border-style : Solid;
+  border-color : #000000;
+  border-width : 1px;
+  left : 294px;
+  top : 500px;
+  width : 1000px;
+  height : 600px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 200px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  margin: auto;
+}
+
+#wdierShow .row{
+  background : white;
+  border-style : Solid;
+  border-color : #000000;
+  border-width : 1px;
+  position : absolute ;
+  left : 294px;
+  top : 22px;
+  width : 1000px;
+  height : 600px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 200px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  height : 35px;
+  z-index: 1;
+}
+
+#wdierShow .studentGallery{
+  border-style : Solid;
+  border-color : #000000;
+  border-width : 1px;
+  left : 294px;
+  top : 800px;
+  width : 1000px;
+  height : 600px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  margin: auto;
+}
+#wdierShow .photoGallery{
+  border-style : Solid;
+  border-color : #000000;
+  border-width : 1px;
+  left : 294px;
+  top : 800px;
+  width : 1000px;
+  height : 600px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  margin: auto;
+}
+#wdierShow .commentGallery{
+  border-style : Solid;
+  border-color : #000000;
+  border-width : 1px;
+  left : 294px;
+  width : 1000px;
+  height : 600px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px #222;
+  margin: auto;
+}
+/*
+#wdierShow .profileImg{
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  position : absolute ;
+  left : 550px;
+  border-radius: 50%;
+  border: 4px solid black;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  min-width:140px;
+  overflow:hidden;
+  cursor: pointer;
+  float: left;
+  z-index: 100;*/
+  /*// -webkit-animation: index imgSlideIn .65s .15s ease forwards;
+  // animation: index imgSlideIn .65s .15s ease forwards;*/
+}
+</style>
+<section id="wdierShow">
+<h1 class="page-header"><%= @wdier.name %></h1>
+<div class="index">
+
+
+  <section>
+    <div class="button"><%= link_to "edit", edit_wdier_path(@wdier)%></h2></div>
+  </br>
+  <div class="profileImg">
+  <%= image_tag @wdier.img_url %>
+</div>
+  <div class="topContainer">
+    <!-- <h1><%= @wdier.name %></h1> -->
+  <ul class="grid">
+    <%= @wdier.squad_id %> </br>
+    <%= @wdier.codey_id %> </br>
+    <%= @wdier.quote %> </br>
+    <%= @wdier.teaching %> </br>
+    <%= @wdier.memory %> </br>
+    <%= @wdier.favlang %> </br>
+    <%= @wdier.wisewords %> </br>
+  </ul>
+  </div>
+  <section id="photo">
+    <div class="photoGallery">
+      <h2>Pics Please</h2>
+      <button> <%= link_to "Add new photo", new_photo_path(@wdier) %></button>
+      <ul>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><% @wdier.photos.each do |photo| %>
+          <%= image_tag photo.img_url %></li>
+          <% end %>
+        </ul>
+        </div>
+<section>
+</section>
+<section id="comment">
+  <div class="commentGallery">
+    <div class="overlay">
+      <h2>keep in touch...</h2>
+
+
+<%= link_to "Add new comment", new_wdier_comment_path(@wdier) %>
+<% @wdier.comments.each do |comment| %>
+
+<p>
+  <%= comment.body %>
+</p>
+<% if current_user && current_user == comment.user %>
+<%= link_to "Edit", edit_wdier_comment_path(@wdier) %> |
+<%= link_to "Delete", wdier_comment_path(@wdier), method: :delete %>
+<% end %>
+</div>
+<% end %>
+</div>
+</section>
+</section>
