@@ -5,4 +5,5 @@ class Student < ActiveRecord::Base
   has_many :comments
   has_many :negatives
   has_many :photos, through: :negatives
+  belongs_to :users
 end

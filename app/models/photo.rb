@@ -4,7 +4,9 @@ class Photo < ActiveRecord::Base
   has_many :negatives
   has_many :instructors, through: :negatives
   has_many :students, through: :negatives
-  has_many :yearbook, through: :negatives
+  has_many :users, through: :negatives
+  has_many :wdiers, through: :negatives
+  belongs_to :yearbook
   # acts_as_taggable
   # acts_as_taggable_on :name
 
@@ -17,7 +19,7 @@ class Photo < ActiveRecord::Base
   def all_tags
     self.tags.map(&:name).join(", ")
   end
-  
+
   def self.tagged_with(name)
     Tag.find_by_name!(name).photos
   end

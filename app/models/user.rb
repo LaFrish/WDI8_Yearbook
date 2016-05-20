@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   has_many :photos
   has_many :comments
   has_many :negatives
+  # has_many :users
+  has_many :instructors # an instance of being an instructor
+  has_many :students # an instance of being a student
   # acts_as_taggable # Alias for acts_as_taggable_on :tags
   # acts_as_taggable_on :names
 end

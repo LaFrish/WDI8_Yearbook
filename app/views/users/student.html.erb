@@ -1,0 +1,59 @@
+
+<style>
+
+</style>
+
+<section id="userShow">
+  <button class="button">
+    <%= link_to "edit", edit_user_path(@user)%></h2>
+  </br>
+  <div class="profileImg">
+    <%= image_tag @user.img_url %>
+  </div>
+  <div class="topContainer">
+    <h1><%= @user.name %></h1>
+    <%= @user.squad_id %> </br>
+    <%= @user.codey_id %> </br>
+    <%= @user.quote %> </br>
+    <%= @user.teaching %> </br>
+    <%= @user.memory %> </br>
+    <%= @user.favlang %> </br>
+    <%= @user.wisewords %> </br>
+  </div>
+<!-- squad -->
+  <div class="userGallery">
+    <h2><%= @user.squad_name %></h2>
+    <div class="index">
+      <% @users.each do |user| %>
+      <%= link_to image_tag(user.img_url), user_path(user) %>
+      <% end %>
+    </div>
+  </div>
+  <section id="photo">
+    <div class="photoGallery">
+      <h2>Pics Please</h2>
+      <button> <%= link_to "Add new photo", new_photo_path(@user) %></button>
+      <ul>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <% @user.photos.each do |photo| %>
+          <%= image_tag photo.url %></li>
+          <% end %>
+        </ul>
+      </div>
+    </section>
+    <section id="comment">
+      <div class="commentGallery">
+        <div class="overlay">
+          <h2>keep in touch...</h2>
+          <%= link_to "Add new comment", new_user_comment_path(@user) %>
+          <% @user.comments.each do |comment| %>
+          <p><%= comment.body %></p>
+          <% if current_user && current_user == comment.user %>
+          <%= link_to "Edit", edit_user_comment_path(@user) %> |
+          <%= link_to "Delete", user_comment_path(@user), method: :delete %>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+    </section>
+  </section>
