@@ -4,6 +4,8 @@ Comment.destroy_all
 Negative.destroy_all
 User.destroy_all
 Photo.destroy_all
+Wdier.destroy_all
+Post.destroy_all
 
 
 
@@ -100,11 +102,10 @@ Photo.create!(img_url:"https://www.sdcity.edu/Portals/0/CollegeServices/UserSupp
 second_photo= Photo.create!(img_url:"https://media4.popsugar-assets.com/files/2013/08/12/833/n/1922398/3a9296910b700fb0_tumblr_mj1k17kIL61qfjyrro1_500.xxxlarge.gif")
 
 
-
 Jesse.photos << first_photo
 Robin.photos << second_photo
 
-
+Robincomment = Post.create!(name: "Frish", body: "Hi", wdier_id: 7 )
 
 gallery1 = Photo.create!(
 img_url: "https://lh3.googleusercontent.com/JZ-7KKH5eQVjlODoyt7zOSl3fXCEDx_8PTTs-zxTbqAoxbA9fd7DtQewhsPJGQ3TC2XUKwBRo78m=w2334-h944");

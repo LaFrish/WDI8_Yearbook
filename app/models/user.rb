@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :photos
   has_many :comments
+  has_many :posts
   has_many :negatives
   # has_many :users
   has_many :instructors # an instance of being an instructor

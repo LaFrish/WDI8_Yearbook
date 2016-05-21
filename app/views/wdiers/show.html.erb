@@ -137,15 +137,15 @@
       <h2>keep in touch...</h2>
 
 
-<%= link_to "Add new comment", new_wdier_comment_path(@wdier) %>
-<% @wdier.comments.each do |comment| %>
+<%= link_to "Add new comment", new_wdier_post_path(@wdier) %>
+<% @wdier.posts.each do |post| %>
 
 <p>
-  <%= comment.body %>
+  <%= post.body %>
 </p>
-<% if current_user && current_user == comment.user %>
-<%= link_to "Edit", edit_wdier_comment_path(@wdier) %> |
-<%= link_to "Delete", wdier_comment_path(@wdier), method: :delete %>
+<% if current_user && current_user == post.user %>
+<%= link_to "Edit", edit_wdier_post_path(@wdier) %> |
+<%= link_to "Delete", wdier_post_path(@wdier), method: :delete %>
 <% end %>
 </div>
 <% end %>
