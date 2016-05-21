@@ -1,15 +1,15 @@
 class PhotosController < ApplicationController
 
   def index
-    if params[:tag]
-      @photos = Photo.tagged_with(params[:tag])
-    else
+    # if params[:tag]
+    #   @photos = Photo.tagged_with(params[:tag])
+    # else
       @photos = Photo.all
     end
-  end
+  # end
 
   def show
-    @photos = Photo.find_by_id(params[:id])
+    @photo = Photo.find_by_id(params[:id])
   end
 
   def new
@@ -51,6 +51,6 @@ end
 
   private
   def photo_params
-    params.require(:photo).permit(:image, :title, :caption, :url, :tag_list, :all_tags)
+    params.require(:photo).permit( :caption, :img_url, :tag_list, :all_tags)
   end
 end

@@ -29,7 +29,7 @@ class PostsController < ApplicationController
       redirect_to post_params([:wdier_id])
     else
       flash[:alert] = "Error creating post."
-      redirect_to post_params([:wdier_id])
+      redirect_to wdier_posts_path(@wdier)
     end
   end
 
@@ -37,12 +37,12 @@ class PostsController < ApplicationController
   def update
     @wdier = Wdier.find(params[:wdier_id])
     @post = Post.find(params[:id])
-    # if @post.wdier == current_wdier
-    #   @post.update(wdier_params)
-    # else
-    #   flash[:alert] = "Only the author of the post can edit it!"
-    # end
-    redirect_to wdier_params(@wdier)
+    if @post.user == current_user
+      @post.update(wdier_params)
+    else
+      flash[:alert] = "Only the author of the post can edit it!"
+    end
+    redirect_to wdier_posts_path(@post)
   end
 
   def destroy
@@ -53,7 +53,7 @@ class PostsController < ApplicationController
     else
       flash[:alert] = "Only the author of the post can delete"
     end
-    redirect_to wdier_path(@wdier)
+    redirect_to wdier_posts_path(@post)
   end
 
   private

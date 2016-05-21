@@ -47,7 +47,7 @@
   <%= image_tag photo.img_url %></img>
 <button><%= link_to "Edit", edit_photo_path(photo) %> </button>
 <button><%= link_to "Delete", photo_path(photo),  method: :delete %> </button>
-
+<button> <%= link_to"View", photo_path(photo) %> </button>
 <%= render @photos %>
 <% end %>
   </li>

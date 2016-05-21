@@ -138,10 +138,8 @@
 
 
 <%= link_to "Add new comment", new_wdier_post_path(@wdier) %>
-<% @wdier.posts.each do |post| %>
-
-<p>
-  <%= post.body %>
+  <% @wdier.posts.each do |post| %>
+    <%= post.body %>
 </p>
 <% if current_user && current_user == post.user %>
 <%= link_to "Edit", edit_wdier_post_path(@wdier) %> |
