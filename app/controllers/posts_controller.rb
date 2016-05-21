@@ -1,60 +1,63 @@
-class CommentsController < ApplicationController
+class PostsController < ApplicationController
 
   def index
-    id = params[:student_id]
-    @student = Student.find(params[:student_id])
-    @comments = Comment.all
-    @comments = @student.comments.where(data_type: "comment")
+    @posts = Post.all
   end
 
   def show
-    @student = Student.find(params[:student_id])
-    @comment = Comment.find(params[:id])
+    @wdier = Wdier.find(params[:wdier_id])
+    @post = Post.find(params[:id])
+  end
+
+  def edit
+    @wdier = Wdier.find(params[:wdier_id])
+    @post = Post.find(params[:id])
   end
 
   def new
-    # @student = Student.find(params[:student_id])
-    @comment = Comment.new
+    @wdier = Wdier.find(params[:wdier_id])
+    @post = Post.new
   end
 
   def create
-    @comment = Comment.new(params.require(:comment).permit(:task))
-    if @comment.save
-        redirect_to student_params(@student), alert:"Comment created successfully."
+    @wdier = Wdier.find(params[:wdier_id])
+    @post = @wdier.posts.create!(post_params)
+    @post = Post.new(params.require(:post).permit(:task))
+    @post.save
+    if @post.save
+      flash[:alert] = "Post created successfully."
+      redirect_to post_params([:wdier_id])
     else
-        redirect_to student_params(@student), alert: "Error creating comment."
+      flash[:alert] = "Error creating post."
+      redirect_to post_params([:wdier_id])
     end
   end
 
-
-
-  def edit
-    @student = Student.find(params[:student_id])
-    @comment = Comment.find(params[:id])
-  end
 
   def update
-    @comment = Comment.find(params[:id])
-    if @comment.user == current_user
-      @comment.update(student_params)
-    else
-      flash[:alert] = "Only the author of the comment can edit it!"
-    end
-    redirect_to student_params(@student)
+    @wdier = Wdier.find(params[:wdier_id])
+    @post = Post.find(params[:id])
+    # if @post.wdier == current_wdier
+    #   @post.update(wdier_params)
+    # else
+    #   flash[:alert] = "Only the author of the post can edit it!"
+    # end
+    redirect_to wdier_params(@wdier)
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
-    if @comment.user == current_user
-      @comment.destroy
+    @wdier = Wdier.find(params[:wdier_id])
+    @post = Post.find(params[:id])
+    if @post.user == current_user
+      @post.destroy
     else
-      flash[:alert] = "Only the author of the comment can delete"
+      flash[:alert] = "Only the author of the post can delete"
     end
-    redirect_to student_path(@student)
+    redirect_to wdier_path(@wdier)
   end
 
   private
-  def comment_params
-    params.require(:comment).permit(:author, :title, :body)
+  def post_params
+    params.require(:post).permit(:name,:body)
   end
 end

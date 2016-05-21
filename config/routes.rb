@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'tags/:tag', to: 'photo#index', as: "tag"
 
   resources :wdiers do
-    resources :comments
+    resources :posts
   end
 
   resources :photos
