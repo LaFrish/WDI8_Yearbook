@@ -26,10 +26,10 @@ class PostsController < ApplicationController
     @post.save
     if @post.save
       flash[:alert] = "Post created successfully."
-      redirect_to post_params([:wdier_id])
+      redirect_to wdier_path(@wdier)
     else
       flash[:alert] = "Error creating post."
-      redirect_to wdier_posts_path(@wdier)
+      redirect_to wdier_path(@wdier)
     end
   end
 
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
     else
       flash[:alert] = "Only the author of the post can edit it!"
     end
-    redirect_to wdier_posts_path(@post)
+    redirect_to wdier_path(@wdier)
   end
 
   def destroy
