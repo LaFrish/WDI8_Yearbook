@@ -23,3 +23,15 @@
 
 # generated metrics
 /public/metrics
+
+#AWS KEY
+.aws
+/.aws
+/.aws/credentials
+
+/.env
+.env
+
+/config/initializers/aws.rb
+config/initializers/aws.rb
+aws.rb

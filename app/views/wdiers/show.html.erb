@@ -33,6 +33,14 @@
   margin: 50px 100px 100px 50px;
   overflow: hidden;
 }
+
+#wdierShow .photoGallery img {
+width: 300px;
+height: 200px;
+border-color: 1px black;
+box-shadow: 0 0 5px 0 #222;
+}
+
 #wdierShow .commentGallery{
   margin: 50px 100px 100px 50px;
   overflow: hidden;
@@ -184,6 +192,8 @@ cursor: pointer;
   text-align: left;
   margin: 25px 50px 25px 25px;
 }
+
+
 </style>
 <!-- <div class="profileImg"> -->
 
@@ -220,7 +230,7 @@ cursor: pointer;
           <%= @wdier.codey_id %></br>
           <%= @wdier.role %></br>
         </ul>
-        <button><%= link_to "edit", edit_wdier_path(@wdier)%></h2></button>
+        <button><%= link_to "edit", edit_wdier_path(@wdier)%></button>
       </br>
       <div class="projectGallery">
         <ul class="grid">

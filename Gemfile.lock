@@ -46,6 +46,9 @@ GEM
       aws-sdk-resources (= 2.3.4)
     aws-sdk-core (2.3.4)
       jmespath (~> 1.0)
+    aws-sdk-rails (1.0.1)
+      aws-sdk-resources (~> 2)
+      railties (>= 3)
     aws-sdk-resources (2.3.4)
       aws-sdk-core (= 2.3.4)
     babel-source (5.8.35)
@@ -228,6 +231,7 @@ DEPENDENCIES
   activerecord-postgis-adapter
   acts-as-taggable-on
   aws-sdk (~> 2.0)
+  aws-sdk-rails
   bourbon
   byebug
   coffee-rails (~> 4.1.0)
