@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
 
+
   def index
     # if params[:tag]
     #   @photos = Photo.tagged_with(params[:tag])
@@ -18,13 +19,13 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.create!(photo_params)
-    if @photo.save
-      flash[:success] = "The photo was added"
+    # if @photo.save
+    #   flash[:success] = "The photo was added"
 
     redirect_to photo_path(@photo)
-  else
-    render 'new'
-  end
+  # else
+  #   render 'new'
+  # end
 end
 
   def edit
@@ -42,7 +43,7 @@ end
     if @photo.present?
     @photo.destroy
   end
-    redirect_to photos_path(@photo)
+    redirect_to photo_path(@photo)
   end
 
   def attr_accessible

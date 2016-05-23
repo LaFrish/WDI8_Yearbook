@@ -1,22 +1,8 @@
 <style>
 
 #wdierShow .topContainer {
-  background : white;
-  text-align: center;
-  border-style : Solid;
-  border-color : #000000;
-  border-width : 1px;
-  left : 294px;
-  top : 500px;
-  width : 1000px;
-  height : 600px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  margin-top: 200px;
   overflow: hidden;
-  box-sizing: border-box;
-  box-shadow: 0 0 5px #222;
-  margin: auto;
+  margin: 50px 100px 100px 50px;
 }
 
 #wdierShow .row{
@@ -40,114 +26,244 @@
 }
 
 #wdierShow .studentGallery{
-  border-style : Solid;
-  border-color : #000000;
-  border-width : 1px;
-  left : 294px;
-  top : 800px;
-  width : 1000px;
-  height : 600px;
+  margin: 50px 100px 100px 50px;
   overflow: hidden;
-  box-sizing: border-box;
-  box-shadow: 0 0 5px #222;
-  margin: auto;
 }
 #wdierShow .photoGallery{
-  border-style : Solid;
-  border-color : #000000;
-  border-width : 1px;
-  left : 294px;
-  top : 800px;
-  width : 1000px;
-  height : 600px;
+  margin: 50px 100px 100px 50px;
   overflow: hidden;
-  box-sizing: border-box;
-  box-shadow: 0 0 5px #222;
-  margin: auto;
 }
 #wdierShow .commentGallery{
-  border-style : Solid;
-  border-color : #000000;
-  border-width : 1px;
-  left : 294px;
-  width : 1000px;
-  height : 600px;
+  margin: 50px 100px 100px 50px;
   overflow: hidden;
-  box-sizing: border-box;
-  box-shadow: 0 0 5px #222;
-  margin: auto;
 }
-/*
+#wdierShow projectGallery{
+  margin: 50px 100px 100px 50px;
+  overflow: hidden;
+}
+#wdierShow html {
+  color: #222;
+  font-family: monospace, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  font-style, font-weight, letter-spacing, line-height, word-spacing: normal;
+}
+
+#wdierShow body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#wdierShow .wrapper {
+  width: 1200px;
+  height: 100%;
+  position: relative;
+  top: 25%;
+  /*   left: 50%;  */
+  margin: 100px 100px;
+}
+
+#wdierShow .box{
+  position:relative;
+  margin: 160px auto;
+  width: 1200px;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index:-1;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+}
+
+#wdierShow .cover-pic {
+  width: 1200px;
+  height: 300px;
+  background: url() 0 -10px;
+  background-size: 100%;
+}
+
+#wdierShow .profile-name {
+  margin-top: 250px;
+  position: relative;
+  top: -50px;
+  color: #fff;
+  text-decoration:none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-shadow: 0 0 5px #000;
+  line-height: 30px;
+}
 #wdierShow .profileImg{
   margin: auto;
+  margin-bottom: -300px;
   height: 300px;
   width: 300px;
-  position : absolute ;
+  /*position : absolute ;*/
   left : 550px;
-  border-radius: 50%;
-  border: 4px solid black;
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-  min-width:140px;
+  border:  solid #222;
+  border-radius: 100%;
+  box-shadow: 0 0 20px 0 #222;
+  /*min-width:140px;*/
   overflow:hidden;
   cursor: pointer;
-  float: left;
-  z-index: 100;*/
-  /*// -webkit-animation: index imgSlideIn .65s .15s ease forwards;
-  // animation: index imgSlideIn .65s .15s ease forwards;*/
+  /*float: left;*/
+  z-index: 1;
+  -webkit-animation: index imgSlideIn .65s .15s ease forwards;
+  animation: index imgSlideIn .65s .15s ease forwards;
+}
+
+#wdierShow .profile-pic img{
+  position: relative;
+  z-index: 1;
+  /*margin-left:auto;
+  margin-right:auto;*/
+  margin-bottom: -325px;
+  width: 300px;
+  height:300px;
+  border:  solid #222;
+  border-radius: 100%;
+  box-shadow: 0 0 20px 0 #222;
+  cursor: pointer;
+}
+
+#wdierShow .profileImg:before {
+  content: "";
+  position: absolute;
+  margin-left: 600px;
+  margin-right: 600px;
+  width: 120px;
+  height: 120px;
+
+  background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 55%);
+  background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 55%);
+  background: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 55%);
+  background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 55%);
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 55%);
+
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+}
+
+#wdierShow .profile-pic:hover {
+  ;
+}
+/*#wdierShow button {
+text-align: center;
+width: 200px;
+height: 50px;
+margin: 25px;
+box-shadow: 0 0 5px 0 #222;
+cursor: pointer;
+}*/
+
+#wdierShow .button {
+  text-align: center;
+  margin: 25px;
+  box-shadow: 0 0 5px 0 #222;
+  cursor: pointer;
+}
+
+#wdierShow h1{
+  margin: 25px 25px 25px 25px;
+}
+#wdierShow .grid{
+  text-align: left;
+  margin: 25px 50px 25px 25px;
+}
+#wdierShow footer{
+  background-color: #fff;
+  line-height: 50px;
+  text-align: left;
+  margin: 25px 50px 25px 25px;
 }
 </style>
+<!-- <div class="profileImg"> -->
+
 <section id="wdierShow">
-<h1 class="page-header"><%= @wdier.name %></h1>
-<div class="index">
+  <div class="wrapper">
+    <div class="profileImg"><%= image_tag @wdier.img_url %>
+    </div>
+    <div class="box">
+      <div class="cover-pic">
 
-
-  <section>
-    <div class="button"><%= link_to "edit", edit_wdier_path(@wdier)%></h2></div>
-  </br>
-  <div class="profileImg">
-  <%= image_tag @wdier.img_url %>
-</div>
-  <div class="topContainer">
-    <!-- <h1><%= @wdier.name %></h1> -->
-  <ul class="grid">
-    <%= @wdier.squad_id %> </br>
-    <%= @wdier.codey_id %> </br>
-    <%= @wdier.quote %> </br>
-    <%= @wdier.teaching %> </br>
-    <%= @wdier.memory %> </br>
-    <%= @wdier.favlang %> </br>
-    <%= @wdier.wisewords %> </br>
-  </ul>
-  </div>
-  <section id="photo">
-    <div class="photoGallery">
-      <h2>Pics Please</h2>
-      <button> <%= link_to "Add new photo", new_photo_path(@wdier) %></button>
-      <ul>
-        <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><% @wdier.photos.each do |photo| %>
-          <%= image_tag photo.img_url %></li>
-          <% end %>
+      <div class="profile-name">
+        <h1 class="page-header"><%= @wdier.name %></h1>
+      </div>
+      </div>
+      <div class="topContainer">
+        <ul class="grid">
+          <%= @wdier.github_url %></br>
+          <%= @wdier.portfolio_url %></br>
+          <%= @wdier.quote %></br>
+          <%= @wdier.squad_name %></br>
+          <%= @wdier.teaching %></br>
+          <%= @wdier.memory %></br>
+          <%= @wdier.favlang %></br>
+          <%= @wdier.wisewords %></br>
+          <%= @wdier.tag_list %></br>
+          <%= @wdier.q1 %></br>
+          <%= @wdier.q2 %></br>
+          <%= @wdier.q3 %></br>
+          <%= @wdier.fb %></br>
+          <%= @wdier.linkedin %></br>
+          <%= @wdier.squad_id %></br>
+          <%= @wdier.student_id %></br>
+          <%= @wdier.instructor_id %></br>
+          <%= @wdier.codey_id %></br>
+          <%= @wdier.role %></br>
         </ul>
+        <button><%= link_to "edit", edit_wdier_path(@wdier)%></h2></button>
+      </br>
+      <div class="projectGallery">
+        <ul class="grid">
+          <h1> Project Gallery </h1>
+          <li><%= @wdier.project1_url %></li>
+          <li><%= @wdier.project2_url %></li>
+          <li><%= @wdier.project3_url %></li>
+        </ul>
+    </div>
+    <div class="photo">
+      <div class="photoGallery">
+        <h1>Pics Please</h1>
+        <button> <%= link_to "Add new photo", new_photo_path(@wdier) %> </button>
+        <ul>
+          <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><% @wdier.photos.each do |photo| %>
+            <%= image_tag photo.img_url %></li>
+            <% end %>
+          </ul>
         </div>
-<section>
-</section>
-<section id="comment">
-  <div class="commentGallery">
-    <div class="overlay">
-      <h2>keep in touch...</h2>
+        </div>
 
 
-<%= link_to "Add new comment", new_wdier_post_path(@wdier) %>
-  <% @wdier.posts.each do |post| %>
-  <%= post.name %>
-    <%= post.body %>
-</p>
-<% if current_user && current_user == post.user %>
-<%= link_to "Edit", edit_wdier_post_path(@wdier) %> |
-<%= link_to "Delete", wdier_post_path(@wdier), method: :delete %>
-<% end %>
-</div>
-<% end %>
-</div>
-</section>
-</section>
+        <div class="comment">
+          <div class="commentGallery">
+            <div class="overlay">
+              <h1>keep in touch...</h1>
+
+
+              <button><%= link_to "Add new comment", new_wdier_post_path(@wdier) %></button>
+              <% @wdier.posts.each do |post| %>
+              <%= post.name %>
+              <%= post.body %>
+            </p>
+            <% if current_user && current_user == post.user %>
+            <%= link_to "Edit", edit_wdier_post_path(@wdier) %> |
+            <%= link_to "Delete", wdier_post_path(@wdier), method: :delete %>
+            <% end %>
+          </div>
+          <% end %>
+          </div>
+        </div>
+        <footer>
+        </br>
+        </footer>
+      </div>
+    </section>
