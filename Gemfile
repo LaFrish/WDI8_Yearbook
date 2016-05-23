@@ -13,6 +13,7 @@ gem 'acts-as-taggable-on'
 gem 'bourbon'
 gem 'font-awesome-rails'
 gem 'aws-sdk', '~> 2.0'
+gem 'aws-sdk-rails'
 gem 'fancybox2-rails', '~> 0.2.8'
 # gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

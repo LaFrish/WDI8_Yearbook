@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require_tree .
 //= require fancybox
+//= require jquery.ui.widget
+//= require z.jquery.fileupload
 
 $(document).ready(function(){
   $(window).scroll(function(){

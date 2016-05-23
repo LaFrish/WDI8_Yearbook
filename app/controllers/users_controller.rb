@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_s3_direct_post, only: [:new, :edit, :create, :update]
+
 
 
   def index
@@ -39,5 +42,8 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :img_url, :squad_name, :squad_id, :quote, :teaching, :memory, :favlang, :wisewords, :tag_list,:github_url, :portfolio_url, :project1_url, :project2_url, :project3_url, :quote, :q1, :q2, :q3, :fb, :linkedin, :email, :student_id, :instructor_id)
+  end
+  def set_s3_direct_post
+    @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: '201', acl: 'public-read')
   end
 end
