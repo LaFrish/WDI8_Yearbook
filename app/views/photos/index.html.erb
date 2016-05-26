@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<header>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <!-- Add jQuery library -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -17,6 +19,44 @@
 
 <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+</header>
+<style>
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/*#photoIndex ul {
+  list-style: none;
+  margin: 0px auto;
+  padding: 10px;
+  display: block;
+  max-width: 780px;
+  text-align: center;
+}*/
+
+/*.container{
+  position: relative;
+}
+.container:before{
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%;
+  }
+  .container > .galleryImgs{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }*/
+
+
+
+</style>
+
+<section index="photoIndex">
 <h1> WDI 8 Photo Gallery </h1>
 
 <div class="page-header"><h1>Photos</h1></div>
@@ -34,7 +74,7 @@
 </div>
 <section id="photo">
   <div class="container">
-    <ul class="row">
+    <ul class="grid">
       <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
   <!-- <div class="photoGallery">
     <div class='imgGalleryContainer'>
@@ -43,7 +83,8 @@
   </div>
     <div class='imgGalleryExpanded'>
         <div class='galleryImgs'> -->
-<img class="img-responsive">  <% @photos.each do |photo| %>
+<!-- <div class="thumbnail"> -->
+<img class="galleryImgs">  <% @photos.each do |photo| %>
   <%= image_tag photo.img_url %></img>
 <button><%= link_to "Edit", edit_photo_path(photo) %> </button>
 <button><%= link_to "Delete", photo_path(photo),  method: :delete %> </button>
@@ -52,5 +93,7 @@
 <% end %>
   </li>
   </ul>
+  <!-- </div> -->
 </div>
+</section>
 </section>

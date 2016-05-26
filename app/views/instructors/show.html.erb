@@ -99,13 +99,13 @@
 
 <div id="instructorShow">
   <section>
-    <div class="button"><%= link_to "edit", edit_instructor_path(@instructor)%></h2></div>
+    <div class="button"><%= link_to "edit", edit_wdier_path(@wdier)%></h2></div>
   </br>
   <div class="profileImg">
-  <%= image_tag @instructor.img_url %>
+  <%= image_tag @wdier.img_url %>
 </div>
   <div class="topContainer">
-    <h1><%= @instructor.name %></h1>
+    <h1><%= @wdier.name %></h1>
 
     <%= @instructor.squad_id %> </br>
     <%= @instructor.codey_id %> </br>
@@ -116,19 +116,19 @@
     <%= @instructor.wisewords %> </br>
   </div>
 
-  <div class="studentGallery">
-    <h2><%= @instructor.squad_name %></h2>
-    <div class="index">
-      <% @students.each do |student| %>
-      <%= link_to image_tag(student.img_url), student_path(student) %>
-      <% end %>
+    <div class="studentGallery">
+      <h2> <%= @wdier.squad_name %></h2>
+      <div class="index">
+        <% @wdiers.each do |wdier| %>
+        <%= link_to image_tag(wdier.img_url), wdier_path(wdier) %>
+        <% end %>
+      </div>
     </div>
-  </div>
 
   <section id="photo">
     <div class="photoGallery">
       <h2>Pics Please</h2>
-      <button> <%= link_to "Add new photo", new_photo_path(@student) %></button>
+      <button> <%= link_to "Add new photo", new_photo_path() %></button>
       <ul>
         <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><% @instructor.photos.each do |photo| %>
           <%= image_tag photo.url %></li>

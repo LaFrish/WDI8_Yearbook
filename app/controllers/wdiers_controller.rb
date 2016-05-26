@@ -1,6 +1,5 @@
 class WdiersController < ApplicationController
 
-
   def index
     @wdiers = Wdier.all
   end
