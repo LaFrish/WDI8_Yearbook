@@ -93,6 +93,10 @@ body {
   line-height: 1.5;
 }
 
+button{
+	z-index: 2;
+
+}
 #logo {
   margin-top: -15px;
   font-size: 3em;
@@ -112,6 +116,10 @@ body {
   display: inline;
 }
 
+#navigation_container img{
+	width:60px;
+	height:60px;
+}
 .tab {
   font-size: 105%;
   padding-top: 4%;
@@ -201,7 +209,7 @@ nav a:hover {
   background: red;
 }
 
-.ga-btn {
+#navigation_container .ga-btn {
 	position: relative;
 	margin: auto;
 	// margin-left: 48vw;
@@ -594,7 +602,7 @@ section .inner {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 110;
+	z-index: 2;
 	opacity: 0;
 	font-family: Verdana;
 	color: #fcfcfc;
@@ -782,58 +790,51 @@ of
 Photo
 */
 //
-// #photos {
-//   opacity: .88;
-// }
-//
-// #photos img {
-//   width: 30%;
-//   float: left;
-//   display: block;
-//   margin: 2px;
-// }
-//
-// ul {
-//   list-style: none;
-//   margin: 0px auto;
-//   padding: 10px;
-//   display: block;
-//   max-width: 780px;
-//   text-align: center;
-// }
-//
-// #overlay {
-//   background: rgba(0, 0, 0, .8);
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   display: none;
-//   text-align: center;
-// }
-//
-// #overlay img {
-//   margin: 10% auto 0;
-//   width: 550px;
-//   border-radius: 5px;
-// }
-//
-// #photos {
-//   width: 100%;
-// }
-//
-// #photo-gallery {
-//   width: 100%;
-//
-// }
-//
-// a img {
-//   height:175px;
-//
-// }
+#photos {
+  opacity: .88;
+}
 
-#photo ul.row {
+#photos img {
+  width: 30%;
+  float: left;
+  display: block;
+  margin: 2px;
+}
+
+
+
+#overlay {
+  background: rgba(0, 0, 0, .8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+}
+
+#overlay img {
+  margin: 10% auto 0;
+  width: 550px;
+  border-radius: 5px;
+}
+
+#photos {
+  width: 100%;
+}
+
+#photo-gallery {
+  width: 100%;
+
+}
+
+a img {
+  height:175px;
+
+}
+
+#photo ul .row {
   padding: 0px;
   margin: 0px;
 }
@@ -846,11 +847,11 @@ Photo
 
 #photo img {
 	border: 1.5px solid #ccc;
-	width: 600px;
-	height: 400px;
+	width: 320px;
+	height: 240px;
   padding: 0px;
   margin: 0px;
-	// border: 1.5px solid #ccc;
+	border: 1.5px solid #ccc;
  padding: 10px;
  margin: 2% 1.5%;
   border-radius: 20px;

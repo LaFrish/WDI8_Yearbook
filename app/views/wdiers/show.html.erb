@@ -1,4 +1,4 @@
-<style>
+s <style>
 
 #wdierShow .topContainer {
   overflow: hidden;
@@ -49,13 +49,13 @@ box-shadow: 0 0 5px 0 #222;
   margin: 50px 100px 100px 50px;
   overflow: hidden;
 }
-#wdierShow html {
+/*#wdierShow html {
   color: #222;
   font-family: monospace, sans-serif;
   font-size: 12px;
   -webkit-font-smoothing: antialiased;
   font-style, font-weight, letter-spacing, line-height, word-spacing: normal;
-}
+}*/
 
 #wdierShow body {
   width: 100%;
@@ -81,7 +81,7 @@ box-shadow: 0 0 5px 0 #222;
   border: 1px solid #bbb;
   border-radius: 8px;
   overflow: hidden;
-  z-index:-1;
+  z-index:0;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 }
@@ -109,10 +109,10 @@ box-shadow: 0 0 5px 0 #222;
 #wdierShow .profileImg{
   margin: auto;
   margin-bottom: -300px;
+  /*margin-top: 0px;*/
   height: 300px;
   width: 300px;
-  /*position : absolute ;*/
-  left : 550px;
+  position : relative;
   border:  solid #222;
   border-radius: 100%;
   box-shadow: 0 0 20px 0 #222;
@@ -120,24 +120,16 @@ box-shadow: 0 0 5px 0 #222;
   overflow:hidden;
   cursor: pointer;
   /*float: left;*/
-  z-index: 1;
+  z-index: 2;
   -webkit-animation: index imgSlideIn .65s .15s ease forwards;
   animation: index imgSlideIn .65s .15s ease forwards;
 }
 
-#wdierShow .profile-pic img{
-  position: relative;
-  z-index: 1;
-  /*margin-left:auto;
-  margin-right:auto;*/
-  margin-bottom: -325px;
-  width: 300px;
-  height:300px;
-  border:  solid #222;
-  border-radius: 100%;
-  box-shadow: 0 0 20px 0 #222;
-  cursor: pointer;
+#wdierShow .profileImg img{
+width: 100%;
+height: 100%;
 }
+
 
 #wdierShow .profileImg:before {
   content: "";
@@ -230,7 +222,7 @@ cursor: pointer;
           <%= @wdier.codey_id %></br>
           <%= @wdier.role %></br>
         </ul>
-        <button><%= link_to "edit", edit_wdier_path(@wdier)%></button>
+        <%= link_to "edit", edit_wdier_path(@wdier)%>
       </br>
       <div class="projectGallery">
         <ul class="grid">
@@ -240,10 +232,11 @@ cursor: pointer;
           <li><%= @wdier.project3_url %></li>
         </ul>
     </div>
+
     <div class="photo">
       <div class="photoGallery">
         <h1>Pics Please</h1>
-        <button> <%= link_to "Add new photo", new_photo_path(@wdier) %> </button>
+         <%= link_to "Add new photo", new_photo_path(@wdier) %>
         <ul>
           <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><% @wdier.photos.each do |photo| %>
             <%= image_tag photo.img_url %></li>
@@ -259,11 +252,11 @@ cursor: pointer;
               <h1>keep in touch...</h1>
 
 
-              <button><%= link_to "Add new comment", new_wdier_post_path(@wdier) %></button>
+              <%= link_to "Add new comment", new_wdier_post_path(@wdier) %>
               <% @wdier.posts.each do |post| %>
               <%= post.name %>
               <%= post.body %>
-            </p>
+            </br>
             <% if current_user && current_user == post.user %>
             <%= link_to "Edit", edit_wdier_post_path(@wdier) %> |
             <%= link_to "Delete", wdier_post_path(@wdier), method: :delete %>
@@ -276,4 +269,5 @@ cursor: pointer;
         </br>
         </footer>
       </div>
+    </div>
     </section>
