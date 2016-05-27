@@ -448,10 +448,13 @@ a img {
 </style>
 <section id="photoShow">
 
-  <%= image_tag @photo.img_url%>
+  <%= image_tag @photo.img_url%></br>
   <%= @photo.caption %>
+  <%= @photo.tag %>
+  <%= @photo.tagging %>
   <button><%= link_to "Edit", edit_photo_path(@photo) %> </button>
   <button><%= link_to "Delete", photo_path(@photo),  method: :delete %> </button>
+  <button><%= link_to "Back to Gallery", photos_path(@photo) %> </button>
     </img>
 
 
