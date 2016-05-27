@@ -34,8 +34,10 @@ end
 
   def update
     @photo = Photo.find_by_id(params[:id])
-    # @photo.update(photo_params.merge([:id]))
-    redirect_to photo_path(@photo)
+     @photo.update!(photo_params)
+    else
+      redirect_to photo_path(@photo)
+
   end
 
   def destroy
