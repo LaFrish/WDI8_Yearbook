@@ -86,3 +86,29 @@ h1 {
 	display: inline-block;
 	margin: 20px;
 }
+
+#yearbookIndex .yearbookCover .container_btm{
+  background: url("yeabookbtm-bg.png") no-repeat;
+  height: 500px;
+  width: 1200px;
+
+
+}
+#yearbookIndex .students{
+  background: url("cog-outline-red.png") no-repeat;
+  height: 300px;
+  width: 300px;
+  font-size: 100px;
+
+}
+#yearbookIndex .wdiers:hover{
+  background: pink;
+}
+#yearbookIndex .instructors{
+	background: url("red-cog.png") no-repeat;
+  height: 300px;
+  width: 300px;
+}
+#yearbookIndex .instructors:hover{
+	color: yellow;
+}
