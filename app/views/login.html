@@ -1,0 +1,241 @@
+<style>
+
+//login
+.login_container {
+	border: 2px solid #000;
+}
+#login label {
+  cursor: pointer;
+  color: #666;
+}
+
+#login label input[type="checkbox"] {
+  display: none;
+}
+
+#login label input[type="checkbox"] + .label-text:before {
+  content: "\f096";
+  font-family: "FontAwesome";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  width: 1em;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#login label input[type="checkbox"]:checked + .label-text:before {
+  content: "\f14a";
+  color: #06a3e9;
+}
+
+#login label input[type="checkbox"]:disabled + .label-text {
+  color: #aaa;
+}
+
+#login label input[type="checkbox"]:before {
+  content: "\f0c8";
+  color: #ccc;
+}
+
+#login body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #263238;
+  font-family: 'Lato', sans-serif;
+}
+
+#login h1{
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 100;
+}
+
+#login .login__form{
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+#login .form__control{
+  display: block;
+  margin-bottom: 10px;
+  height: 45px;
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#login .form__control:focus{
+  outline:none;
+  border:1px solid #29B6F6;
+  -webkit-box-shadow: 0px 0px 5px  #E91E63;
+  box-shadow: 0px 0px 1px  #29B6F6;
+}
+
+#login .btn{
+  display: block;
+  border: 1px solid transparent;
+  height: 45px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  outline:none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+#login .btn__login{
+  background-color: #E91E63;
+  color: #fff;
+  font-size: 18px;
+}
+
+#login .btn__login:hover{
+  background-color: #fff;
+  color: #E91E63;
+  border: 1px solid #E91E63;
+}
+
+#signup__email{
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAA7UlEQVR4Aa2VCQ2EMBREawELWKgFLKwFLNRCLWABC1jAwF4WsMBy/E1+JsMxSZM8bt70bvi8XneJC8kId1DE08LXzsNCpcnPxR3cjxAgy9uF2YmDEiCJ1QBVjNQmpwGyGDEpDaBiGG5KwLQQmbwzccsFeoAuFgKs18/bWKQ2eb/eNAuzkUqU3FyDk1+Okvwvkes0TzTxd6FHebAAnBiV65NMRgWbUInJ8cMIMuy0hwEFInII+C7MICZDF5pSkI9EzALyqVxc8VCEpUe5LubrEe/QBncZkcYVLIO8wCy1mvtJVNtNaTpfpVSQdqH6ARac3tEPInsoAAAAAElFTkSuQmCC') left 8px center no-repeat;
+  padding-left: 40px;
+}
+
+#signup__password{
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAXCAYAAADpwXTaAAAAuUlEQVR4AcXUUY0DIRCH8bGABSxgYS3UwloYC1g4LVhAwebWAhbo12QeNlzKUkJ6m/ye/sn30AmV3vd7HB56sUPekc4YUVGQkFFxInwS+7GIQi48sm1hJBZQ8Wg343AijcQiTkjHjgp3F0tGOjaLbSMxhfR8NeZtzHbN7UaFXoPNDzotw4ldpCJCJngUxD+XmZReRmMBbkVMbS/rYlgRaw80HzMVuipWoP97zSkWW/oCFr/N5l9jijWe5ji9FMKDOfwAAAAASUVORK5CYII=') left 8px center no-repeat;
+  padding-left: 40px;
+}
+
+#login .forgot__password{
+  text-decoration: none;
+  color: #4B5052;
+  float: right;
+}
+
+#login .login__options{
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+#login .form__group{
+  margin-bottom: 15px;
+}
+
+#login h5{
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #dbdbdb;
+  line-height: 0.1em;
+  margin: 30px 0 20px;
+}
+
+#login h5 span {
+  background:#fff;
+  padding:0 10px;
+}
+
+#login .social__login{
+  display: flex;
+}
+
+#login .social__login a{
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  line-height: 45px;
+  margin: 3px;
+}
+
+#login .social__login i{
+  margin-right: 10px;
+}
+
+#login .btn__google{
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 18px;
+}
+
+#login .btn__google:hover{
+  background-color: #fff;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+#login .btn__facebook{
+  background-color: #06a3e9;
+  color: #fff;
+  font-size: 18px;
+}
+
+#login .btn__facebook:hover{
+  background-color: #fff;
+  color: #06a3e9;
+  border: 1px solid #06a3e9;
+}
+
+#login .signup__link a{
+  text-decoration: none;
+  color: #E91E63;
+}
+
+#login .signup__link{
+  font-weight: 600;
+}
+
+#login .signup__link span{
+  color: #4B5052;
+}
+</style>
+
+<div id="login">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= link_to "Sign In", new_user_session_path %>
+  <% if !current_user %>
+  <%= link_to "Sign Up", new_user_registration_path %>
+  <% end %>
+
+  <div class="login_container">
+
+    <h1>Login now</h1>
+
+    <div class="login__form">
+      <form>
+        <input type="text" name="username" class="form__control" id="signup__email" placeholder="Email address" />
+        <input type="password" name="password" class="form__control" id="signup__password" placeholder="Password" />
+
+        <div class="login__options">
+          <label>
+            <input type="checkbox" name="check" />
+            <span class="label-text">Remember me</span>
+          </label>
+
+          <a href="#" class="forgot__password">Forgot your password?</a>
+        </div>
+
+        <div class="form__group">
+          <button class="btn btn__login">SIGN IN</button>
+        </div>
+        <div class="signup__link">
+          <span>Not a member? <a href="#">Sign up</a></span>
+        </div>
+        <!-- <h5><span>Or sign in with</span></h5>
+        <div class="social__login">
+        <a href="#" class="btn btn__google"><i class="fa fa-google"></i> GOOGLE</a>
+        <a href="#" class="btn btn__facebook"><i class="fa fa-facebook"></i> FACEBOOK</a> -->
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</div>

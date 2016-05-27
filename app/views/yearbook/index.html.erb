@@ -1,57 +1,35 @@
-<section>
-  <div class="inner">
-    <h1>
-      Welcome</br> to WDI8 Yearbook</h1>
+<style>
+#yearbookIndex .topbtn{
+  margin-top: 200px;
+}
+#yearbookIndex .yearbookCover{
+  background-color: #000;
 
+}
+#yearbookIndex h1{
+color: #fff;
+}
+#yearbookIndex h2{
+color: red;
+}
+#yearbookIndex p{
+color: #000
+}
+</style>
 
+<section id="yearbookIndex">
+<section class="topbtn">
+  <div class="button"><%= link_to "New User", new_wdier_path(@wdier)%></div></br>
+  <div class="button"><%= link_to "Yearbook Index", root_path(@yearbook)%></div></br>
+  <div class="button"><%= link_to "Photo Index", photos_path(@photo)%></div></br>
+  <div class="button"><%= link_to "New Photo", new_photo_path(@photo)%></div></br>
+  <div class="button"><%= link_to "users Index", wdiers_path(@wdier)%></div></br>
+</section>
 
-<div class="button"><%= link_to "New User", new_wdier_path(@wdier)%></div></br>
-<div class="button"><%= link_to "Yearbook Index", root_path(@yearbook)%></div></br>
-<div class="button"><%= link_to "Photo Index", photos_path(@photo)%></div></br>
-<div class="button"><%= link_to "New Photo", new_photo_path(@photo)%></div></br>
-<div class="button"><%= link_to "users Index", wdiers_path(@wdier)%></div></br>
-<div class="button"><%= link_to "Add Codey", new_codey_path(@codey)%></div></br>
-<div class="button"><%= link_to "Codey Index", codeys_path(@codey)%></div></br>
-<div id="login">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= link_to "Sign In", new_user_session_path %>
-  <% if !current_user %>
-  <%= link_to "Sign Up", new_user_registration_path %>
-  <% end %>
-
-  <div class="login_container">
-
-    <h1>Login now</h1>
-
-    <div class="login__form">
-      <form>
-        <input type="text" name="username" class="form__control" id="signup__email" placeholder="Email address" />
-        <input type="password" name="password" class="form__control" id="signup__password" placeholder="Password" />
-
-        <div class="login__options">
-          <label>
-            <input type="checkbox" name="check" />
-            <span class="label-text">Remember me</span>
-          </label>
-
-          <a href="#" class="forgot__password">Forgot your password?</a>
-        </div>
-
-        <div class="form__group">
-          <button class="btn btn__login">SIGN IN</button>
-        </div>
-        <div class="signup__link">
-          <span>Not a member? <a href="#">Sign up</a></span>
-        </div>
-        <!-- <h5><span>Or sign in with</span></h5>
-        <div class="social__login">
-          <a href="#" class="btn btn__google"><i class="fa fa-google"></i> GOOGLE</a>
-          <a href="#" class="btn btn__facebook"><i class="fa fa-facebook"></i> FACEBOOK</a> -->
-        </div>
-        </div>
-      </form>
-    </div>
+<section class="yearbookCover">
+  <div class="container">
+    <h1> We Are</h1>
+    <h2>WDI8</h2>
   </div>
-</div>
+</section>
 </section>
