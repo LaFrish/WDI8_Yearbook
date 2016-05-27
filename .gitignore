@@ -37,3 +37,5 @@ config/initializers/aws.rb
 aws.rb
 
 config/secrets.yml
+
+.sass-cache
