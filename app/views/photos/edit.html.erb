@@ -1,15 +1,21 @@
 
 <h2>Edit photo</h2>
+<%= form_for @photo do |f| %>
 <div class="row text-center">
-  <%= form_for @photo do |f| %>
-    <div class="large-10 large-centered columns">
-      <%= f.text_field :img_url, placeholder: "Enter the photo URL" %>
-    </div>
-    <div class="large-10 large-centered columns">
-      <%= f.text_field :all_tags, placeholder: "Enter your tags, separated with commas" %>
-    </div>
-    <div class="large-10 large-centered columns">
-      <%= f.submit "Post", class: "button"%>
-    </div>
-  <% end %>
+  <div class="large-10 large-centered columns">
+
+<%=f.label :img_url, "Photo URL" %>
+<%=f.text_field :img_url %>
+</br>
+<%=f.label :caption, "Caption" %>
+<%=f.text_field :caption%>
+</br>
+<%=f.label :all_tags,"Tags", placeholder: "Separated with commas" %>
+<%= f.text_field :all_tags %>
+</br>
+<%=f.label :tag_list, "Tag List", placeholder: "Separated with commas" %>
+<%=f.text_field :tag_list %>
 </div>
+<%=f.submit%>
+  <% end %>
+<div>
