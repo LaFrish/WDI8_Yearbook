@@ -1,9 +1,24 @@
 <style>
-#yearbookIndex .topbtn{
-  margin-top: 200px;
+#yearbookIndex{
+  text-align: center;
 }
-#yearbookIndex .yearbookCover{
+
+#yearbookIndex .yearbookCover {
+  margin-top: 200px;
+  background: url("http://www.nestbuyer.com/wp-content/uploads/2014/09/DC-skyline.jpg");
+  height: 800px;
+}
+#yearbookIndex .yearbookCover .overlay {
   background-color: #000;
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+}
+#yearbookIndex .yearbookCover .container_btm{
+  background: url("http://themeshifters.com/themes/vinto/demo/bg/home-bg.png");
+  height: 100%;
+  width: 100%;
+  margin-top: -200px;
 
 }
 #yearbookIndex h1{
@@ -15,21 +30,56 @@ color: red;
 #yearbookIndex p{
 color: #000
 }
+
+#yearbookIndex .middle{
+  background: #fff;
+
+}
+#yearbookIndex .wdiers{
+  background: url("assets/images/cog-outline-red.png")
+  height: 800px;
+
+}
 </style>
-
 <section id="yearbookIndex">
-<section class="topbtn">
-  <div class="button"><%= link_to "New User", new_wdier_path(@wdier)%></div></br>
-  <div class="button"><%= link_to "Yearbook Index", root_path(@yearbook)%></div></br>
-  <div class="button"><%= link_to "Photo Index", photos_path(@photo)%></div></br>
-  <div class="button"><%= link_to "New Photo", new_photo_path(@photo)%></div></br>
-  <div class="button"><%= link_to "users Index", wdiers_path(@wdier)%></div></br>
-</section>
-
-<section class="yearbookCover">
-  <div class="container">
-    <h1> We Are</h1>
-    <h2>WDI8</h2>
-  </div>
-</section>
+  <section class="yearbookCover">
+    <div class="overlay">
+      <div class="cover_container">
+        </br>
+          <div class="button"><%= link_to "New User", new_wdier_path(@wdier)%></div>
+          <div class="button"><%= link_to "Yearbook Index", root_path(@yearbook)%></div>
+          <div class="button"><%= link_to "Photo Index", photos_path(@photo)%></div>
+          <div class="button"><%= link_to "New Photo", new_photo_path(@photo)%></div>
+          <div class="button"><%= link_to "users Index", wdiers_path(@wdier)%></div>
+        </br>
+          <h1> We Are</h1>
+          <h2>WDI8</h2>
+        </br>
+      </section>
+        <div class="container_btm">
+          WORD</br>
+          WORD</br>
+          WORD</br>
+          WORD</br>
+          WORD</br>
+          WORD</br>
+          WORD</br>
+          WORD</br>
+          WORD</br>
+          WORD</br>
+          WORD</br>
+          WORD</br>
+        </div>
+      </div>
+    </div>
+  <!-- </section> -->
+ <section class="middle">
+   <div class="middle_container">
+     <div class="wdiers">
+WORD
+     </div>
+   </div>
+ </section>
+ <section>
+ </section>
 </section>
