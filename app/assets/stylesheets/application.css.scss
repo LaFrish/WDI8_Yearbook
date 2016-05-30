@@ -7,6 +7,33 @@
 
 // @import "font-awesome";
 
+@font-face {
+	font-family:'PFDinTextCompPro-Bold';
+	src: url('PFDinTextCompPro-Bold_gdi.eot');
+	src: url('PFDinTextCompPro-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('PFDinTextCompPro-Bold_gdi.woff') format('woff'),
+		url('PFDinTextCompPro-Bold_gdi.ttf') format('truetype'),
+		url('PFDinTextCompPro-Bold_gdi.otf') format('opentype'),
+		url('PFDinTextCompPro-Bold_gdi.svg#PFDinTextCompPro-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+@font-face {
+	font-family:'PFDinTextCompPro-Regular';
+	src: url('PFDinTextCompPro-Regular_gdi.eot');
+	src: url('PFDinTextCompPro-Regular_gdi.eot?#iefix') format('embedded-opentype'),
+		url('PFDinTextCompPro-Regular_gdi.woff') format('woff'),
+		url('PFDinTextCompPro-Regular_gdi.ttf') format('truetype'),
+		url('PFDinTextCompPro-Regular_gdi.otf') format('opentype'),
+		url('PFDinTextCompPro-Regular_gdi.svg#PFDinTextCompPro-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Lato|Montserrat|Roboto+Slab:400,700|Arvo:400,700|Catamaran:400,900,800,500,600,700,300,200,100|Questrial|Sanchez|Marmelad|Fredericka+the+Great|Permanent+Marker|Gravitas+One|Elsie:400,900|Abril+Fatface|Bangers|Luckiest+Guy|Ultra|Graduate);
 
 @import "http://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
@@ -14,6 +41,9 @@
 @import "https://daneden.github.io/animate.css/animate.min.css";
 @import "bourbon";
 
+body{
+  font-family: 'PFDinTextCompPro-Regular';
+}
 
 .index img {
   height: 200px;
