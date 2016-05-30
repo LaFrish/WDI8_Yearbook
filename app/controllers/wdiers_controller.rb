@@ -16,7 +16,9 @@ class WdiersController < ApplicationController
 
   def show
     @wdier = Wdier.find(params[:id])
+    # @wdier = Wdier.where(squad_id: @wdier.squad_id).not(id: @wdier.id).order(:name)
   end
+
 
   def edit
     @wdier = Wdier.find(params[:id])

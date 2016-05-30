@@ -43,8 +43,9 @@ akes <style>
   box-shadow: inset 0 0 5px 0 #222;
 }
 #wdierShow projectGallery{
-  margin: 50px 100px 100px 50px;
-  overflow: hidden;
+  /*margin: 50px 100px 100px 50px;
+  overflow: hidden;*/
+  vertical-align: middle;
 }
 /*#wdierShow html {
 color: #222;
@@ -153,12 +154,12 @@ font-style, font-weight, letter-spacing, line-height, word-spacing: normal;
   ;
 }
 #wdierShow button {
-text-align: center;
-width: 200px;
-height: 50px;
-margin: 25px;
-box-shadow: 0 0 5px 0 #222;
-cursor: pointer;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  margin: 25px;
+  box-shadow: 0 0 5px 0 #222;
+  cursor: pointer;
 }
 
 #wdierShow .button {
@@ -199,7 +200,13 @@ cursor: pointer;
   margin: 25px 50px 25px 25px;
   box-shadow: inset 0 0 5px 0 #222;
 }
-
+#wdierShow .gal button{
+  background-color: #fff;
+  line-height: 50px;
+  text-align: left;
+  margin: 25px 50px 25px 25px;
+  box-shadow: inset 0 0 5px 0 #222;
+}
 </style>
 <!-- <div class="profileImg"> -->
 
@@ -226,87 +233,81 @@ cursor: pointer;
           <i class="fa-file-text-o"></i>
           Portfolio
           <% end %>
-        <%=link_to @wdier.fb, class: 'btn btn-primary btn-lg' do %>
-        <i class="fa fa-facebook"></i>
-        Facebook
-        <% end %>
-        <%=link_to @wdier.linkedin, class: 'btn btn-primary btn-lg' do %>
-        <i class="fa fa-linkedin"></i>
-        LinkedIn
-        <% end %>
-      </ul>
-    </div>
-    <div class="topContainer">
-      <ul class="grid">
-
-
-        <%= @wdier.squad_name %></br>
-        <%= @wdier.teaching %></br>
-        <%= @wdier.memory %></br>
-        <%= @wdier.favlang %></br>
-        <%= @wdier.wisewords %></br>
-        <%= @wdier.tag_list %></br>
-        <%= @wdier.q1 %></br>
-        <%= @wdier.q2 %></br>
-        <%= @wdier.q3 %></br>
-        <%= @wdier.squad_id %></br>
-        <%= @wdier.student_id %></br>
-        <%= @wdier.instructor_id %></br>
-        <%= @wdier.codey_id %></br>
-        <%= @wdier.role %></br>
-      </ul>
-      <%= link_to "edit", edit_wdier_path(@wdier)%>
-    </br>
-    <div class="projectGallery">
-      <h1> Project Gallery </h1>
-      <%=link_to image_tag("red-cog.png"), @wdier.project1_url%>
-      <%=link_to image_tag("red-cog.png"), @wdier.project2_url%>
-      <%=link_to image_tag("red-cog.png"), @wdier.project3_url%>
-    </div>
-    <div class="squadGallery">
-      <ul class="grid">
-        <div class="index">
-          <h2> <%= @wdier.squad_name %></h2>
 
         </ul>
       </div>
-    </div>
-
-    <div class="photo">
-      <div class="photoGallery">
-        <h1>Pics Please</h1>
-        <button><%= link_to "Add new photo", new_photo_path(@wdier) %></button>
-        <ul>
-          <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><% @wdier.photos.each do |photo| %>
-            <%= image_tag photo.img_url %></li>
-            <% end %>
+      <div class="topContainer">
+        <ul class="grid">
+          <%= @wdier.squad_name %></br>
+          <%= @wdier.teaching %></br>
+          <%= @wdier.memory %></br>
+          <%= @wdier.favlang %></br>
+          <%= @wdier.wisewords %></br>
+          <%= @wdier.tag_list %></br>
+          <%= @wdier.q1 %></br>
+          <%= @wdier.q2 %></br>
+          <%= @wdier.q3 %></br>
+          <%= @wdier.squad_id %></br>
+          <%= @wdier.student_id %></br>
+          <%= @wdier.instructor_id %></br>
+          <%= @wdier.codey_id %></br>
+          <%= @wdier.role %></br>
+        </ul>
+        <%= link_to "edit", edit_wdier_path(@wdier)%>
+      </br>
+      <div class="projectGallery">
+        <ul class="grid">
+          <div class="index">
+            <h1> Project Gallery </h1>
+            <%=link_to image_tag("project1.png"), @wdier.project1_url%>
+            <%=link_to image_tag("project2.png"), @wdier.project2_url%>
+            <%=link_to image_tag("project3.png"), @wdier.project3_url%>
           </ul>
         </div>
-      </div>
-      <div class="comment">
-        <div class="commentGallery">
-          <div class="overlay">
-            <h1>keep in touch...</h1>
-            <button><%= link_to "Add new comment", new_wdier_post_path(@wdier) %> </button>
-            <% @wdier.posts.each do |post| %>
-            <div class="name">
-              <%= post.name %>
-            </div>
-            <div class="body">
-              <%= post.body %>
-            </div>
-            <%= link_to "Add new comment", new_wdier_post_path(@wdier) %>
-            <% end %>
-            <% if current_user && current_user == post.user %>
-            <%= link_to "Edit", edit_wdier_post_path(@wdier) %> |
-            <%= link_to "Delete", wdier_post_path(@wdier), method: :delete %>
-            <% end %>
+
+        <div class="squadGallery">
+          <ul class="grid">
+            <div class="index">
+              <h2> <%= @wdier.squad_name %></h2>
+            </ul>
           </div>
         </div>
+
+        <div class="photo">
+          <div class="photoGallery">
+            <h1>Pics Please</h1>
+            <button><%= link_to "Add new photo", new_photo_path(@wdier) %></button>
+            <ul>
+              <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><% @wdier.photos.each do |photo| %>
+                <%= image_tag photo.img_url %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="commentGallery">
+              <div class="overlay">
+                <h1>keep in touch...</h1>
+                <button><%= link_to "Add new comment", new_wdier_post_path(@wdier) %> </button>
+                <% @wdier.posts.each do |post| %>
+                <div class="name">
+                  <%= post.name %>
+                </div>
+                <div class="body">
+                  <%= post.body %>
+                </div>
+                <%= link_to "Add new comment", new_wdier_post_path(@wdier) %>
+                <% end %>
+                <% if current_user && current_user == post.user %>
+                <%= link_to "Edit", edit_wdier_post_path(@wdier) %> |
+                <%= link_to "Delete", wdier_post_path(@wdier), method: :delete %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <footer>
+          </br>
+        </footer>
       </div>
-      <footer>
-      </br>
-    </footer>
-  </div>
-</div>
-</section>
+    </div>
+  </section>
