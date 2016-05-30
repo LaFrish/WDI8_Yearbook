@@ -26,7 +26,7 @@ class WdiersController < ApplicationController
     @wdier = Wdier.find(params[:id])
     @wdier.update(wdier_params)
 
-    redirect_to wdiers_path(@wdier)
+    redirect_to wdier_path(@wdier)
   end
 
   def destroy

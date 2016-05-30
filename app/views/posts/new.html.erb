@@ -1,4 +1,11 @@
-
+<style>
+body{
+  background-color: #fff;
+}
+form{
+  background-color: red;
+}
+</style>
 <%= form_for [@wdier, @post] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
