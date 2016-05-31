@@ -3,8 +3,6 @@
     <div class="overlay">
       <div class="text-overlay">
       </br>
-
-
     </br>
     <span> We Are</br>
     WDI8</span>
@@ -12,11 +10,12 @@
 </div>
 </div>
 </section>
-<div class="button"><%= link_to "New Photo", new_photo_path(@photo)%></div>
+<section class="space">
+  <div class="inner-shadow mustard">
+</section>
 <section class="words">
-  <div class="inner-shadow brand">
-    <h4>WORDS OF WISDOM</h4>
-    <h5> from our instructors </h5>
+  <div class="inner-shadow mustard">
+    <h4>INSTRUCTOR'S WORDS OF WISDOM</h4>
   </div>
   <div class="wordContainer">
     <div class="box_left wisewords">
@@ -88,8 +87,8 @@
   </section>
   <section class="middle">
     <div class="middle_container">
-      <div class="inner-shadow brand">
-        We are WDI 8</br>Student & Instructor Gallery</div>
+      <div class="inner-shadow mustard">
+      </br><h5>Student & Instructor Gallery</h5></div>
         <div>
           <h2 class="wdiers"><%=link_to image_tag("wdi8.png"), wdiers_path(@wdier)%></h2>
         </div>
@@ -97,8 +96,8 @@
     </div>
   </section>
   <section>
-    <div class="inner-shadow brand">
-      Photo Gallery</div>
+    <div class="inner-shadow mustard">
+      </br><h5>Photo Gallery</h5></div>
       <div>
         <h2><%=link_to image_tag("red-cog300.png"), photos_path(@photos)%></h2>
   </section>

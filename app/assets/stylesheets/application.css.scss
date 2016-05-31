@@ -112,7 +112,7 @@ a:visited {
 }
 
 
-ul, li, h1, h2, h3, h4, h5, h6, p, a, .logo {
+ul, li, h1, h2, h3, h4, h5, p, a, .logo {
 	font-family: "Lato","Verdana",sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -121,6 +121,10 @@ ul, li, h1, h2, h3, h4, h5, h6, p, a, .logo {
 	padding: 0;
 }
 
+h6{
+	// font-family:'PFDinTextCompPro-Bold';
+	color: rgba(255, 165, 0, 0.75);
+}
 .inner {
 	width: 800px;
 	position: relative;
@@ -182,9 +186,9 @@ nav {
 
 #navigation_container .ga-btn {
 	position: relative;
-	margin: auto;
-	// margin-left: 48vw;
-	// margin-right:48vw;
+	// margin: auto;
+	margin-left: 47vw;
+	margin-right:47vw;
 	width:30px;
 	height:30px;
 	border:0;
@@ -192,7 +196,8 @@ nav {
 }
 
 #navigation_container .ga-btn :hover{
-	border-color: red;
+	background: rgba(255, 165, 0, 0.75);
+	border-radius: 100%;
 }
 
 // .logo {
@@ -218,9 +223,6 @@ nav {
 .alternate a{
 	color: #000;
 }
-
-
-
 .alternate nav a {
 	display: inline-block;
 	color: #000;
@@ -249,7 +251,7 @@ nav {
 }
 #yearbookIndex .text-overlay{
 	background: red;
-	opacity: 0.5;
+	opacity: 0.7;
 	padding: 0 50px;
 	width: 100%;
 	height: 100%;
@@ -257,9 +259,9 @@ nav {
 	position: relative;
 }
 #yearbookIndex span{
-	font-size: 200px;
+	font-size: 250px;
 	text-align: center;
-	line-height: 300px;
+	line-height: 275px;
 	display: block;
 	background-image: url("http://pixelumenlab.com/wp-content/uploads/2015/02/washington_dc_night_skyline-1024x577.jpg");
 	background-repeat: no-repeat;
@@ -337,11 +339,20 @@ h1 {
 	margin: 20px;
 }
 
-#yearbookIndex .yearbookCover .container_btm{
-	background: url("yeabookbtm-bg.png") no-repeat;
-	height: 500px;
-	width: 1200px;
+footer{
+	background-color: #000;
+	background: url("9845479.png") no-repeat;
+	height: 200px;
+	width: 100%;
 }
+#yearbookIndex .space{
+	height: 200px;
+}
+#yearbookIndex h6{
+	font-family:'PFDinTextCompPro-Bold';
+	font-size: 200px;
+}
+
 #yearbookIndex .students{
 	background: url("cog-outline-red.png") no-repeat;
 	height: 300px;
@@ -358,17 +369,17 @@ h1 {
 	width: 300px;
 }
 #yearbookIndex .instructors:hover{
-	color: yellow;
+	background: rgba(255, 165, 0, 0.75);
 }
 
 #yearbookIndex{
 	text-align: center;
 }
 #yearbookIndex .yearbookCover {
-	margin-top: 200px;
+	margin-top: 65px;
 	background: url("http://pixelumenlab.com/wp-content/uploads/2015/02/washington_dc_night_skyline-1024x577.jpg") no-repeat;
 	background-size: cover;
-	height: 800px;
+	height: 650px;
 }
 #yearbookIndex .yearbookCover .overlay {
 	background-color: #000;
@@ -560,7 +571,12 @@ h1 {
 	box-shadow: 0 0 5px 0 #222;
 	cursor: pointer;
 }
-.brand {
+// .red {
+// 	font-family: sans-serif;
+// 	font-weight: 700;
+// 	color: red;
+// }
+.mustard {
 	font-family: sans-serif;
 	font-weight: 700;
 	color: rgba(255, 165, 0, 0.75);
@@ -802,7 +818,7 @@ i {
 	background-color: #fff;
 }
 .icon-link.fill.envelope:hover .fa-envelope {
-	color: #333;
+	color: rgba(255, 165, 0, 0.75);
 	-webkit-transition: color 150ms ease-in-out;
 	transition: color 150ms ease-in-out;
 }
@@ -838,7 +854,7 @@ i {
 	border: 2px solid #444;
 }
 .icon-link:hover.envelope {
-	border: 2px solid #000;
+	border: 2px solid rgba(255, 165, 0, 0.75);
 }
 .icon-link:hover.globe {
 	border: 2px solid #000;
@@ -868,7 +884,7 @@ i {
 	transition: color 150ms ease-in-out;
 }
 .icon-link:hover .fa-envelope {
-	color: yellow;
+	color: rgba(255, 165, 0, 0.75);
 	-webkit-transition: color 150ms ease-in-out;
 	transition: color 150ms ease-in-out;
 }
@@ -1282,8 +1298,6 @@ Photo
 	display: block;
 	margin: 2px;
 }
-
-
 
 #overlay {
 	background: rgba(0, 0, 0, .8);
