@@ -1337,9 +1337,12 @@ i {
   #photo .center {
     text-align: center;
   }
-	#PhotoIndex h4{
+	#photoIndex h4{
 		font-size:100px;
 		font-family: 'PFDinTextCompPro-Bold';
+	}
+	#photoIndex container{
+		margin-top: 100px;
 	}
 //Photo Show
 #photoShow img{
