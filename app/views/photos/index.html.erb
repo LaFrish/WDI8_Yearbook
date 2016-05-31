@@ -9,30 +9,26 @@
 
   <section id="photo">
     <div class="space">
-    
-
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-      <%= render partial: "photos/new" %>
-    </div>
-
-    <div class="inner-shadow mustard" >
-      <h2> WDI 8 Photo Gallery </h2></div>
-      <button class="button"><%= link_to "New Photo", new_photo_path(@photo)%></button>
-
-      <div class="index">
-        <div class="photoGallery">
-          <div class='imgGalleryContainer'>
-            <div class="thumbnail">
-              <ul>
-                <li><% @photos.each do |photo| %>
-                  <%= link_to image_tag(photo.img_url), photo_path(photo)%>
-                  <%= render @photos %></img>
-                  <% end %>
-                </li>
-              </ul>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <%= render partial: "photos/new" %>
+      </div>
+      <div class="inner-shadow mustard" >
+        <h2> WDI 8 Photo Gallery </h2></div>
+        <button class="button"><%= link_to "New Photo", new_photo_path(@photo)%></button>
+        <div class="index">
+          <div class="photoGallery">
+            <div class='imgGalleryContainer'>
+              <div class="thumbnail">
+                <ul>
+                  <li><% @photos.each do |photo| %>
+                    <%= link_to image_tag(photo.img_url), photo_path(photo)%>
+                    <%= render @photos %></img>
+                    <% end %>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
-  </section>
