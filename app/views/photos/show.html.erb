@@ -1,13 +1,4 @@
-<style>
-
-
-#photoShow img{
-  width: 75%;
-}
-
-</style>
 <section id="photoShow">
-
   <%= image_tag @photo.img_url%></br>
   <%= @photo.caption %>
   <%= @photo.tag %>
@@ -16,7 +7,4 @@
   <button><%= link_to "Delete", photo_path(@photo),  method: :delete %> </button>
   <button><%= link_to "Back to Gallery", photos_path(@photo) %> </button>
     </img>
-
-
-
 </section>
