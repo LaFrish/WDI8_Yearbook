@@ -45,6 +45,181 @@ body{
   font-family: 'PFDinTextCompPro-Regular';
 }
 
+new nav bar
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+::selection {
+  background: #000;
+  color: #aaf;
+}
+.alternate ::selection {
+  background: #c00;
+  color: red;
+}
+
+#navigation_container body {
+  margin: 0;
+  padding: 0;
+  height: 2000px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#navigation_container button{
+  z-index: 2;
+
+}
+#logo {
+  margin-top: -15px;
+  font-size: 3em;
+  padding-left: 1%;
+  padding-top: 2.8%;
+}
+
+#navigation_container {
+  padding-left: 0;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  display: inline;
+}
+
+#navigation_container img{
+  width:60px;
+  height:60px;
+}
+.tab {
+  font-size: 105%;
+  padding-top: 4%;
+  display: inline;
+}
+
+.nav_link {
+  color: #e11a61;
+}
+
+a {
+  color: #e11a61;
+}
+
+a:visited {
+  color: #e11a61;
+}
+
+
+ul, li, h1, h2, h3, h4, h5, h6, p, a, .logo {
+  font-family: "Lato","Verdana",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.inner {
+  width: 800px;
+  position: relative;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding-top: 50px;
+  background: #000;
+  transition: 0.7s all;
+  z-index: 100;
+}
+
+header.alt-header {
+  background: #fff;
+}
+
+.alt-header a {
+  color: #000;
+}
+
+body.header-fixed header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  overflow: visible;
+}
+
+#navigation_container nav li {
+  display: inline;
+  /*// float: left;*/
+}
+
+#navigation_container nav a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  transition: 0.3s all;
+}
+
+#navigation_container nav a:hover {
+  background: red;
+}
+
+#navigation_container .ga-btn {
+  position: relative;
+  margin: auto;
+  // margin-left: 48vw;
+  // margin-right:48vw;
+  width:30px;
+  height:30px;
+  border:0;
+  /*top: 20px;*/
+}
+
+#navigation_container .ga-btn :hover{
+  border-color: #e11a61;
+}
+
+.logo {
+  float: left;
+  color: #fff;
+  font-size: 50px;
+  line-height: 50px;
+  transition: 0.7s all;
+}
+
+.alt-header .logo {
+  color: #000;
+}
+
+#navigation_container body.header-fixed .logo {
+  font-size: 30px;
+}
+
+.alternate {
+  background: #000;
+  color: #fff;
+}
+
+#navigation_container section .inner {
+  padding-top: 200px;
+}
+body{
+  background-color: #000;
+}
 .index img {
   height: 200px;
   width: 200px;
@@ -73,11 +248,11 @@ body{
 
 
 a {
-	color: white;
+	color: yellow;
 }
 
 a:hover, a:focus {
-	color: #e11a61;
+	color: yellow;
 }
 
 li {
@@ -85,12 +260,10 @@ li {
 }
 
 h1 {
-	color: #e11a61;
+	color: yellow;
 	text-align: center;
 	font-size: 24px;
 }
-
-
 
 .grid {
 	margin: 20px 0 0 0;
@@ -141,4 +314,177 @@ h1 {
 }
 #yearbookIndex .instructors:hover{
 	color: yellow;
+}
+#wdierShow .red-cog{
+  background: url("cog-outline-red.png") no-repeat;
+	width: 50px;
+	height: 50px;
+  color: blue;
+	font-family: monospace;
+	line-height: 100px;
+}
+#wdierShow .project1 button{
+  background: url("project1.png");
+  // margin: 25px 50px 25px 25px;
+  box-shadow: inset 0 0 5px 0 #222;
+}
+#wdierShow .project2 button{
+  background: url("project2.png");
+  // margin: 25px 50px 25px 25px;
+  box-shadow: inset 0 0 5px 0 #222;
+}
+#wdierShow .project3 button{
+  background: url("project3.png");
+  // margin: 25px 50px 25px 25px;
+  box-shadow: inset 0 0 5px 0 #222;
+}
+#wdierShow .project4 button{
+  background: url("project1.png");
+  // margin: 25px 50px 25px 25px;
+  box-shadow: inset 0 0 5px 0 #222;
+}
+//icon links
+.icon-link {
+  width: 60px;
+  height: 60px;
+  background-color: #666;
+  line-height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  margin: 5px;
+  box-sizing: content-box;
+}
+.icon-link.fill.facebook {
+  background-color: #3b5998;
+}
+.icon-link.fill.facebook:hover {
+  background-color: #fff;
+}
+.icon-link.fill.facebook:hover .fa-facebook {
+  color: #3b5998;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+.icon-link.fill.linkedin {
+  background-color: #007bb6;
+}
+.icon-link.fill.linkedin:hover {
+  background-color: #fff;
+}
+.icon-link.fill.linkedin:hover .fa-linkedin {
+  color: #007bb6;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+.icon-link.fill.github {
+  background-color: #444;
+}
+.icon-link.fill.github:hover {
+  background-color: #fff;
+}
+.icon-link.fill.github:hover .fa-github {
+  color: #444;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+.icon-link.fill.envelope {
+  background-color: #333;
+}
+.icon-link.fill.envelope:hover {
+  background-color: #fff;
+}
+.icon-link.fill.envelope:hover .fa-envelope {
+  color: #333;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+
+.icon-link.brand {
+  background-color: #fff;
+}
+.icon-link.brand .fa {
+  color: #006FC2;
+}
+.icon-link.round {
+  border-radius: 50%;
+}
+.icon-link.round-corner {
+  border-radius: 5px;
+}
+.icon-link:hover {
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  height: 56px;
+  line-height: 56px;
+  width: 56px;
+  background-color: #fff;
+}
+.icon-link:hover.facebook {
+  border: 2px solid #3b5998;
+}
+
+.icon-link:hover.linkedin {
+  border: 2px solid #007bb6;
+}
+.icon-link:hover.github {
+  border: 2px solid #444;
+}
+.icon-link:hover.envelope {
+  border: 2px solid #000;
+}
+.icon-link:hover.globe {
+  border: 2px solid #000;
+}
+.icon-link:hover.desktop {
+  border: 2px solid #000;
+}
+
+.icon-link:hover .fa {
+  line-height: 56px;
+}
+.icon-link:hover .fa-facebook {
+  color: #3b5998;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+
+.icon-link:hover .fa-linkedin {
+  color: #007bb6;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+
+.icon-link:hover .fa-github {
+  color: #444;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+.icon-link:hover .fa-envelope {
+  color: yellow;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+
+.icon-link:hover .fa-globe {
+  color: green;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+.icon-link:hover .fa-desktop {
+  color: #000;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+.icon-link .fa {
+  color: #fff;
+  line-height: 60px;
+  font-size: 36px;
+}
+
+.brand-icons {
+  background-color: #ddd;
+  padding: 10px 0;
 }
