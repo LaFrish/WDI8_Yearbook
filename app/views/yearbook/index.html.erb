@@ -2,46 +2,97 @@
   <section class="yearbookCover">
     <div class="overlay">
       <div class="cover_container">
-        </br>
-          <div class="button"><%= link_to "New User", new_wdier_path(@wdier)%></div>
-          <div class="button"><%= link_to "Yearbook Index", root_path(@yearbook)%></div>
-          <div class="button"><%= link_to "Photo Index", photos_path(@photo)%></div>
-          <div class="button"><%= link_to "New Photo", new_photo_path(@photo)%></div>
-          <div class="button"><%= link_to "users Index", wdiers_path(@wdier)%></div>
-        </br>
-          <h1> We Are</h1>
-          <h2>WDI8</h2>
-        </br>
-        <div class="container_btm">
-          WORD</br>
-          WORD</br>
-          WORD</br>
-          WORD</br>
-          WORD</br>
-          WORD</br>
-          WORD</br>
-          WORD</br>
-          WORD</br>
-          WORD</br>
-          WORD</br>
-          WORD</br>
-        </div>
+      </br>
+      <div class="button"><%= link_to "New User", new_wdier_path(@wdier)%></div>
+      <div class="button"><%= link_to "Yearbook Index", root_path(@yearbook)%></div>
+      <div class="button"><%= link_to "Photo Index", photos_path(@photo)%></div>
+      <div class="button"><%= link_to "New Photo", new_photo_path(@photo)%></div>
+      <div class="button"><%= link_to "users Index", wdiers_path(@wdier)%></div>
+    </br>
+    <h1> We Are</h1>
+    <h2>WDI8</h2>
+  </br>
+</div>
+</div>
+</section>
+<section class="middle">
+  <div class="middle_container">
+    <div class="vertical-align">
+      <div >
+        <h2 class="wdiers"><%= link_to image_tag("cog-outline-red.png"), wdiers_path(@wdier)%></h2>
+        <h2 class="wdiers"><%=link_to image_tag("red-cog.png"), wdiers_path(@wdier)%></h2>
       </div>
     </div>
-  </section>
- <section class="middle">
-   <div class="middle_container">
-     <div class="vertical-align">
-       <div >
-
-         <h2 class="wdiers"><%= link_to image_tag("cog-outline-red.png"), wdiers_path(@wdier)%></h2>
-
-            <h2 class="wdiers"><%=link_to image_tag("red-cog.png"), wdiers_path(@wdier)%></h2>
-             </div>
-          </div>
-        </div>
+  </div>
+</section>
+<section class="words">
+  <div class="inner-shadow brand">
+    <h4>WORDS OF WISDOM</h4>
+    <h5> from our instructors </h5>
+  </div>
+  <div class="wordContainer">
+    <div class="box_left wisewords">
+      <div class="index">
+        <%= image_tag "https://pbs.twimg.com/profile_images/494612822740197377/4ldXwgN5_400x400.jpeg" %>
       </div>
- </section>
- <section>
- </section>
+      <h3> Words </h3>
+    </div>
+  </div>
+  <div class="wordContainer">
+    <div class="box_right wisewords">
+      <div class="index">
+        <%= image_tag "https://avatars3.githubusercontent.com/u/6268177?v=3&s=460" %>
+      </div>
+      <h3> Words </h3>
+      </div>
+    </div>
+<div class="wordContainer">
+    <div class="box_left wisewords">
+      <div class=index>
+      <%= image_tag "http://orig02.deviantart.net/789b/f/2011/284/c/0/minus_the_bear_logo_by_mrjiggles4-d4cjd90.png" %>
+    </div>
+    <h1> Words </h1>
+  </div>
+</div>
+<div class="wordContainer">
+    <div class="box_right wisewords">
+      <div class=index>
+      <%= image_tag"http://i.giphy.com/1Lks5PFkIekO4.gif" %>
+    </div>
+    <h1> Words </h1>
+  </div>
+  <div class="wordContainer">
+    <div class=index>
+      <div class="box_left wisewords">
+        <div class=index>
+        <%= image_tag"http://media.vogue.com/r//2015/03/11/cinderella-gifs-steven-dam-06.gif"%>
+      </div>
+      <h1> Words </h1>
+    </div>
+  </div>
+  <div class="wordContainer">
+    <div class=index>
+      <div class="box_right wisewords">
+        <%= image_tag"https://pbs.twimg.com/profile_images/566317879713214465/jzp0Z10y.jpeg"%>
+      </div>
+      <h1> Words </h1>
+    </div>
+    <div class="wordContainer">
+      <div class=index>
+        <div class="box_left wisewords">
+          <%= image_tag"http://media.vogue.com/r//2015/03/11/cinderella-gifs-steven-dam-06.gif"%>
+        </div>
+        <h1> Words </h1>
+      </div>
+    </div>
+    <div class="wordContainer">
+      <div class=index>
+        <div class="box_right wisewords">
+          <%= image_tag"http://media.vogue.com/r//2015/03/11/cinderella-gifs-steven-dam-06.gif"%>
+        </div>
+        <h1> Words </h1>
+      </div>
+    </div>
+  </div>
+</section>
 </section>
