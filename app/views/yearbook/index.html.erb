@@ -15,16 +15,6 @@
 </div>
 </div>
 </section>
-<section class="middle">
-  <div class="middle_container">
-    <div class="vertical-align">
-      <div >
-        <h2 class="wdiers"><%= link_to image_tag("cog-outline-red.png"), wdiers_path(@wdier)%></h2>
-        <h2 class="wdiers"><%=link_to image_tag("red-cog.png"), wdiers_path(@wdier)%></h2>
-      </div>
-    </div>
-  </div>
-</section>
 <section class="words">
   <div class="inner-shadow brand">
     <h4>WORDS OF WISDOM</h4>
@@ -34,8 +24,9 @@
     <div class="box_left wisewords">
       <div class="index">
         <%= image_tag "https://pbs.twimg.com/profile_images/494612822740197377/4ldXwgN5_400x400.jpeg" %>
+        <h3> Jesse Shawl</h3>
       </div>
-      <h3> Words </h3>
+      <h3> The learning is endless. Learn to love mistakes </h3>
     </div>
   </div>
   <div class="wordContainer">
@@ -43,56 +34,74 @@
       <div class="index">
         <%= image_tag "https://avatars3.githubusercontent.com/u/6268177?v=3&s=460" %>
       </div>
-      <h3> Words </h3>
-      </div>
+      <h3> Robin Thomas</h3>
+      <h3> Go teach! Do a free "Beginner's HTML" class at your library or church. What you have, everyone else wants! </h3>
     </div>
-<div class="wordContainer">
+  </div>
+  <div class="wordContainer">
     <div class="box_left wisewords">
       <div class=index>
-      <%= image_tag "http://orig02.deviantart.net/789b/f/2011/284/c/0/minus_the_bear_logo_by_mrjiggles4-d4cjd90.png" %>
+        <%= image_tag "http://orig02.deviantart.net/789b/f/2011/284/c/0/minus_the_bear_logo_by_mrjiggles4-d4cjd90.png" %>
+      </div>
+      <h3> Words </h3>
     </div>
-    <h1> Words </h1>
   </div>
-</div>
-<div class="wordContainer">
+  <div class="wordContainer">
     <div class="box_right wisewords">
       <div class=index>
-      <%= image_tag"http://i.giphy.com/1Lks5PFkIekO4.gif" %>
+        <%= image_tag"http://i.giphy.com/1Lks5PFkIekO4.gif" %>
+      </div>
+      <h3>Nick Olds</h3>
+      <h3> Technologies fade, Concepts do not. </h3>
     </div>
-    <h1> Words </h1>
-  </div>
-  <div class="wordContainer">
-    <div class=index>
+    <div class="wordContainer">
       <div class="box_left wisewords">
         <div class=index>
-        <%= image_tag"http://media.vogue.com/r//2015/03/11/cinderella-gifs-steven-dam-06.gif"%>
+          <%= image_tag"http://media.vogue.com/r//2015/03/11/cinderella-gifs-steven-dam-06.gif"%>
+        </div>
+        <h3>Joe Zaretsky</h3>
+        <h3> You know WAY more than you think you do! </h3>
       </div>
-      <h1> Words </h1>
     </div>
-  </div>
-  <div class="wordContainer">
-    <div class=index>
+    <div class="wordContainer">
       <div class="box_right wisewords">
-        <%= image_tag"https://pbs.twimg.com/profile_images/566317879713214465/jzp0Z10y.jpeg"%>
+        <div class=index>
+          <%= image_tag"https://pbs.twimg.com/profile_images/566317879713214465/jzp0Z10y.jpeg"%>
+        </div>
+        <h3> Words </h3>
       </div>
-      <h1> Words </h1>
-    </div>
-    <div class="wordContainer">
-      <div class=index>
+      <div class="wordContainer">
         <div class="box_left wisewords">
-          <%= image_tag"http://media.vogue.com/r//2015/03/11/cinderella-gifs-steven-dam-06.gif"%>
+          <div class=index>
+            <%= image_tag"https://avatars3.githubusercontent.com/u/10698044?v=3&s=460"%>
+          </div>
+          <h3> Words </h3>
         </div>
-        <h1> Words </h1>
       </div>
-    </div>
-    <div class="wordContainer">
-      <div class=index>
+      <div class="wordContainer">
         <div class="box_right wisewords">
-          <%= image_tag"http://media.vogue.com/r//2015/03/11/cinderella-gifs-steven-dam-06.gif"%>
+          <div class=index>
+            <%= image_tag"http://media.vogue.com/r//2015/03/11/cinderella-gifs-steven-dam-06.gif"%>
+          </div>
+          <h3> Words </h3>
         </div>
-        <h1> Words </h1>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  <section class="middle">
+    <div class="middle_container">
+      <div class="inner-shadow brand">
+        We are WDI 8</br>Student & Instructor Gallery</div>
+        <div>
+          <h2 class="wdiers"><%=link_to image_tag("wdi8.png"), wdiers_path(@wdier)%></h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="inner-shadow brand">
+      Photo Gallery</div>
+      <div>
+        <h2><%=link_to image_tag("red-cog300.png"), photos_path(@photos)%></h2>
+  </section>
 </section>
