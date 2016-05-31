@@ -14,23 +14,25 @@
     <div class="inner" id="row">
       <nav role='navigation'>
         <ul>
-          <div class="nav_link col-xs-1 tab">
-            <li><%= link_to "Wdiers", wdiers_path %></div>
-            <div class="nav_link col-xs-1 tab"><li><%= link_to "Gallery", photos_path %></div>
-            </ul>
-          </nav>
-        </div>
-        <div class="ga-btn">
-          <%= link_to image_tag("General_Assembly.png"), root_path %>
-        </div>
-      </header>
+          <div class="logo">
+            <h6> WDI8 Yearbook</h6></div>
+            <div class="nav_link col-xs-1 tab">
+              <li><%= link_to "Wdiers", wdiers_path %></div>
+                <div class="nav_link col-xs-1 tab"><li><%= link_to "Photo Gallery", photos_path %></div>
+                </ul>
+              </nav>
+            </div>
+            <div class="ga-btn">
+              <%= link_to image_tag("General_Assembly.png"), root_path %>
+            </div>
+          </header>
 
-      <%= yield %>
-      <footer>
-        <h1>Botton of page</h1>
-      </footer>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <script src="/assets/javascripts/application.js"></script>
-      <script src="/assets/javascripts/fontsmoothie.min.js"></script>
-    </body>
-    </html>
+          <%= yield %>
+          <footer>
+
+          </footer>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+          <script src="/assets/javascripts/application.js"></script>
+          <script src="/assets/javascripts/fontsmoothie.min.js"></script>
+        </body>
+        </html>
