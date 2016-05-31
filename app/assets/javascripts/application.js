@@ -15,8 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require fancybox
-//= require jquery.ui.widget
-//= require z.jquery.fileupload
+
 
 
 //nav
@@ -28,8 +27,6 @@ $(document).ready(function(){
     } else {
         $('body').removeClass('header-fixed');
     }
-    // change the style of the navbar when the user scrolls into the next zone.
-    // get the distance of the 2nd section from the top of the page - height of header.
     var topOffset = $('#section2').offset().top;
     var headerHeight = $('#navigation_container').height();
     var transitionPoint = topOffset - headerHeight;
@@ -40,41 +37,41 @@ $(document).ready(function(){
     }
   });
 });
-//STOP NAV
-// $(document).ready(function(){
-//
-// 	$("nav a").on("click", function(event){
-// 		event.preventDefault();
-// 		$("nav").addClass("fixed");
-// 		id = ($(this).attr("href"));
-// 		scrollVertical = $(id).offset().top;
-//
-// 		$("body, html").animate({scrollTop: scrollVertical});
-// 	});
-//
-// 	$(document).on("scroll", function(){
-// 		secondPage = $("nav li:nth-child(2) a").attr("href");
-//
-// 		if ( $("body").scrollTop() >= $("nav").height() )
-// 		{
-// 			$("nav").addClass("fixed");
-// 		} else {
-// 			$("nav").removeClass("fixed");
-// 		}
-// 	});
-//
-// });
-//
-// $(document).ready(function () {
-//     $('li img').on('click', function () {
-//         var src = $(this).attr('src');
-//         var img = '<img src="' + src + '" class="img-responsive"/>';
-//         $('#myModal').modal();
-//         $('#myModal').on('shown.bs.modal', function () {
-//             $('#myModal .modal-body').html(img);
-//         });
-//         $('#myModal').on('hidden.bs.modal', function () {
-//             $('#myModal .modal-body').html('');
-//         });
-//     });
-// });
+// //STOP NAV
+$(document).ready(function(){
+
+	$("nav a").on("click", function(event){
+		event.preventDefault();
+		$("nav").addClass("fixed");
+		id = ($(this).attr("href"));
+		scrollVertical = $(id).offset().top;
+
+		$("body, html").animate({scrollTop: scrollVertical});
+	});
+
+	$(document).on("scroll", function(){
+		secondPage = $("nav li:nth-child(2) a").attr("href");
+
+		if ( $("body").scrollTop() >= $("nav").height() )
+		{
+			$("nav").addClass("fixed");
+		} else {
+			$("nav").removeClass("fixed");
+		}
+	});
+
+});
+
+$(document).ready(function () {
+    $('li img').on('click', function () {
+        var src = $(this).attr('src');
+        var img = '<img src="' + src + '" class="img-responsive"/>';
+        $('#myModal').modal();
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myModal .modal-body').html(img);
+        });
+        $('#myModal').on('hidden.bs.modal', function () {
+            $('#myModal .modal-body').html('');
+        });
+    });
+});

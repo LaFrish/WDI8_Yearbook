@@ -1,5 +1,3 @@
-
-<!-- <div class="profileImg"> -->
 <section id="wdierShow">
   <div class="wrapper">
     <div class="profileImg"><%= image_tag @wdier.img_url %>
@@ -10,7 +8,7 @@
           <h1 class="page-header inner-shadow mustard"><%= @wdier.name %></h1>
         </div>
         <div class="page-header social">
-          <ul class="grid">
+          <!-- <ul class="grid"> -->
             <%= link_to @wdier.portfolio_url, class:"icon-link round globe fill" do %><i class="fa fa-globe"></i></a>
             <% end %>
             <%= link_to @wdier.fb, class:"icon-link round facebook fill" do %>
@@ -25,9 +23,7 @@
             <% end %>
             <%= link_to @wdier.portfolio_url, class:"icon-link round desktop fill" do %><i class="fa fa-desktop"></i></a>
             <% end %>
-
-
-          </ul>
+          <!-- </ul> -->
         </div>
       </div>
       <div class="quote_container">

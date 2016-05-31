@@ -9,7 +9,7 @@ Post.destroy_all
 
 
 
-Adrian = Wdier.create!(name: "Adrian Maseda", img_url: "http://orig02.deviantart.net/789b/f/2011/284/c/0/minus_the_bear_logo_by_mrjiggles4-d4cjd90.png", squad_name: "", squad_id: 1, quote: "", teaching: "", memory: "", favlang: "", wisewords: "", email: "amaseda@ga.com", password: "coders", role: "Instructor")
+Adrian = Wdier.create!(name: "Adrian Maseda", img_url: "https://pbs.twimg.com/profile_images/609055940596236288/RfQHyuDo.jpg", squad_name: "The squad with no name...because we forgot to name our squad.", squad_id: 1, quote: "Clear eyes. Full hearts. Can't lose.", teaching: "1 year", memory: "Even though I wasn't there in person and had to watch footage of the event, Bipin's slam poetry was a thing of beauty.", favlang: "JavaScript", wisewords: "Deploy early and often.", email: "amaseda@ga.com", password: "coders", role: "Instructor")
 
 Becky = Wdier.create!(name: "Becky Beauchamp", img_url: "https://pbs.twimg.com/profile_images/566317879713214465/jzp0Z10y.jpeg", squad_name: "", squad_id: 2, quote: "", teaching: "", memory: "", favlang: "", wisewords: "", email: "bbeauchamp@ga.com", password: "coders", role: "Instructor")
 
