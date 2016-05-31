@@ -1,38 +1,18 @@
-
-<div class="alternate" id="demosection2">
-  <div class="inner">
-<section id="studentIndex">
+<!--
+<div class="alternate" id="section2"> -->
+<div class="inner">
+  <section id="studentIndex">
     <h1 class="page-header">Wdiers</h1>
-    <div class="thumbnail-grid flex index">
-    <div class="flex-item">
+    <div class="thumbnail-grid index">
+
+      <% @wdiers.each do |wdier| %>
+      <%= link_to image_tag(wdier.img_url), wdier_path(wdier) %>
       <figure class="i1">
-        <!-- <li> -->
-          <% @wdiers.each do |wdier| %>
-          <%= link_to image_tag(wdier.img_url), wdier_path(wdier) %>
-          <!-- </li> -->
-        <!-- </ul> -->
-    <figcaption><%= wdier.name %></figcaption>
-  </figure>
-  <%end%>
+        <figcaption><%= wdier.name %></figcaption>
+      </figure>
+      <%end%>
+    </div>
+  </section>
 </div>
 </div>
-      <div class="thumbnail-grid flex">
-      <a href="https://sinfonietta-meridiana.de/" target="_blank" class="flex-item">
-        <figure class="i1">
-          <figcaption></figcaption>
-        </figure>
-      </a>
-      <a href="https://pension-am-alten-waschhaus.de/en/" target="_blank" class="flex-item">
-        <figure class="i2">
-          <figcaption></figcaption>
-        </figure>
-      </a>
-      <a href="https://goerlitzmade.com/en/" target="_blank" class="flex-item">
-        <figure class="i3">
-          <figcaption></figcaption>
-        </figure>
-      </a>
-    </div>
-    </div>
-    </div>
-</section>
+</div>

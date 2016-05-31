@@ -100,15 +100,15 @@ new nav bar
 }
 
 .nav_link {
-  color: #e11a61;
+  color: red;
 }
 
 a {
-  color: #e11a61;
+  color: red;
 }
 
 a:visited {
-  color: #e11a61;
+  color: red;
 }
 
 
@@ -130,7 +130,7 @@ ul, li, h1, h2, h3, h4, h5, h6, p, a, .logo {
 header {
   position: fixed;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 20px;
   background: #000;
   transition: 0.7s all;
   z-index: 100;
@@ -138,6 +138,7 @@ header {
 
 header.alt-header {
   background: #fff;
+	  color: #000;
 }
 
 .alt-header a {
@@ -176,6 +177,7 @@ nav {
 
 #navigation_container nav a:hover {
   background: red;
+	opacity: 0.6;
 }
 
 #navigation_container .ga-btn {
@@ -190,19 +192,19 @@ nav {
 }
 
 #navigation_container .ga-btn :hover{
-  border-color: #e11a61;
+  border-color: red;
 }
 
-.logo {
-  float: left;
-  color: #fff;
-  font-size: 50px;
-  line-height: 50px;
-  transition: 0.7s all;
-}
+// .logo {
+//   float: left;
+//   color: #fff;
+//   font-size: 50px;
+//   line-height: 50px;
+//   transition: 0.7s all;
+// }
 
 .alt-header .logo {
-  color: #000;
+  color: #fff;
 }
 
 #navigation_container body.header-fixed .logo {
@@ -212,6 +214,24 @@ nav {
 .alternate {
   background: #000;
   color: #fff;
+}
+.alternate a{
+  color: #000;
+}
+
+
+
+.alternate nav a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  padding: 5px;
+  transition: 0.3s all;
+}
+
+.alternate nav a:hover {
+  background: red;
+	opacity: 0.6;
 }
 
 #navigation_container section .inner {
@@ -235,8 +255,8 @@ nav {
   float: left;
 	vertical-align: middle;
     z-index: 3;
-  // -webkit-animation: index imgSlideIn .65s .15s ease forwards;
-  // animation: index imgSlideIn .65s .15s ease forwards;
+  -webkit-animation: index imgSlideIn .65s .15s ease forwards;
+  animation: index imgSlideIn .65s .15s ease forwards;
 }
 
 .index img:hover {
@@ -246,13 +266,12 @@ nav {
   z-index: 1;
 }
 
-
 a {
-	color: yellow;
+	color: red;
 }
 
 a:hover, a:focus {
-	color: yellow;
+	color: red;
 }
 
 li {
@@ -260,7 +279,7 @@ li {
 }
 
 h1 {
-	color: yellow;
+	color: red;
 	text-align: center;
 	font-size: 24px;
 }
@@ -294,8 +313,6 @@ h1 {
   background: url("yeabookbtm-bg.png") no-repeat;
   height: 500px;
   width: 1200px;
-
-
 }
 #yearbookIndex .students{
   background: url("cog-outline-red.png") no-repeat;
@@ -349,6 +366,7 @@ color: #000
 
 }
 //WDIER INDEX
+
 .thumbnail-grid {
  user-select: none
 }
@@ -357,7 +375,7 @@ color: #000
  width: 200px;
  height: 200px;
  margin: 5px;
- /*border-radius: 100%;*/
+ border-radius: 100%;
  box-shadow: inset 0 -40px 0 0 rgba(0,0,0,.1);
  transition: all .2s ease-in-out
 }
@@ -365,6 +383,7 @@ color: #000
  box-shadow: inset 0 -200px 0 0 rgba(0,0,0,.5)
 }
 .thumbnail-grid figcaption {
+	border-radius: 100%;
  position: absolute;
  width: 100%;
  font-weight: 300;
@@ -388,34 +407,11 @@ color: #000
 .flex-item {
  flex: 1 0 auto
 }
-
-.thumbnail-grid figure.i1 {
- background-size: cover
-}
-.thumbnail-grid figure.i2 {
- background: url(https://anselmurban.de/codepen-img/pension.png) no-repeat center;
- background-size: cover
-}
-.thumbnail-grid figure.i3 {
- background: url(https://anselmurban.de/codepen-img/goerlitzmade.png) no-repeat center;
- background-size: cover
-}
-
-
 /* Thumbnails for HiDPI/retina screens */
 @media print,
  (-o-min-device-pixel-ratio: 5/4),
  (-webkit-min-device-pixel-ratio: 1.25),
  (min-resolution: 120dpi) {
- .thumbnail-grid figure.i1 {
-	 background-image: url(https://anselmurban.de/codepen-img/sinfonietta-meridiana%402x.png)
- }
- .thumbnail-grid figure.i2 {
-	 background-image: url(https://anselmurban.de/codepen-img/pension%402x.png)
- }
- .thumbnail-grid figure.i3 {
-	 background-image: url(https://anselmurban.de/codepen-img/goerlitzmade%402x.png)
- }
 }
 //WDIER SHOW
 #wdierShow {
@@ -666,18 +662,18 @@ i {
 	flex: 1 0 auto
 }
 
-.thumbnail-grid figure.i1 {
-	background: url(https://anselmurban.de/codepen-img/sinfonietta-meridiana.png) no-repeat center;
-	background-size: cover
-}
-.thumbnail-grid figure.i2 {
-	background: url(https://anselmurban.de/codepen-img/pension.png) no-repeat center;
-	background-size: cover
-}
-.thumbnail-grid figure.i3 {
-	background: url(https://anselmurban.de/codepen-img/goerlitzmade.png) no-repeat center;
-	background-size: cover
-}
+// .thumbnail-grid figure.i1 {
+// 	background: url(https://anselmurban.de/codepen-img/sinfonietta-meridiana.png) no-repeat center;
+// 	background-size: cover
+// }
+// .thumbnail-grid figure.i2 {
+// 	background: url(https://anselmurban.de/codepen-img/pension.png) no-repeat center;
+// 	background-size: cover
+// }
+// .thumbnail-grid figure.i3 {
+// 	background: url(https://anselmurban.de/codepen-img/goerlitzmade.png) no-repeat center;
+// 	background-size: cover
+// }
 
 
 /* Thumbnails for HiDPI/retina screens */
@@ -685,15 +681,15 @@ i {
 	(-o-min-device-pixel-ratio: 5/4),
 	(-webkit-min-device-pixel-ratio: 1.25),
 	(min-resolution: 120dpi) {
-	.thumbnail-grid figure.i1 {
-		background-image: url(https://anselmurban.de/codepen-img/sinfonietta-meridiana%402x.png)
-	}
-	.thumbnail-grid figure.i2 {
-		background-image: url(https://anselmurban.de/codepen-img/pension%402x.png)
-	}
-	.thumbnail-grid figure.i3 {
-		background-image: url(https://anselmurban.de/codepen-img/goerlitzmade%402x.png)
-	}
+	// .thumbnail-grid figure.i1 {
+	// 	background-image: url(https://anselmurban.de/codepen-img/sinfonietta-meridiana%402x.png)
+	// }
+	// .thumbnail-grid figure.i2 {
+	// 	background-image: url(https://anselmurban.de/codepen-img/pension%402x.png)
+	// }
+	// .thumbnail-grid figure.i3 {
+	// 	background-image: url(https://anselmurban.de/codepen-img/goerlitzmade%402x.png)
+	// }
 }
 #wdierShow .red-cog{
   background: url("cog-outline-red.png") no-repeat;
