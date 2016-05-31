@@ -1,4 +1,17 @@
+<style>
+#form {
+  margin-top: 400px;
+  height: 1000px;
+}
 
+#form .fill{
+  height: 800px;
+  width: 600px;
+  background: red;
+  color: #000;
+}
+</style>
+<section class="form">
 <h2>Edit photo</h2>
 <%= form_for @photo do |f| %>
 <div class="row text-center">
@@ -13,9 +26,7 @@
 <%=f.label :all_tags,"Tags", placeholder: "Separated with commas" %>
 <%= f.text_field :all_tags %>
 </br>
-<%=f.label :tag_list, "Tag List", placeholder: "Separated with commas" %>
-<%=f.text_field :tag_list %>
-</div>
 <%=f.submit%>
   <% end %>
 <div>
+</section>
