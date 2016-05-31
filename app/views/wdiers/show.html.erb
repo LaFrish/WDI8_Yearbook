@@ -1,3 +1,5 @@
+<%= link_to "edit", edit_wdier_path(@wdier)%>
+</br>
 <section id="wdierShow">
   <div class="wrapper">
     <div class="profileImg"><%= image_tag @wdier.img_url %>
@@ -5,59 +7,67 @@
     <div class="box">
       <div class="cover-pic">
         <div class="profile-name">
-          <h1 class="page-header inner-shadow mustard"><%= @wdier.name %></h1>
+          <h2 class="inner-shadow mustard"><%= @wdier.name %></h2>
         </div>
         <div class="page-header social">
-          <!-- <ul class="grid"> -->
-            <%= link_to @wdier.portfolio_url, class:"icon-link round globe fill" do %><i class="fa fa-globe"></i></a>
-            <% end %>
-            <%= link_to @wdier.fb, class:"icon-link round facebook fill" do %>
-            <i class="fa fa-facebook"></i></a>
-            <% end %>
-            <%= link_to @wdier.linkedin, class:"icon-link round linkedin fill" do %>
-            <i class="fa fa-linkedin"></i></a>
-            <% end %>
-            <%= link_to @wdier.github_url, class: "icon-link round github fill" do %><i class="fa fa-github"></i></a>
-            <% end %>
-            <%= link_to @wdier.email, class:"icon-link round envelope fill" do %><i class="fa fa-envelope"></i></a>
-            <% end %>
-            <%= link_to @wdier.portfolio_url, class:"icon-link round desktop fill" do %><i class="fa fa-desktop"></i></a>
-            <% end %>
-          <!-- </ul> -->
+          <%= link_to @wdier.portfolio_url, class:"icon-link round desktop fill" do %><i class="fa fa-desktop"></i></a>
+          <% end %>
+          <%= link_to @wdier.github_url, class: "icon-link round github fill" do %><i class="fa fa-github"></i></a>
+          <% end %>
+          <%= link_to @wdier.fb, class:"icon-link round facebook fill" do %>
+          <i class="fa fa-facebook"></i></a>
+          <% end %>
+          <%= link_to @wdier.linkedin, class:"icon-link round linkedin fill" do %>
+          <i class="fa fa-linkedin"></i></a>
+          <% end %>
+          <%= link_to @wdier.email, class:"icon-link round envelope fill" do %><i class="fa fa-envelope"></i></a>
+          <% end %>
         </div>
       </div>
       <div class="quote_container">
         <div class="quote">
-        <%= @wdier.quote %></br>
+          <%= @wdier.quote %></br>
         </div>
       </div>
       <div class="topContainer">
-        <ul class="grid">
-          <%= @wdier.teaching %></br>
-          <%= @wdier.memory %></br>
-          <%= @wdier.favlang %></br>
-          <%= @wdier.wisewords %></br>
-        </ul>
-        <%= link_to "edit", edit_wdier_path(@wdier)%>
-      </br>
-
-      <div class="thumbnail-grid flex">
-  <a href="https://sinfonietta-meridiana.de/" target="_blank" class="flex-item">
-    <figure class="i1">
-      <figcaption><%= @wdier.q1 %></figcaption>
-    </figure>
-  </a>
-  <a href="https://pension-am-alten-waschhaus.de/en/" target="_blank" class="flex-item">
-    <figure class="i2">
-      <figcaption><%= @wdier.q2 %></figcaption>
-    </figure>
-  </a>
-  <a href="https://goerlitzmade.com/en/" target="_blank" class="flex-item">
-    <figure class="i3">
-      <figcaption><%= @wdier.q3 %></figcaption>
-    </figure>
-  </a>
-</div>
+        <!-- INSTRUCTORS         -->
+        <div class="wordContainer">
+          <div class="box_left wisewords">
+            <%= @wdier.teaching %>
+          </div>
+        </div>
+        <div class="wordContainer">
+          <div class="box_left wisewords">
+            <%= @wdier.memory %>
+          </div>
+        </div>
+        <div class="wordContainer">
+          <div class="box_left wisewords">
+            <%= @wdier.favlang %>
+          </div>
+        </div>
+        <div class="wordContainer">
+          <div class="box_left wisewords">
+            <%= @wdier.wisewords %>
+          </div>
+        </div>
+        <!-- STUDENTS -->
+        <div class="wordContainer">
+          <div class="box_left wisewords">
+            <h2><%= @wdier.q1 %></h2>
+          </div>
+        </div>
+        <div class="wordContainer">
+          <div class="box_left wisewords">
+            <h3><%= @wdier.q2 %></h3>
+          </div>
+        </div>
+        <div class="wordContainer">
+          <div class="box_left wisewords">
+            <h2><%= @wdier.q3 %></h2>
+          </div>
+        </div>
+      </div>
       <div class="projectGallery">
         <ul class="grid">
           <div class="index">

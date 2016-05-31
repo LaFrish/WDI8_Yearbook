@@ -662,9 +662,9 @@ i {
 	color: white;
 }
 #wdierShow .social{
-	/*display: inline-flex;*/
-	vertical-align: middle;
-
+	vertical-align:middle;
+	text-align: center;
+	margin-top: -30px;
 }
 
 #wdierShow .thumbnail-grid {
@@ -801,18 +801,18 @@ i {
 	transition: color 150ms ease-in-out;
 }
 .icon-link.fill.github {
-	background-color: #444;
+	background-color: #675392;
 }
 .icon-link.fill.github:hover {
 	background-color: #fff;
 }
 .icon-link.fill.github:hover .fa-github {
-	color: #444;
+	color: #675392;
 	-webkit-transition: color 150ms ease-in-out;
 	transition: color 150ms ease-in-out;
 }
 .icon-link.fill.envelope {
-	background-color: #333;
+	background-color: rgba(255, 165, 0, 0.75);
 }
 .icon-link.fill.envelope:hover {
 	background-color: #fff;
@@ -822,7 +822,17 @@ i {
 	-webkit-transition: color 150ms ease-in-out;
 	transition: color 150ms ease-in-out;
 }
-
+.icon-link.fill.desktop {
+	background-color: #6BB07D;
+}
+.icon-link.fill.desktop:hover {
+	background-color: #fff;
+}
+.icon-link.fill.desktop:hover .fa-envelope {
+	color: #6BB07D;
+	-webkit-transition: color 150ms ease-in-out;
+	transition: color 150ms ease-in-out;
+}
 .icon-link.brand {
 	background-color: #fff;
 }
@@ -851,16 +861,14 @@ i {
 	border: 2px solid #007bb6;
 }
 .icon-link:hover.github {
-	border: 2px solid #444;
+	border: 2px solid #675392;
 }
 .icon-link:hover.envelope {
 	border: 2px solid rgba(255, 165, 0, 0.75);
 }
-.icon-link:hover.globe {
-	border: 2px solid #000;
-}
+
 .icon-link:hover.desktop {
-	border: 2px solid #000;
+	border: 2px solid #6BB07D;
 }
 
 .icon-link:hover .fa {
@@ -879,7 +887,7 @@ i {
 }
 
 .icon-link:hover .fa-github {
-	color: #444;
+	color: #675392;
 	-webkit-transition: color 150ms ease-in-out;
 	transition: color 150ms ease-in-out;
 }
@@ -889,13 +897,8 @@ i {
 	transition: color 150ms ease-in-out;
 }
 
-.icon-link:hover .fa-globe {
-	color: green;
-	-webkit-transition: color 150ms ease-in-out;
-	transition: color 150ms ease-in-out;
-}
 .icon-link:hover .fa-desktop {
-	color: #000;
+	color: #6BB07D;
 	-webkit-transition: color 150ms ease-in-out;
 	transition: color 150ms ease-in-out;
 }
