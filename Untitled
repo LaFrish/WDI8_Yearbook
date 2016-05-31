@@ -1,3 +1,24 @@
+
+<%= link_to @wdier.linkedin.url, class: 'btn btn-primary btn-lg' do %>
+<i class="fa fa-linkedin" aria-hidden="true"></i>
+<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+<i class="fa fa-facebook-official" aria-hidden="true"></i>
+LinkedIn
+<% end %>
+<%= link_to @wdier.fb, class: 'btn btn-primary btn-lg' do %>
+<i class="fa-file-text-o"> </i>
+Facebook
+<% end %>
+<%= link_to @wdier.email, class: 'btn btn-primary btn-lg' do %>
+<i class="fa-file-text-o"></i>
+Email
+<% end %>
+
+
+
+
+
+
 <div class="index">
   <% @instructors.each do |instructor| %>
   <%= link_to image_tag(instructor.img_url), instructor_path(instructor) %>
