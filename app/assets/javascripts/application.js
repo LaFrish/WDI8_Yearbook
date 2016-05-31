@@ -30,7 +30,7 @@ $(document).ready(function(){
     }
     // change the style of the navbar when the user scrolls into the next zone.
     // get the distance of the 2nd section from the top of the page - height of header.
-    var topOffset = $('#demosection2').offset().top;
+    var topOffset = $('#section2').offset().top;
     var headerHeight = $('#navigation_container').height();
     var transitionPoint = topOffset - headerHeight;
     if (scrollTop > transitionPoint) {
