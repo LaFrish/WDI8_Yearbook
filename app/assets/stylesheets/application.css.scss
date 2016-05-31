@@ -345,8 +345,10 @@ footer{
 	height: 200px;
 	width: 100%;
 }
-#yearbookIndex .space{
-	height: 200px;
+.space{
+	margin-top: 150px;
+	height: 150px;
+	text-align: center;
 }
 #yearbookIndex h6{
 	font-family:'PFDinTextCompPro-Bold';
@@ -927,22 +929,24 @@ max-width: 780px;
 text-align: center;
 }*/
 
-/*.container{
-position: relative;
+#photoIndex .top{
+	margin-top: 150px;
+	height: 200px;
+	text-align: center;
 }
-.container:before{
-display: block;
-content: "";
-width: 100%;
-padding-top: 56.25%;
-}
-.container > .galleryImgs{
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-}*/
+// #photoIndex .container:before{
+// display: block;
+// content: "";
+// width: 100%;
+// padding-top: 56.25%;
+// }
+// #photoIndex .container > .galleryImgs{
+// position: absolute;
+// top: 0;
+// left: 0;
+// right: 0;
+// bottom: 0;
+// }
 
 
 //img gallery
@@ -1097,120 +1101,7 @@ Doing this lines up the right and left-most gallery with the edge of the content
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
-.imgGalleryExpanded {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 2;
-	opacity: 0;
-	font-family: Verdana;
-	color: #fcfcfc;
-	background: rgba(0,0,0,.8);
-	-webkit-transform: translateX(-100%);
-	transform: translateX(-100%);
-	-webkit-transition: transform 0s .290s linear, opacity .290s ease;
-	transition: transform 0s .290s linear, opacity .290s ease;
-}
-.imgGalleryExpanded:before, .imgGalleryExpanded:after {
-	content: '';
-	position: absolute;
-	right: 20px;
-	top: 30px;
-	width: 30px;
-	height: 3px;
-	background: #fcfcfc;
-	cursor: pointer;
-}
-.imgGalleryExpanded:before {
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-.imgGalleryExpanded:after {
-	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
-.imgGalleryExpanded > button {
-	position: absolute;
-	cursor: pointer;
-	outline: none;
-	display: block;
-	border: none;
-	width: 50px;
-	height: 45px;
-	background: none;
-	margin-top: 10px;
-	left: 50%;
-	top: 85%;
-	float: left;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-	margin-left: -40px;
-}
-.imgGalleryExpanded > button:active {
-	-webkit-transform: translate(-50%, 2px);
-	transform: translate(-50%, 2px);
-}
-.imgGalleryExpanded > button:after {
-	content: '\f0d9  ';
-	font-family: FontAwesome;
-	display: block;
-	position: absolute;
-	text-indent: 0;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	color: #fcfcfc;
-	line-height: 50px;
-	font-size: 400%;
-	height: 100%;
-	width: 100%;
-	text-align:center;
-	-webkit-transition: color .290s ease;
-	transition: color .290s ease;
-	-webkit-filter: drop-shadow(0 2px 10px rgba(0,0,0,.42));
-	filter: drop-shadow(0 2px 10px rgba(0,0,0,.42));
-}
-.imgGalleryExpanded > button:nth-of-type(1):before {
-	content: attr(data-count);
-	display: block;
-	position: relative;
-	top: 42px;
-	font-size: 120%;
-	left: calc(100% - 10px);
-	font-family: Verdana;
-	color: #fcfcfc;
-	pointer-events: none;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	text-shadow: 0 2px 10px rgba(0,0,0,.42);
-}
-.imgGalleryExpanded > button:active:before {
-	-webkit-transform: translateY(-2px);
-	transform: translateY(-2px);
-}
-.imgGalleryExpanded > button:nth-of-type(2) {
-	margin-left: 40px;
-}
-.imgGalleryExpanded > button:nth-of-type(2):after {
-	content: '\f0da ';
-}
-.imgGalleryExpanded > button:hover:after {
-	color: #f21b0a;
-}
-.imgGalleryExpanded > .imgTitle {
-	position: absolute;
-	left: 50%;
-	top: calc(10% + 30px);
-	font-size: 130%;
-	width:80%;
-	text-align:center;
-	text-shadow: 0 2px 10px rgba(0,0,0,.42);
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
+
 .galleryImgs {
 	position: relative;
 	width: 80%;
