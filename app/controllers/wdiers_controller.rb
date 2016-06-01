@@ -19,7 +19,7 @@ class WdiersController < ApplicationController
 
   def show
     @wdier = Wdier.find(params[:id])
-    @instructor = Wdier.where(role: "Instructor")
+    @instructor = Wdier.find.where(role: "Instructor")
     @student = Wdier.where(role: "Student")
     @squa = Wdier.where(squad_id: @wdier.squad_id)
     # @squad = Wdier.where(:squad_id)
