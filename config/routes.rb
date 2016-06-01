@@ -6,6 +6,13 @@ Rails.application.routes.draw do
   resources :wdiers do
     resources :posts
   end
+  resources :wdiers do
+    resources :students
+  end
+
+  resources :wdiers do
+    resources :instructors
+  end
 
   resources :photos
 end

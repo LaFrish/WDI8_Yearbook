@@ -1,10 +1,26 @@
 <section id="studentIndex">
     <h1 class="page-header">Students</h1>
-    <div class="index">
+
       <ul class="grid">
-        <li><% @users.each do |user| %>
-          <%= link_to image_tag(user.img_url), user_path(user) %></li>
-          <%end%>
+          <div class="thumbnail-grid index">
+            <% @students.each do |wdier| %>
+            <%= link_to image_tag(wdier.img_url), wdier_path(wdier) %>
+            <figure class="i1">
+              <figcaption><%= wdier.name %></figcaption>
+            </figure>
+            <%end%>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+
+        <!-- <li><#% @users.each do |user| %>
+          <#%= link_to image_tag(user.img_url), user_path(user) %></li>
+          <#%end%> -->
         </ul>
       </div>
     </section>

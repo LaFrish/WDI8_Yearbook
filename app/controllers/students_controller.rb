@@ -1,21 +1,24 @@
 class StudentsController < ApplicationController
 
   def index
-    @students = Student.all
+    @wdiers = Wdier.all
+    @students = Wdier.where(role: "Student")
   end
+
+  # def new
+  #   @student = Student.new
+  # end
+
+  # def create
+  #   @student = Student.create!(student_params)
+  #
+  #   redirect_to students_path(@student)
+  # end
 
   def show
-    @student = Student.find(params[:id])
-  end
-
-  def new
-    @student = Student.new
-  end
-
-  def create
-    @student = Student.create!(student_params)
-
-    redirect_to students_path(@student)
+    @wdier = Wdier.find(params[:id])
+    @student = Wdier.where(role: "Student")
+    # @student = Wdier.student.where(squad_id: @instructor.squad_id)
   end
 
   def edit
@@ -23,7 +26,7 @@ class StudentsController < ApplicationController
   end
 
   def update
-    @student = Student.find(params[:id])
+    @students = Wdier.where(role: "Student")
     @student.update(student_params)
     redirect_to students_path(@student)
   end
