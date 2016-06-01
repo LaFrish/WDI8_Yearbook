@@ -8,6 +8,4 @@ Rails.application.routes.draw do
   end
 
   resources :photos
-  resources :codeys
-  resources :squads
 end

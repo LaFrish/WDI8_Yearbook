@@ -110,7 +110,7 @@ Jesse.photos << first_photo
 Robin.photos << second_photo
 
 Robincomment = Post.create!(name: "Frish", body: "Hi", wdier_id: 7 )
-
+Jessecomment = Post.create!(name: "Frish", body: "Jesse is the best instructor!!", wdier_id: 3 )
 gallery1 = Photo.create!(
 img_url: "https://lh3.googleusercontent.com/JZ-7KKH5eQVjlODoyt7zOSl3fXCEDx_8PTTs-zxTbqAoxbA9fd7DtQewhsPJGQ3TC2XUKwBRo78m=w2334-h944");
 
