@@ -109,8 +109,8 @@
     </br><h5>Photo Gallery</h5></div>
     <div>
 
-      <h2><%=link_to image_tag("instructors.png"), wdier_instructors_path("/wdiers/wdiers/instructors")%></h2>
-      <h2><%=link_to image_tag("students.png"), "wdiers_students_path(@wdier)"%></h2>
+      <h2><%=link_to image_tag("instructors.png"), wdiers_path(@wdier)%></h2>
+      <h2><%=link_to image_tag("students.png"), wdiers_path(@wdier)%></h2>
       <h2><%=link_to image_tag("photo.png"), photos_path(@photos)%></h2>
     </section>
 

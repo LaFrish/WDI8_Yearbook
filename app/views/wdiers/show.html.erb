@@ -10,14 +10,14 @@
           <h2 class="inner-shadow mustard"><%= @wdier.name %></h2>
         </div>
         <div class="page-header social">
-          <%= link_to @wdier.portfolio_url, class:"icon-link round desktop fill" do %><i class="fa fa-desktop"></i></a>
+          <%= link_to @wdier.portfolio_url, class:"icon-link round desktop fill" if @wdier.portfolio_url? do  %><i class="fa fa-desktop"></i></a>
           <% end %>
-          <%= link_to @wdier.github_url, class: "icon-link round github fill" do %><i class="fa fa-github"></i></a>
+          <%= link_to @wdier.github_url, class: "icon-link round github fill" if @wdier.github_url? do %><i class="fa fa-github"></i></a>
           <% end %>
-          <%= link_to @wdier.fb, class:"icon-link round facebook fill" do %>
+          <%= link_to @wdier.fb, class:"icon-link round facebook fill" if @wdier.fb? do %>
           <i class="fa fa-facebook"></i></a>
           <% end %>
-          <%= link_to @wdier.linkedin, class:"icon-link round linkedin fill" do %>
+          <%= link_to @wdier.linkedin, class:"icon-link round linkedin fill" if @wdier.linkedin? do %>
           <i class="fa fa-linkedin"></i></a>
           <% end %>
           <%= link_to @wdier.email, class:"icon-link round envelope fill" do %><i class="fa fa-envelope"></i></a>
@@ -72,11 +72,13 @@
         <ul class="grid">
           <div class="index">
             <h1> Project Gallery </h1>
-            <%=link_to image_tag("project1.png"), @wdier.project1_url%>
-            <%=link_to image_tag("project2.png"), @wdier.project2_url%>
-            <%=link_to image_tag("project3.png"), @wdier.project3_url%>
+            <%=link_to image_tag("project1.png"), @wdier.project1_url if @wdier.project1_url? %>
+            <%=link_to image_tag("project2.png"), @wdier.project2_url if @wdier.project2_url? %>
+            <%=link_to image_tag("project3.png"), @wdier.project3_url if @wdier.project3_url? %>
           </ul>
         </div>
+
+
         <div class="squadGallery">
           <ul class="grid">
             <div class="index inner-shadow mustard">
