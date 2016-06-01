@@ -108,6 +108,9 @@
     <div class="inner-shadow mustard">
     </br><h5>Photo Gallery</h5></div>
     <div>
+      http://localhost:3000/wdiers/wdiers/instructors
+      <h2><%=link_to image_tag("photo.png"), wdiers_instructors_path(@photos)%></h2>
+      <h2><%=link_to image_tag("photo.png"), wdiers_students_path(@photos)%></h2>
       <h2><%=link_to image_tag("photo.png"), photos_path(@photos)%></h2>
     </section>
 
