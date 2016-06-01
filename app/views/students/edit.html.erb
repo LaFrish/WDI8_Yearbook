@@ -1,0 +1,60 @@
+<h2> New student <%=link_to @student.name, @student %> </h2>
+<%= form_for [@student] do |f| %>
+</br>
+<%= f.label :name %>
+<%= f.text_field :name %>
+</br>
+<%=f.label :img_url %>
+<%=f.text_field :img_url %>
+</br>
+<%=f.label :github_url %>
+<%=f.text_field :github_url %>
+</br>
+<%=f.label :portfolio_url %>
+<%=f.text_field :portfolio_url %>
+</br>
+<%=f.label :quote %>
+<%=f.text_field :quote %>
+</br>
+<%=f.label :q1 %>
+<%=f.text_field :q1 %>
+</br>
+<%=f.label :q2 %>
+<%=f.text_field :q2 %>
+</br>
+<%=f.label :q3 %>
+<%=f.text_field :q3 %>
+</br>
+<%=f.label :q4 %>
+<%=f.text_field :q4 %>
+</br>
+<%=f.label :project1_url %>
+<%=f.text_field :project1_url %>
+</br>
+<%=f.label :project2_url %>
+<%=f.text_field :project2_url %>
+</br>
+<%=f.label :project3_url %>
+<%=f.text_field :project3_url %>
+</br>
+<%=f.label :project4_url %>
+<%=f.text_field :project4_url %>
+</br>
+<%=f.label :email %>
+<%=f.text_field :email %>
+</br>
+<%=f.label :fb %>
+<%=f.text_field :fb %>
+</br>
+<%=f.label :linkedin %>
+<%=f.text_field :linkedin %>
+</br>
+<%=f.label :squad_id %>
+<%=f.text_field :squad_id %>
+</br>
+<%=f.label :codey_id %>
+<%=f.text_field :codey_id %>
+</br>
+<div class="button">
+<%=f.submit %></div>
+<% end %>
