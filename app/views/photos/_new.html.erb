@@ -11,21 +11,16 @@
   color: #000;
 }
 </style>
-<section class="form">
-<%= form_for @photo.new do |f| %>
 <div class="row text-center">
-  <div class="large-10 large-centered columns">
-
-<%=f.label :img_url, "Photo URL" %>
-<%=f.text_field :img_url %>
-</br>
-<%=f.label :caption, "Caption" %>
-<%=f.text_field :caption%>
-</br>
-<%=f.label :all_tags,"Tags", placeholder: "Separated with commas" %>
-<%= f.text_field :all_tags %>
-</br>
-<%=f.submit%>
+  <%= form_for(Photo.new) do |f| %>
+    <div class="large-10 large-centered columns">
+      <%= f.text_field :img_url, placeholder: "Enter the photo URL" %>
+    </div>
+    <div class="large-10 large-centered columns">
+      <%= f.text_field :all_tags, placeholder: "Enter your tags, separated with commas" %>
+    </div>
+    <div class="large-10 large-centered columns">
+      <%= f.submit "Post", class: "button"%>
+    </div>
   <% end %>
-<div>
-</section>
+</div>
