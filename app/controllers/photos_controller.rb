@@ -43,7 +43,7 @@ end
     @photo = Photo.find(params[:id])
     @photo.destroy
 
-    redirect_to photo_path(@photo)
+    redirect_to photos_path(@photo)
   end
 
   def attr_accessible
