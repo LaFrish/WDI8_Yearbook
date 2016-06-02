@@ -1,5 +1,5 @@
 class Wdier < ActiveRecord::Base
-  belongs_to :squad
+  belongs_to :yearbook
   belongs_to :instructors
   belongs_to :students
   has_one :codey

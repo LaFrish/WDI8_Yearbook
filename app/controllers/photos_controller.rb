@@ -10,7 +10,7 @@ class PhotosController < ApplicationController
   # end
 
   def show
-    @photo = Photo.find_by_id(params[:id])
+    @photo = Photo.find(params[:id])
   end
 
   def new
@@ -19,32 +19,30 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.create!(photo_params)
-    # if @photo.save
-    #   flash[:success] = "The photo was added"
+    if @photo.save
+      flash[:success] = "The photo was added"
 
     redirect_to photo_path(@photo)
-  # else
-  #   render 'new'
-  # end
+  else
+    render 'new'
+  end
 end
 
   def edit
-    @photo = Photo.find_by_id(params[:id])
+    @photo = Photo.find(params[:id])
   end
 
   def update
-    @photo = Photo.find_by_id(params[:id])
+    @photo = Photo.find(params[:id])
      @photo.update!(photo_params)
     else
       redirect_to photo_path(@photo)
-
   end
 
   def destroy
-    @photo = Photo.find_by_id(params[:id])
-    if @photo.present?
+    @photo = Photo.find(params[:id])
     @photo.destroy
-  end
+
     redirect_to photo_path(@photo)
   end
 

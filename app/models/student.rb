@@ -6,4 +6,5 @@ class Student < ActiveRecord::Base
   has_many :negatives
   has_many :photos, through: :negatives
   belongs_to :users
+  belongs_to :wdiers
 end

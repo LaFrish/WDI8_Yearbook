@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   # has_many :users
   has_many :instructors # an instance of being an instructor
   has_many :students # an instance of being a student
+  has_many :wdiers # an instance of being a wdier
   # acts_as_taggable # Alias for acts_as_taggable_on :tags
   # acts_as_taggable_on :names
 end
