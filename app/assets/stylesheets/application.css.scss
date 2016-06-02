@@ -1308,7 +1308,8 @@ a img {
 #photo .center {
 	text-align: center;
 }
-#photoIndex h4{
+ h4{
+	text-align: center;
 	font-size:100px;
 	font-family: 'PFDinTextCompPro-Bold';
 }
@@ -1319,11 +1320,8 @@ a img {
 #photoShow img{
 	width: 75%;
 }
-#yearbookIndex h4{
-	font-size:100px;
-	font-family: 'PFDinTextCompPro-Bold';
-}
-#yearbookIndex h5{
+
+h5{
 	font-size:75px;
 	font-family: 'PFDinTextCompPro-Regular';
 }
@@ -1389,17 +1387,6 @@ a img {
 .wdi8 {
 	background: url("wdi8.png");
 }
-#form {
-  margin-top: 400px;
-  height: 1000px;
-}
-
-#form .fill{
-  height: 800px;
-  width: 600px;
-  background: red;
-  color: #000;
-}
 
 .test {
 	background: red;
@@ -1407,4 +1394,23 @@ a img {
 .test img{
 	color: #000;
 	width: 100%;
+}
+
+#comment_form .box{
+	position:relative;
+	margin: 50px 50px 50px 400px;
+	width: 600px;
+	height: 400px;
+	background: #fff;
+	border: 1px solid #bbb;
+	border-radius: 8px;
+	overflow: hidden;
+	z-index:0;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.insidebox{
+  position:relative;
+  margin: 50px 50px 150px 125px;
+  text-align: left;
+  font-size: 50px;
 }

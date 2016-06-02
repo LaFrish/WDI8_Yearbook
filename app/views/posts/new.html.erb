@@ -1,15 +1,21 @@
-<style>
-body{
-  background-color: #fff;
-}
-form{
-  background-color: red;
-}
-</style>
+<section id="comment_form">
+</br>
+</br>
+</br>
+<div class="inner-shadow mustard"> </br><h4>NEW COMMENT</h4></div>
+<div class="box">
+<div class="insidebox">
 <%= form_for [@wdier, @post] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+</br>
   <%= f.label :body %>
   <%= f.text_area :body %>
-  <%= f.submit %>
+</br>
+
+  <button><%= f.submit "Post", class: "button"%></button>
+</div>
 <% end %>
+</div>
+</div>
+</section>

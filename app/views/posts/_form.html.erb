@@ -1,12 +1,27 @@
 <style>
-body{
+#comment_form{
   background-color: pink;
+  height: 1200px;
+  width: 100%;
 }
 </style>
-<%= form_for @post do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+
+<section class="comment_form">
+<div class="row text-center">
+  <%= form_for @post do |f| %>
+  <div class="large-10 large-centered columns">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+</br>
+<div class="large-10 large-centered columns">
   <%= f.label :body %>
   <%= f.text_area :body %>
-  <%= f.submit %>
+</div>
+</br>
+<div class="large-10 large-centered columns">
+  <%= f.submit "Post", class: "button"%>
+</div>
 <% end %>
+</div>
+</section>

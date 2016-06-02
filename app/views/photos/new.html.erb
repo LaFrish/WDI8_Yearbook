@@ -1,22 +1,15 @@
-<style>
-#form {
-  margin-top: 400px;
-  height: 1000px;
-}
 
-#form .fill{
-  height: 800px;
-  width: 600px;
-  background: red;
-  color: #000;
-}
-</style>
-<section class="form">
+<section id="comment_form">
   <%= form_for @photo do |f| %>
-  <div class="row text-center">
-    <div class="large-10 large-centered columns">
-      <div class="fill">
-        <div class="input">
+  <div class="inner-shadow mustard">
+  </br>
+  </br>
+  </br>
+  <h4>PHOTO</h4>
+</div>
+  <div class="box">
+  <div class="insidebox">
+    <div class="input">
           <%=f.label :img_url, "Photo URL" %>
           <%=f.text_field :img_url %>
         </div>
@@ -28,8 +21,8 @@
         <%=f.label :all_tags,"Tags", placeholder: "Separated with commas" %>
         <%= f.text_field :all_tags %>
       </div>
-      <%=f.submit%>
+      <button><%= f.submit "Post", class: "button"%></button>
       <% end %>
     </div>
-  </div>
+    </div>
 </section>
