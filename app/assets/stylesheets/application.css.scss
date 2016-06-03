@@ -311,29 +311,27 @@ nav {
 	z-index: 3;
 	-webkit-animation: index imgSlideIn .65s .15s ease forwards;
 	animation: index imgSlideIn .65s .15s ease forwards;
+	transition: all .2s ease-in-out
 }
 
-.index img:hover {
-	background-color: red;
-	opacity: 0.4;
-	cursor:pointer;
-	z-index: 1;
-}
-
-a {
-	color: red;
-}
-
-a:hover, a:focus {
-	color: red;
-}
+// .index img:hover {
+// 	background-color: red;
+// 	opacity: 0.4;
+// 	cursor:pointer;
+// 	z-index: 1;
+// }
+//
+//
+// a:hover, a:focus {
+// 	color: red;
+// }
 
 li {
 	list-style: none;
 }
 
 h1 {
-	color: red;
+	color: rgba(255, 165, 0, 0.75);
 	text-align: center;
 	font-size: 24px;
 }
@@ -440,23 +438,43 @@ footer img{
 
 }
 //WDIER INDEX
-
-.thumbnail-grid {
-	user-select: none
+* {
+	box-sizing: border-box
 }
+.thumbnail-grid {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	text-align: center;
+	width: 100%;
+	z-index: 0
+}
+.thumbnail-grid:after{
+	content: '';
+	display: table;
+}
+
+.thumbnail-grid:after {
+	clear: both;
+}
+
 .thumbnail-grid figure {
+	z-index: 1;
+	border-radius: 100%;
 	position: relative;
 	width: 200px;
 	height: 200px;
 	margin: 5px;
 	border-radius: 100%;
-	box-shadow: inset 0 -40px 0 0 rgba(0,0,0,.1);
+	box-shadow: inset 0 0px 0 0 rgba(0,0,0,.1);
 	transition: all .2s ease-in-out
 }
 .thumbnail-grid figure:hover {
 	box-shadow: inset 0 -200px 0 0 rgba(0,0,0,.5)
 }
 .thumbnail-grid figcaption {
+	z-index: 1;
 	border-radius: 100%;
 	position: absolute;
 	width: 100%;
@@ -464,7 +482,7 @@ footer img{
 	text-align: center;
 	color: #f4f4f4;
 	text-shadow: 0 0 3px #000;
-	bottom: 10px;
+
 	transition: all .2s ease-in-out
 }
 .thumbnail-grid figure:hover figcaption {
@@ -605,11 +623,11 @@ footer img{
 	box-shadow: 0 0 5px 0 #222;
 	cursor: pointer;
 }
-// .red {
-// 	font-family: sans-serif;
-// 	font-weight: 700;
-// 	color: red;
-// }
+.red {
+	font-family: sans-serif;
+	font-weight: 700;
+	color: red;
+}
 .mustard {
 	font-family: sans-serif;
 	font-weight: 700;
@@ -1388,13 +1406,6 @@ h5{
 	background: url("wdi8.png");
 }
 
-.test {
-	background: red;
-}
-.test img{
-	color: #000;
-	width: 100%;
-}
 
 #comment_form .box{
 	position:relative;
@@ -1413,4 +1424,67 @@ h5{
   margin: 50px 50px 150px 125px;
   text-align: left;
   font-size: 50px;
+}
+.login_container {
+	border: 2px solid #000;
+}
+.devise{
+	line-height: 35px;
+	height: 120px;
+	background-color: #000;
+	font-family: 'PFDinTextCompPro-Bold';
+	font-size: 30px;
+	text-align: center;
+}
+#login label {
+  cursor: pointer;
+  color: #666;
+}
+
+#login label input[type="checkbox"] {
+  display: none;
+}
+
+#login label input[type="checkbox"] + .label-text:before {
+  content: "\f096";
+  font-family: "FontAwesome";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  width: 1em;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#login label input[type="checkbox"]:checked + .label-text:before {
+  content: "\f14a";
+  color: #06a3e9;
+}
+
+#login label input[type="checkbox"]:disabled + .label-text {
+  color: #aaa;
+}
+
+#login label input[type="checkbox"]:before {
+  content: "\f0c8";
+  color: #ccc;
+}
+
+#login body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #263238;
+  font-family: 'Lato', sans-serif;
+}
+
+#login h1{
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 100;
 }

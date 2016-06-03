@@ -2,10 +2,12 @@ class PhotosController < ApplicationController
 
 
   def index
+    @photos = Photo.all
+    @photos = Photo.paginate(:page => params[:page])
     # if params[:tag]
     #   @photos = Photo.tagged_with(params[:tag])
     # else
-      @photos = Photo.all
+
     end
   # end
 
@@ -49,6 +51,8 @@ end
   def attr_accessible
     @photo = Photo.find(params[:id])
   end
+
+
 
   private
   def photo_params
