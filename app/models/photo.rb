@@ -55,10 +55,9 @@ class Photo < ActiveRecord::Base
   # s3_region: ENV["aws_region"],
 end
 
-# for the Post model
-# class Post
-  self.per_page = 25
-end
-
-# set per_page globally
-WillPaginate.per_page = 25
+# # class Post
+#   self.per_page = 25
+#
+#
+# # set per_page globally
+# WillPaginate.per_page = 25

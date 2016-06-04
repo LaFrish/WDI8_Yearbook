@@ -28,6 +28,12 @@
                 </ul>
               </div>
             </div>
+            <div class="digg_pagination">
+              <div class="page_info">
+                <%= page_entries_info @photos %>
+              </div>
+                <%= will_paginate @photos, :container => false %>
+            </div>
           </div>
         </div>
       </section>
