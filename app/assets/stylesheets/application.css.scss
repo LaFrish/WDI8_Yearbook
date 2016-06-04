@@ -1,6 +1,5 @@
 /*
 *= require_self
-*= require fancybox
 *= require font-awesome
 *= require_tree .
 */
@@ -39,7 +38,7 @@
 @import "http://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
 @import "https://daneden.github.io/animate.css/animate.min.css";
-@import "bourbon";
+
 
 body{
 	font-family: 'PFDinTextCompPro-Regular';

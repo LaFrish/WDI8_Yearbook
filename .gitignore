@@ -31,9 +31,7 @@
 /.env
 .env
 
-/config/initializers/aws.rb
-config/initializers/aws.rb
-aws.rb
+
 
 config/secrets.yml
 
