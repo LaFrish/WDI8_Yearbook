@@ -110,9 +110,8 @@
     <div class="inner-shadow mustard">
     </br><h5>Photo Gallery</h5></div>
     <div>
-
-      <h2><%=link_to image_tag("instructors.png"), wdiers_path(@wdier)%></h2>
-      <h2><%=link_to image_tag("students.png"), wdiers_path(@wdier)%></h2>
+      <h2><%=link_to image_tag("instructors.png"), wdiers_path(anchor: "instructorArea")%></h2>
+      <h2><%=link_to image_tag("students.png"), wdiers_path(anchor: "studentArea")%></h2>
       <h2><%=link_to image_tag("photo.png"), photos_path(@photos)%></h2>
     </section>
   </section>
