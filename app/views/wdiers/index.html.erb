@@ -1,27 +1,32 @@
 
 <section id="wdierIndex">
-
-
-
 <div class="inner">
-  <!-- <section id="wdierIndex">
-    <h1 class="page-header">Wdiers</h1> -->
+  <div class="inner-shadow mustard page-header">
+    <h4>Instructors</h4></div>
     <div class="thumbnail-grid flex index">
-      <!-- <div class="flex-item"> -->
-
-      <% @wdiers.each do |wdier| %>
+      <% @instructors.each do |wdier| %>
     <div class="flex-item"><%= link_to image_tag(wdier.img_url), wdier_path(wdier) %>
       <figure class="i1">
         <figcaption><%= wdier.name %></figcaption>
       </figure>
     </div>
-      <% end %>
+  <% end %>
       </div>
-
     </div>
-
+    <div class="inner">
+      <div class="inner-shadow mustard page-header">
+        <h4>Students</h4></div>
+        <div class="thumbnail-grid flex index">
+          <% @students.each do |wdier| %>
+        <div class="flex-item"><%= link_to image_tag(wdier.img_url), wdier_path(wdier) %>
+          <figure class="i1">
+            <figcaption><%= wdier.name %></figcaption>
+          </figure>
+        </div>
+        <% end %>
+          </div>
+        </div>
   </section>
-</div>
 <footer>
   <%= image_tag("blkdc.png") %>
 </footer>
