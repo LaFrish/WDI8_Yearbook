@@ -1,18 +1,25 @@
 
+<section id="wdierIndex">
+
+
+
 <div class="inner">
-  <section id="wdierIndex">
-    <h1 class="page-header">Wdiers</h1>
+  <!-- <section id="wdierIndex">
+    <h1 class="page-header">Wdiers</h1> -->
     <div class="thumbnail-grid flex index">
       <!-- <div class="flex-item"> -->
 
       <% @wdiers.each do |wdier| %>
-    <%= link_to image_tag(wdier.img_url), wdier_path(wdier) %>
+    <div class="flex-item"><%= link_to image_tag(wdier.img_url), wdier_path(wdier) %>
       <figure class="i1">
         <figcaption><%= wdier.name %></figcaption>
       </figure>
+    </div>
       <% end %>
       </div>
+
     </div>
+
   </section>
 </div>
 <footer>
