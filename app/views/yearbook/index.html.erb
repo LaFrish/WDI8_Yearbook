@@ -99,10 +99,13 @@
         </br>
         </br>
         <span2>WDIERS</span2>
-            <%=link_to image_tag("wdi8-blk.png"), wdiers_path(@wdier)%>
-          </br>
           </div>
-          </div>
+          <!-- </div> -->
+          <div class="links">
+          <%=link_to image_tag("wdi8-blk.png"), wdiers_path(@wdier)%>
+        <%=link_to image_tag("instructor.png"), wdiers_path(anchor: "instructorArea")%>
+        <%=link_to image_tag("student.png"), wdiers_path(anchor: "studentArea")%>
+      </div>
       </div>
     </div>
   </section>
@@ -110,8 +113,7 @@
     <div class="inner-shadow mustard">
     </br><h5>Photo Gallery</h5></div>
     <div>
-      <h2><%=link_to image_tag("instructors.png"), wdiers_path(anchor: "instructorArea")%></h2>
-      <h2><%=link_to image_tag("students.png"), wdiers_path(anchor: "studentArea")%></h2>
+
       <h2><%=link_to image_tag("photo.png"), photos_path(@photos)%></h2>
     </section>
   </section>
