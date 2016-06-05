@@ -11,10 +11,6 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
-# Ignore all logfiles and tempfiles.
-/log/*
-!/log/.keep
-/tmp
 
 # Ignore application configuration
 /config/application.yml
@@ -31,11 +27,14 @@
 /.env
 .env
 
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
 
+development.log
+~/development.log
 
 config/secrets.yml
 
 .sass-cache
-
-development.log
-~/development.log
