@@ -1,15 +1,16 @@
 class PhotosController < ApplicationController
+  # acts_as_taggable # Alias for acts_as_taggable_on :tags
+  # acts_as_taggable_on :name
 
 
   def index
+    if params[:tag]
+      @photos = Photo.tagged_with(params[:tag])
+    else
     @photos = Photo.all
     @photos = Photo.paginate(:page => params[:page])
-    # if params[:tag]
-    #   @photos = Photo.tagged_with(params[:tag])
-    # else
-
     end
-  # end
+  end
 
   def show
     @photo = Photo.find(params[:id])
