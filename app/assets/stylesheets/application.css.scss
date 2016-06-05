@@ -201,10 +201,15 @@ nav {
 	/*top: 20px;*/
 }
 
-#navigation_container .ga-btn :hover{
+#navigation_container img:hover{
 	background: rgba(255, 165, 0, 0.75);
-	border-radius: 100%;
+		border-radius: 100%;
 }
+//
+// #navigation_container .ga-btn:hover{
+// 	background: rgba(255, 165, 0, 0.75);
+// 	border-radius: 100%;
+// }
 
 // .logo {
 //   float: left;
