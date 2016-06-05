@@ -1,5 +1,6 @@
 class WdiersController < ApplicationController
 
+
   def index
     @wdiers = Wdier.all
     @instructors = Wdier.where(role: "Instructor")
@@ -48,6 +49,15 @@ class WdiersController < ApplicationController
   def photos
     @wdier = @wdier.photos.find(params[:id])
   end
+
+  def attr_accessible
+    @photo = Photo.find(params[:id])
+  end
+
+  def tag_cloud
+    @tags = Post.tag_counts_on(:tags)
+  end
+
 
   private
   def wdier_params

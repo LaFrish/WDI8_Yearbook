@@ -10,9 +10,11 @@
           <h2 class="inner-shadow mustard"><%= @wdier.name %></h2>
         </div>
         <div class="page-header social">
-          <%= link_to @wdier.portfolio_url, class:"icon-link round desktop fill" do %><i class="fa fa-desktop"></i></a>
+          <%= link_to @wdier.portfolio_url, class:"icon-link round desktop fill" do %>
+          <i class="fa fa-desktop"></i></a>
           <% end %>
-          <%= link_to @wdier.github_url, class: "icon-link round github fill" do %><i class="fa fa-github"></i></a>
+          <%= link_to @wdier.github_url, class: "icon-link round github fill" do %>
+          <i class="fa fa-github"></i></a>
           <% end %>
           <%= link_to @wdier.fb, class:"icon-link round facebook fill" do %>
           <i class="fa fa-facebook"></i></a>
@@ -20,7 +22,8 @@
           <%= link_to @wdier.linkedin, class:"icon-link round linkedin fill" do %>
           <i class="fa fa-linkedin"></i></a>
           <% end %>
-          <%= link_to @wdier.email, class:"icon-link round envelope fill" do %><i class="fa fa-envelope"></i></a>
+          <%= link_to @wdier.email, class:"icon-link round envelope fill" do %>
+          <i class="fa fa-envelope"></i></a>
           <% end %>
         </div>
       </div>
@@ -60,6 +63,10 @@
                   <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <% @wdier.photos.each do |photo| %>
                     <%= image_tag photo.img_url %></li>
+                    <% end %>
+
+                    <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+                    <%= link_to tag.name, { :action => :tag, :id => tag.name }, :class => css_class %>
                     <% end %>
                   </ul>
                 </div>
