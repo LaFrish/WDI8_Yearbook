@@ -262,6 +262,7 @@ nav {
 	position: relative;
 }
 #yearbookIndex span{
+	width: 100%;
 	font-size: 225px;
 	text-align: center;
 	line-height: 275px;
@@ -274,6 +275,7 @@ nav {
 	font-weight: 900;
 }
 #yearbookIndex span2{
+	width: 100%;
 	font-size: 250px;
 	text-align: center;
 	line-height: 275px;
@@ -286,6 +288,7 @@ nav {
 	font-weight: 900;
 }
 #yearbookIndex span3{
+	width: 100%;
 	font-size: 250px;
 	text-align: center;
 	line-height: 275px;
@@ -300,7 +303,8 @@ nav {
 
 #yearbookIndex .wdiers .text-overlay img{
 	z-index: 10;
-	opacity: 1.0
+	opacity: 1.0;
+	width: 100%;
 }
 
 #yearbookIndex .bottom .text-overlay{
@@ -422,6 +426,7 @@ footer img{
 	background: url("http://pixelumenlab.com/wp-content/uploads/2015/02/washington_dc_night_skyline-1024x577.jpg") no-repeat;
 	background-size: cover;
 	height: 800px;
+	width: 100%;
 }
 #yearbookIndex .yearbookCover .overlay {
 	background-color: #000;
@@ -534,6 +539,7 @@ footer img{
 }
 .wdi8 {
 	background: url("wdi8.png");
+	width: 100%;
 }
 
 
