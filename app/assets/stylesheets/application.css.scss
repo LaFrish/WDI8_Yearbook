@@ -383,8 +383,8 @@ footer img{
 	height:100%;
 }
 .space{
-	margin-top: 150px;
-	height: 150px;
+	margin-top: 100px;
+	height: 100px;
 	text-align: center;
 }
 #yearbookIndex h6{
@@ -450,13 +450,27 @@ footer img{
 
 
 #yearbookIndex .wordContainer {
-
+	display: table
 }
 
-.box_left h3{
+
+
+
+.words h3{
 	text-align:center;
 	position:relative;
 	top:80px;
+	color: rgba(116, 201, 199, 1);
+	font-family:'PFDinTextCompPro-Bold';
+	font-size: 50px;
+}
+.words h2{
+	text-align:center;
+	position:relative;
+	top:80px;
+	color: red;
+	font-family:'PFDinTextCompPro-Bold';
+	font-size: 30px;
 }
 .box_left {
 	width:600px;
@@ -464,11 +478,22 @@ footer img{
 	background:#FFF;
 	margin:20px 200px -100px 120px;
 }
-.box_right h3{
-	text-align:center;
-	position:relative;
-	top:80px;
+.box_left img{
+	margin-top: 100px;
+	float: left;
 }
+.box_right img{
+	margin-top: 100px;
+	float: right;
+}
+// .box_right h3{
+// 	text-align:center;
+// 	position:relative;
+// 	top:80px;
+// 	color: rgba(116, 201, 199, 1);
+// 	font-family:'PFDinTextCompPro-Bold';
+// 	font-size: 30px;
+// }
 .box_right {
 	width:600px;
 	height:400px;
@@ -766,6 +791,7 @@ footer img{
 }
 
 #wdierShow button {
+	background-color: rgba(116, 201, 199, 1);
 	text-align: center;
 	width: 200px;
 	height: 50px;
@@ -775,6 +801,7 @@ footer img{
 }
 
 #wdierShow .button {
+	background-color: rgba(116, 201, 199, 1);
 	text-align: center;
 	margin: 25px;
 	box-shadow: 0 0 5px 0 #222;
@@ -789,6 +816,11 @@ footer img{
 	font-family: sans-serif;
 	font-weight: 700;
 	color: rgba(255, 165, 0, 0.75);
+}
+.blue {
+	font-family: sans-serif;
+	font-weight: 700;
+color: rgba(116, 201, 199, 1);
 }
 .inner-shadow {
 	text-shadow: 1px 2px 4px #fff6e6, 0px 0px 0px black, 0px 0px 2px white;
@@ -818,12 +850,20 @@ footer img{
 }
 
 #wdierShow .squadGallery{
-	margin: 50px 100px 100px 50px;
+	text-align: center;
+	margin: 50px 50px 50px 50px;
 	overflow: hidden;
+	position:relative;
+	height: 100%;
+	background: #fff;
+	border: 1px solid #bbb;
+	border-radius: 8px;
+	box-shadow: inset 0 0 5px 0 #222;
 }
 
 #wdierShow .photoGallery{
-	margin: 50px 100px 100px 50px;
+	text-align: center;
+	margin: 50px 50px 100px 50px;
 	overflow: hidden;
 	position:relative;
 	height: 100%;
@@ -834,6 +874,7 @@ footer img{
 }
 
 #wdierShow .photoGallery img {
+	text-align: center;
 	width: 300px;
 	height: 200px;
 	border-color: 1px black;
@@ -841,7 +882,8 @@ footer img{
 }
 
 #wdierShow .commentGallery{
-	margin: 50px 100px 100px 50px;
+	text-align: center;
+	margin: 50px 50px 100px 50px;
 	overflow: hidden;
 	position:relative;
 	height: 100%;
@@ -857,13 +899,7 @@ footer img{
 	margin: 25px 50px 25px 25px;
 	box-shadow: inset 0 0 5px 0 #222;
 }
-#wdierShow .body{
-	background-color: #fff;
-	line-height: 50px;
-	text-align: left;
-	margin: 25px 50px 25px 25px;
-	box-shadow: inset 0 0 5px 0 #222;
-}
+
 #wdierShow footer{
 	background-color: #fff;
 	line-height: 50px;
@@ -871,7 +907,7 @@ footer img{
 	margin: 25px 50px 25px 25px;
 }
 i {
-	color: white;
+	color: pink;
 }
 #wdierShow .social{
 	vertical-align:middle;
@@ -946,6 +982,13 @@ i {
 	background: url("project1.png");
 	// margin: 25px 50px 25px 25px;
 	box-shadow: inset 0 0 5px 0 #222;
+}
+
+.squad_img img{
+	margin: auto;
+	border-radius: 25px;
+	width: 600px;
+	height: 400px;
 }
 //icon links
 .icon-link {

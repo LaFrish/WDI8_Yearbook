@@ -34,66 +34,75 @@
           <%= image_tag("quote-end-blue.png") %>
         </div>
       </div>
-
-
       <div class="topContainer">
         <div class="teaching">
-        <h3>Has been teaching for...</br><%= @wdier.teaching if @wdier.teaching? %></h3></div>
-        <h3>Favorite WDI8 Memory</br><%= @wdier.memory if @wdier.memory? %></h3>
-        <h3>Favorite programming language</br><%= @wdier.favlang if @wdier.favlang? %></h3>
-        <h3>Words of wisdom for the students</br><%= @wdier.wisewords if @wdier.wisewords? %></h3>
-        <h3></br><%= @wdier.q1 if @wdier.q1? %></h3>
-        <%= @wdier.q2 if @wdier.q2? %></h3>
-        <h3>I can't live without my...</br><%= @wdier.q3 if @wdier.q3? %></h3>
-        <div class="projectGallery">
-          <div class="thumbnail-grid figure">
+          <h3>Has been teaching for...</br><%= @wdier.teaching if @wdier.teaching? %></h3></div>
+          <h3>Favorite WDI8 Memory</br><%= @wdier.memory if @wdier.memory? %></h3>
+          <h3>Favorite programming language</br><%= @wdier.favlang if @wdier.favlang? %></h3>
+          <h3>Words of wisdom for the students</br><%= @wdier.wisewords if @wdier.wisewords? %></h3>
+          <h3></br><%= @wdier.q1 if @wdier.q1? %></h3>
+          <%= @wdier.q2 if @wdier.q2? %></h3>
+          <h3>I can't live without my...</br><%= @wdier.q3 if @wdier.q3? %></h3>
+          <div class="projectGallery">
+            <div class="thumbnail-grid figure">
               <%=link_to image_tag("project1.png"), @wdier.project1_url if @wdier.project1_url? %>
               <%=link_to image_tag("project2.png"), @wdier.project2_url if @wdier.project2_url? %>
               <%=link_to image_tag("project3.png"), @wdier.project3_url if @wdier.project3_url? %>
-          </div>
-          <div class="squadGallery">
-            <ul class="grid">
-              <div class="index inner-shadow mustard">
+            </div>
+            </div>
+            <div class="squadGallery">
+              <div class="inner-shadow mustard">
                 <h4>SQUAD</h4>
-                <h2> <%= @wdier.squad_name %></h2>
-              </ul>
-            </div>
-            <div class="photo">
-              <div class="photoGallery">
-                <h1>Pics Please</h1>
-                <button><%= link_to "Add new photo", new_photo_path(@wdier) %></button>
-                <ul>
-                  <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <% @wdier.photos.each do |photo| %>
-                    <%= image_tag photo.img_url %></li>
-                    <% end %>
-                  </ul>
-                </div>
+                <h4> <%= @wdier.squad_name %></h4>
+              </br></div>
+              <div class="squad_img"><%= image_tag(@wdier.squad_img) %>
+          </div>
+              <div class="index">
+                <!-- <#% @wdiers.each do |wdier| %> -->
+                <%= link_to image_tag(@wdier.img_url), wdier_path(@wdier) %>
+                <!-- <#% end %> -->
               </div>
-              <div class="comment">
-                <div class="commentGallery">
-                  <div class="overlay">
-                    <h1>keep in touch...</h1>
-                    <button><%= link_to "Add new comment", new_wdier_post_path(@wdier) %> </button>
-                    <% @wdier.posts.each do |post| %>
-                    <div class="name">
-                      <%= post.name %>
-                    </div>
-                    <div class="body">
-                      <%= post.body %>
-                    </div>
-                    <%= link_to "Add new comment", new_wdier_post_path(@wdier) %>
-                    <% end %>
-                    <% if current_user && current_user == post.user %>
-                    <%= link_to "Edit", edit_wdier_post_path(@wdier) %> |
-                    <%= link_to "Delete", wdier_post_path(@wdier), method: :delete %>
-                    <% end %>
+                <%=link_to image_tag(@wdier.squad_name), wdiers_path(@wdier)%>
+              </div>
+            </div>
+
+          <div class="photo">
+            <div class="photoGallery">
+              <div class="inner-shadow mustard">
+                <h4>Pix</h4>
+              </div>
+              <ul>
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <% @wdier.photos.each do |photo| %>
+                  <%= image_tag photo.img_url %></li>
+                  <% end %>
+                </ul>
+                <button><%= link_to "Add new photo", new_photo_path(@wdier) %></button>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="commentGallery">
+                <div class="overlay">
+                  <div class="inner-shadow mustard">
+                    <h4>keep in touch...</h4>
                   </div>
+                  <% @wdier.posts.each do |post| %>
+                  <div class="name">
+                    <%= post.name %></br>
+                    <%= post.body %>
+                  </div>
+                  <button><%= link_to "Add new comment", new_wdier_post_path(@wdier) %> </button>
+                  <% end %>
+                  <% if current_user && current_user == post.user %>
+                  <%= link_to "Edit", edit_wdier_post_path(@wdier) %> |
+                  <%= link_to "Delete", wdier_post_path(@wdier), method: :delete %>
+                  <% end %>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <footer>
-          <%= image_tag("blkdc.png") %>
-        </footer>
+        </div>
+      </section>
+      <footer>
+        <%= image_tag("blkdc.png") %>
+      </footer>
