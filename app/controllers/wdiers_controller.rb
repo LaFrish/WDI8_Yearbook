@@ -5,6 +5,7 @@ class WdiersController < ApplicationController
     @wdiers = Wdier.all
     @instructors = Wdier.where(role: "Instructor")
     @students = Wdier.where(role: "Student")
+    @squads = Wdier.where(squad_name: @wdier.squad_name)
   end
 
   def new
@@ -21,7 +22,7 @@ class WdiersController < ApplicationController
     @wdier = Wdier.find(params[:id])
     # @instructor = Wdier.find.where(role: "Instructor")
     # @student = Wdier.where(role: "Student")
-    # @squad = Wdier.where(squad_id: @wdier.squad_id)
+    @squad = Wdier.where(squad_name: @wdier.squad_name)
 
   end
 
@@ -56,6 +57,10 @@ class WdiersController < ApplicationController
     @tags = Post.tag_counts_on(:tags)
   end
 
+  def squad
+    @wdier = Wdier.find(params[:id])
+    @squad = Wdier.where(squad_name: @wdier.squad_name)
+  end
 
   private
   def wdier_params
