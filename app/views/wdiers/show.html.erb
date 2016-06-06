@@ -58,11 +58,9 @@
               <div class="squad_img"><%= image_tag(@wdier.squad_img) %>
           </div>
               <div class="index">
-                <!-- <#% @wdiers.each do |wdier| %> -->
-                <%= link_to image_tag(@wdier.img_url), wdier_path(@wdier) %>
-                <!-- <#% end %> -->
-              </div>
-                <%=link_to image_tag(@wdier.squad_name), wdiers_path(@wdier)%>
+                <% @squad.each do |squad| %>
+                <%= link_to image_tag(squad.img_url), wdier_path(squad) %>
+                <% end %>
               </div>
             </div>
 
@@ -91,8 +89,9 @@
                     <%= post.name %></br>
                     <%= post.body %>
                   </div>
-                  <button><%= link_to "Add new comment", new_wdier_post_path(@wdier) %> </button>
                   <% end %>
+                  <button><%= link_to "Add new comment", new_wdier_post_path(@wdier) %> </button>
+
                   <% if current_user && current_user == post.user %>
                   <%= link_to "Edit", edit_wdier_post_path(@wdier) %> |
                   <%= link_to "Delete", wdier_post_path(@wdier), method: :delete %>
