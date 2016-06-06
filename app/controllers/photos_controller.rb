@@ -14,7 +14,6 @@ class PhotosController < ApplicationController
 
   def show
     @photo = Photo.find(params[:id])
-    @photo = Photo.paginate(:page => params[:page])
   end
 
   def new
