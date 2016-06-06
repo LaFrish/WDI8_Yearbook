@@ -8,8 +8,8 @@ class CreateWdiers < ActiveRecord::Migration
       t.string :project1_url
       t.string :project2_url
       t.string :project3_url
+      t.string :project4_url
       t.string :quote
-      t.string :squad_name
       t.string :teaching
       t.string :memory
       t.string :favlang
@@ -23,10 +23,9 @@ class CreateWdiers < ActiveRecord::Migration
       t.string :email
       t.string :role
       t.string :password
-      t.integer :squad_id, index: true, foreign_key: true
-      t.integer :codey_id, index: true, foreign_key: true
-      t.integer :student_id, index: true, foreign_key: true
-      t.integer :instructor_id, index: true, foreign_key: true
+      t.string :squad_name
+      t.string :squad_img
+      t.references :user, index: true, foreign_key: false
     end
   end
 end

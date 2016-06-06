@@ -29,29 +29,32 @@
       </div>
       <div class="quote_container">
         <div class="quote">
-          <%= @wdier.quote %></br>
+          <%= image_tag("quote-front-blue copy.png") %>
+          <%= @wdier.quote %>
+          <%= image_tag("quote-end-blue.png") %>
         </div>
       </div>
+
+
       <div class="topContainer">
-        <h3><%= @wdier.teaching if @wdier.teaching? %></h3>
-        <h3><%= @wdier.memory if @wdier.memory? %></h3>
-        <h3><%= @wdier.favlang if @wdier.favlang? %></h3>
-        <h3><%= @wdier.wisewords if @wdier.wisewords? %></h3>
-        <h3><%= @wdier.q1 if @wdier.q1? %></h3>
-        <h3><%= @wdier.q2 if @wdier.q2? %></h3>
-        <h3><%= @wdier.q3 if @wdier.q3? %></h3>
+        <div class="teaching">
+        <h3>Has been teaching for...</br><%= @wdier.teaching if @wdier.teaching? %></h3></div>
+        <h3>Favorite WDI8 Memory</br><%= @wdier.memory if @wdier.memory? %></h3>
+        <h3>Favorite programming language</br><%= @wdier.favlang if @wdier.favlang? %></h3>
+        <h3>Words of wisdom for the students</br><%= @wdier.wisewords if @wdier.wisewords? %></h3>
+        <h3></br><%= @wdier.q1 if @wdier.q1? %></h3>
+        <%= @wdier.q2 if @wdier.q2? %></h3>
+        <h3>I can't live without my...</br><%= @wdier.q3 if @wdier.q3? %></h3>
         <div class="projectGallery">
-          <ul class="grid">
-            <div class="index">
-              <!-- <h1> Project Gallery </h1> -->
+          <div class="thumbnail-grid figure">
               <%=link_to image_tag("project1.png"), @wdier.project1_url if @wdier.project1_url? %>
               <%=link_to image_tag("project2.png"), @wdier.project2_url if @wdier.project2_url? %>
               <%=link_to image_tag("project3.png"), @wdier.project3_url if @wdier.project3_url? %>
-            </ul>
           </div>
           <div class="squadGallery">
             <ul class="grid">
               <div class="index inner-shadow mustard">
+                <h4>SQUAD</h4>
                 <h2> <%= @wdier.squad_name %></h2>
               </ul>
             </div>
@@ -64,10 +67,6 @@
                     <% @wdier.photos.each do |photo| %>
                     <%= image_tag photo.img_url %></li>
                     <% end %>
-
-                    <!-- <#% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-                    <#%= link_to tag.name, { :action => :tag, :id => tag.name }, :class => css_class %>
-                    <#% end %> -->
                   </ul>
                 </div>
               </div>
