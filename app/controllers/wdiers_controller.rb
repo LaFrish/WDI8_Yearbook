@@ -5,7 +5,7 @@ class WdiersController < ApplicationController
     @wdiers = Wdier.all
     @instructors = Wdier.where(role: "Instructor")
     @students = Wdier.where(role: "Student")
-    @squads = Wdier.where(squad_name: @wdier.squad_name)
+    # @squads = Wdier.where(squad_name: @wdier.squad_name)
   end
 
   def new
