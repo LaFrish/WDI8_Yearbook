@@ -35,21 +35,61 @@
         </div>
       </div>
       <div class="topContainer">
+        <% if @wdier.teaching.present? %>
         <div class="teaching">
-          <h3>Has been teaching for...</br><%= @wdier.teaching if @wdier.teaching? %></h3></div>
-          <h3>Favorite WDI8 Memory</br><%= @wdier.memory if @wdier.memory? %></h3>
-          <h3>Favorite programming language</br><%= @wdier.favlang if @wdier.favlang? %></h3>
-          <h3>Words of wisdom for the students</br><%= @wdier.wisewords if @wdier.wisewords? %></h3>
-          <h3></br><%= @wdier.q1 if @wdier.q1? %></h3>
-          <%= @wdier.q2 if @wdier.q2? %></h3>
-          <h3>I can't live without my...</br><%= @wdier.q3 if @wdier.q3? %></h3>
+          <div class="inner-shadow mustard">
+          <h2>I've been teaching for</h2></div><h3><%= @wdier.teaching %></h3>
+        </div>
+        <% end %>
+          <%  if @wdier.memory.present? %>
+          <div class="memory">
+            <div class="inner-shadow mustard">
+          <h2>My favorite WDI8 Memory</h2></div><h3><%= @wdier.memory %></h3>
+        </div>
+        <% end %>
+        <% if @wdier.favlang.present? %>
+        <div class="lang">
+          <div class="inner-shadow mustard">
+          <h2>My favorite programming language</h2></div><h3><%= @wdier.favlang %></h3>
+        </div>
+        <% end %>
+        <% if @wdier.wisewords.present? %>
+        <div class="wisdom">
+          <div class="inner-shadow mustard">
+          <h2>Words of wisdom for the students</h2></div><h3><%= @wdier.wisewords %></h3>
+        </div>
+        <% end %>
+        <% if @wdier.q1.present? %>
+        <div class="q1">
+          <div class="inner-shadow mustard">
+          <h2>My favorite WDI8 Memory</h2></div><h3><%= @wdier.q1 %></h3>
+        </div>
+        <% end %>
+        <%  if @wdier.q2.present? %>
+        <div class="q2">
+          <div class="inner-shadow mustard">
+          <h2> I can't live without my</h2></div><h3><%= @wdier.q2 %></h3>
+        </div>
+        <% end %>
+        <%  if @wdier.q3.present? %>
+        <div class="q3">
+          <div class="inner-shadow mustard">
+          <h2>My guilty pleasure is... </h2></div><h3></br><%= @wdier.q3 %></h3>
+        </div>
+        <% end %>
+        </div>
+        <% if @wdier.project2_url.present? %>
           <div class="projectGallery">
+            <div class="inner-shadow mustard">
+            <h4>Project Gallery</h4>
             <div class="thumbnail-grid figure">
               <%=link_to image_tag("project1.png"), @wdier.project1_url if @wdier.project1_url? %>
               <%=link_to image_tag("project2.png"), @wdier.project2_url if @wdier.project2_url? %>
               <%=link_to image_tag("project3.png"), @wdier.project3_url if @wdier.project3_url? %>
             </div>
             </div>
+            </div>
+            <% end %>
             <div class="squadGallery">
               <div class="inner-shadow mustard">
                 <h4>SQUAD</h4>
@@ -57,7 +97,7 @@
               </br></div>
               <div class="squad_img"><%= image_tag(@wdier.squad_img) %>
           </div>
-              <div class="index">
+              <div class="index thumbnail-grid figure">
                 <% @squad.each do |squad| %>
                 <%= link_to image_tag(squad.img_url), wdier_path(squad) %>
                 <% end %>
