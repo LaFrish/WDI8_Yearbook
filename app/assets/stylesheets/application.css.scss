@@ -1219,6 +1219,17 @@ footer img{
 #wdierShow .thumbnail-grid {
 	user-select: none
 }
+
+.test h1 {
+	font-family: monospace;
+	color: #000;
+
+
+}
+
+.test h1:hover{
+	color: yellow;
+}
 #wdierShow .thumbnail-grid figure {
 	position: relative;
 	width: 500px;
